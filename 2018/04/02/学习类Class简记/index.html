@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="类 ： class symbols objects decorators  1. class 一种原型链的语法糖12345678910111213141516171819class Fruit &amp;#123;    constructor(name, calories) &amp;#123;        this.name = name        this.calories = calories">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T05:59:32.218Z">
+<meta property="og:updated_time" content="2018-06-11T06:34:54.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习类Class简记">
 <meta name="twitter:description" content="类 ： class symbols objects decorators  1. class 一种原型链的语法糖12345678910111213141516171819class Fruit &amp;#123;    constructor(name, calories) &amp;#123;        this.name = name        this.calories = calories">
@@ -183,6 +183,7 @@
 <p>类 ： class symbols objects decorators</p>
 </blockquote>
 <h3 id="1-class-一种原型链的语法糖"><a href="#1-class-一种原型链的语法糖" class="headerlink" title="1. class 一种原型链的语法糖"></a>1. class 一种原型链的语法糖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Fruit &#123;</span><br><span class="line">    constructor(name, calories) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.calories = calories</span><br><span class="line">        this.pieces = 1</span><br><span class="line">    &#125;</span><br><span class="line">    chop () &#123;</span><br><span class="line">        this.pieces++</span><br><span class="line">    &#125;</span><br><span class="line">    bite (person) &#123;</span><br><span class="line">        if (this.piecess &lt; 1) return</span><br><span class="line">        const calories = this.calories/this.pieces</span><br><span class="line">        person.satiety += calories</span><br><span class="line">        this.calories -= calories</span><br><span class="line">        this.pieces--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">util.inherits(Banana,Fruit)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="2-symbols-协议-命名冲突"><a href="#2-symbols-协议-命名冲突" class="headerlink" title="2.symbols 协议/命名冲突"></a>2.symbols 协议/命名冲突</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const first = Symbol()</span><br><span class="line">object.getOwnPropertySymbol()</span><br><span class="line">Symbol.for(key) //获取symbols</span><br><span class="line">Symbol.keyFor(symbol) // 来提取符号的key</span><br><span class="line">Symbol.match() // 正则</span><br><span class="line">Symbol.iterator</span><br></pre></td></tr></table></figure>
 <h3 id="3-objects"><a href="#3-objects" class="headerlink" title="3.objects"></a>3.objects</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object.assign(&#123;&#125;, options)</span><br><span class="line">Object.is</span><br><span class="line"></span><br><span class="line">Object.create()</span><br></pre></td></tr></table></figure>
 <h3 id="4-js规范-保存函数功能的单一性-避免重复的代码"><a href="#4-js规范-保存函数功能的单一性-避免重复的代码" class="headerlink" title="4. js规范 保存函数功能的单一性 避免重复的代码"></a>4. js规范 保存函数功能的单一性 避免重复的代码</h3><p>async/await  &gt; promise<br>Eslint - plugin - prettier</p>
@@ -472,11 +473,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -484,23 +485,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -508,11 +493,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

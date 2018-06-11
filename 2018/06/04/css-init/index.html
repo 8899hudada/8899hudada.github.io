@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="css 初始化为什么要初始化CSS？ 建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。 最简单的初始化方法就是：  {padding: 0; margin: 0;} 。有很多人也是这样写的。这确实很简单，但有人就会感">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T04:50:28.984Z">
+<meta property="og:updated_time" content="2018-06-11T06:35:26.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css init">
 <meta name="twitter:description" content="css 初始化为什么要初始化CSS？ 建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。 最简单的初始化方法就是：  {padding: 0; margin: 0;} 。有很多人也是这样写的。这确实很简单，但有人就会感">
@@ -183,6 +183,7 @@
 <p>建站老手都知道，这是为了考虑到浏览器的兼容问题，其实不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</p>
 <p>最简单的初始化方法就是： <em> {padding: 0; margin: 0;} 。有很多人也是这样写的。这确实很简单，但有人就会感到疑问：</em>号这样一个通用符在编写代码的时候是快，但如果网站很大，CSS样式表文件很大，这样写的话，他会把所有的标签都初始化一遍，这样就大大的加强了网站运行的负载，会使网站加载的时候需要很长一段时间。</p>
 <p>写过css的都知道每个网页引进的css首先都需要初始化</p>
+<a id="more"></a>
 <p>CSS初始化是指重设浏览器的样式。不同的浏览器默认的样式可能不尽相同，所以开发时的第一件事可能就是如何把它们统一。如果没对CSS初始化往往会出现浏览器之间的页面差异。每次新开发网站或新网页时候通过初始化CSS样式的属性，为我们将用到的CSS或html标签更加方便准确，使得我们开发网页内容时更加方便简洁，同时减少CSS代码量，节约网页下载时间。</p>
 <h3 id="雅虎工程师提供的CSS初始化示例代码"><a href="#雅虎工程师提供的CSS初始化示例代码" class="headerlink" title="雅虎工程师提供的CSS初始化示例代码"></a>雅虎工程师提供的CSS初始化示例代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td &#123; margin:0; padding:0; &#125;</span><br><span class="line">body &#123; background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; &#125;</span><br><span class="line">td,th,caption &#123; font-size:14px; &#125;</span><br><span class="line">h1, h2, h3, h4, h5, h6 &#123; font-weight:normal; font-size:100%; &#125;</span><br><span class="line">address, caption, cite, code, dfn, em, strong, th, var &#123; font-style:normal; font-weight:normal;&#125;</span><br><span class="line">a &#123; color:#555; text-decoration:none; &#125;</span><br><span class="line">a:hover &#123; text-decoration:underline; &#125;</span><br><span class="line">img &#123; border:none; &#125;</span><br><span class="line">ol,ul,li &#123; list-style:none; &#125;</span><br><span class="line">input, textarea, select, button &#123; font:14px Verdana,Helvetica,Arial,sans-serif; &#125;</span><br><span class="line">table &#123; border-collapse:collapse; &#125;</span><br><span class="line">html &#123;overflow-y: scroll;&#125;</span><br><span class="line"></span><br><span class="line">.clearfix:after &#123;content: &quot;.&quot;; display: block; height:0; clear:both; visibility: hidden;&#125;</span><br><span class="line">.clearfix &#123; *zoom:1; &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="腾讯官网-样式初始化"><a href="#腾讯官网-样式初始化" class="headerlink" title="腾讯官网 样式初始化"></a>腾讯官网 样式初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select&#123;margin:0;padding:0&#125;</span><br><span class="line">body&#123;font:12px&quot;宋体&quot;,&quot;Arial Narrow&quot;,HELVETICA;background:#fff;-webkit-text-size-adjust:100%;&#125;</span><br><span class="line">a&#123;color:#2d374b;text-decoration:none&#125;</span><br><span class="line">a:hover&#123;color:#cd0200;text-decoration:underline&#125;</span><br><span class="line">em&#123;font-style:normal&#125;</span><br><span class="line">li&#123;list-style:none&#125;</span><br><span class="line">img&#123;border:0;vertical-align:middle&#125;</span><br><span class="line">table&#123;border-collapse:collapse;border-spacing:0&#125;</span><br><span class="line">p&#123;word-wrap:break-word&#125;</span><br></pre></td></tr></table></figure>
@@ -451,11 +452,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,23 +464,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,11 +472,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

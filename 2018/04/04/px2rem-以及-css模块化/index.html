@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="px2rem自适应 {     viewport 和 设备像素比调整基准像素     利用px2rem   自动转换rem}移动端 hotcss &amp;gt; prem 像素  hotcss =&amp;gt; webpack.config.js  =&amp;gt; entry: [‘./app/js/viewport.js’, ‘./app/js/main.js’]  项目组件化设计  css module 滑动">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T02:27:21.851Z">
+<meta property="og:updated_time" content="2018-06-11T06:35:50.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="px2rem 以及 css模块化">
 <meta name="twitter:description" content="px2rem自适应 {     viewport 和 设备像素比调整基准像素     利用px2rem   自动转换rem}移动端 hotcss &amp;gt; prem 像素  hotcss =&amp;gt; webpack.config.js  =&amp;gt; entry: [‘./app/js/viewport.js’, ‘./app/js/main.js’]  项目组件化设计  css module 滑动">
@@ -186,6 +186,7 @@
 <h3 id="项目组件化设计-css-module"><a href="#项目组件化设计-css-module" class="headerlink" title="项目组件化设计  css module"></a>项目组件化设计  css module</h3><blockquote>
 <p>滑动 =&gt; vue-awesome-swiper<br>复制路径 =&gt; copy-link-adress</p>
 </blockquote>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">    /*均分两端对齐*/</span><br><span class="line">    justify-content: space-around;</span><br><span class="line">    /*隐藏字体*/</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content &#123;</span><br><span class="line">    @include list(row)</span><br><span class="line">    .item &#123;</span><br><span class="line">        width: 50%;</span><br><span class="line">        box-sizing: border-box;</span><br><span class="line">        &amp;:first-child &#123;</span><br><span class="line">            padding: 32px 20px;</span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;;</span><br><span class="line">        &amp;:nth-child(3) &#123;</span><br><span class="line"></span><br><span class="line">         &#125;;</span><br><span class="line">        &amp;:nth-child(n + 3) &#123;</span><br><span class="line"></span><br><span class="line">         &#125;;</span><br><span class="line">        &amp;:last-child:after &#123;</span><br><span class="line"></span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
@@ -448,11 +449,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,23 +461,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -484,11 +469,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

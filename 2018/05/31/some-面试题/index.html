@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="比较新的面试题面试题 全局字体123body &amp;#123;    font-family: Microsoft Yahei, SimSun, Helvetica;&amp;#125; 使用css实现一个持续的动画效果1234567@keyframes mymove &amp;#123;    from &amp;#123;top: 0px;&amp;#125;    to &amp;#123;top: 200px;&amp;#125;&amp;#125">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T06:10:00.136Z">
+<meta property="og:updated_time" content="2018-06-11T06:34:38.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="some 面试题">
 <meta name="twitter:description" content="比较新的面试题面试题 全局字体123body &amp;#123;    font-family: Microsoft Yahei, SimSun, Helvetica;&amp;#125; 使用css实现一个持续的动画效果1234567@keyframes mymove &amp;#123;    from &amp;#123;top: 0px;&amp;#125;    to &amp;#123;top: 200px;&amp;#125;&amp;#125">
@@ -182,6 +182,7 @@
         <h4 id="比较新的面试题"><a href="#比较新的面试题" class="headerlink" title="比较新的面试题"></a>比较新的面试题</h4><p><a href="https://mp.weixin.qq.com/s/7thYGgn2ar4OSw19V0t08A" target="_blank" rel="noopener">面试题</a></p>
 <h3 id="全局字体"><a href="#全局字体" class="headerlink" title="全局字体"></a>全局字体</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    font-family: Microsoft Yahei, SimSun, Helvetica;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="使用css实现一个持续的动画效果"><a href="#使用css实现一个持续的动画效果" class="headerlink" title="使用css实现一个持续的动画效果"></a>使用css实现一个持续的动画效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@keyframes mymove &#123;</span><br><span class="line">    from &#123;top: 0px;&#125;</span><br><span class="line">    to &#123;top: 200px;&#125;</span><br><span class="line">&#125;</span><br><span class="line">p &#123;</span><br><span class="line">    animation: mymove 5s infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.  </span><br><span class="line">transform: translate(-50%,-50%);</span><br><span class="line"></span><br><span class="line">2.  </span><br><span class="line">margin:-50px 0 0 -50px;</span><br><span class="line"></span><br><span class="line">3.  </span><br><span class="line">margin:auto;</span><br><span class="line">top:0;</span><br><span class="line">bottom:0;</span><br><span class="line">left:0;</span><br><span class="line">right:0;</span><br><span class="line"></span><br><span class="line">4.  </span><br><span class="line">display:flex;</span><br><span class="line">justify-content:center;</span><br><span class="line">align-items: center;</span><br></pre></td></tr></table></figure>
 <h3 id="多行文本溢出展示"><a href="#多行文本溢出展示" class="headerlink" title="多行文本溢出展示"></a>多行文本溢出展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">    display: -webkit-box;</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    -webkit-line-clamp: 3;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*让图文不可复制*/</span><br><span class="line">p &#123;</span><br><span class="line">    user-select: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="1-跨域解决方案"><a href="#1-跨域解决方案" class="headerlink" title="1.跨域解决方案"></a>1.跨域解决方案</h3><p>同源策略: 协议+域名+端口   防止XSS、CSFR等攻击 =&gt; httpOnly</p>
@@ -497,11 +498,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -509,23 +510,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,11 +518,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T06:00:36.305Z">
+<meta property="og:updated_time" content="2018-06-11T06:36:05.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue基于viewer图片查看器">
 <meta name="twitter:description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
@@ -189,6 +189,7 @@
 <p>1.引入jQ <br>2.引入viewer <br> 3.正确使用viewer</p>
 </blockquote>
 </blockquote>
+<a id="more"></a>
 <h3 id="1-项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤"><a href="#1-项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤" class="headerlink" title="1.项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤 "></a>1.项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤 <br></h3><h5 id="a-首先需要添加项目中jquery、viewerjs的依赖"><a href="#a-首先需要添加项目中jquery、viewerjs的依赖" class="headerlink" title="a.首先需要添加项目中jquery、viewerjs的依赖"></a>a.首先需要添加项目中jquery、viewerjs的依赖<br></h5><pre><code>`npm install jquery viewerjs --save-dev`
 </code></pre><h5 id="b-在build目录中配置webpack-base-config-js"><a href="#b-在build目录中配置webpack-base-config-js" class="headerlink" title="b.在build目录中配置webpack.base.config.js  "></a>b.在build目录中配置webpack.base.config.js  <br></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">        </span><br><span class="line">        resolve: &#123;</span><br><span class="line">            extensions: [<span class="string">'.js'</span>, <span class="string">'.vue'</span>],</span><br><span class="line">            alias: &#123;</span><br><span class="line">                <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</span><br><span class="line">                <span class="string">'@'</span>: resolve(<span class="string">'../src'</span>),</span><br><span class="line">                <span class="string">'jquery'</span>: <span class="string">'jquery'</span> </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        plugins: [</span><br><span class="line">          <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">              $: <span class="string">"jquery"</span>,</span><br><span class="line">              jQuery: <span class="string">"jquery"</span></span><br><span class="line">          &#125;)</span><br><span class="line">       ],</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h5 id="c-在-vue文件中引入"><a href="#c-在-vue文件中引入" class="headerlink" title="c.在.vue文件中引入  "></a>c.在.vue文件中引入  <br></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">'jquery'</span></span><br><span class="line"><span class="keyword">import</span> Viewer <span class="keyword">from</span> <span class="string">'viewerjs'</span></span><br></pre></td></tr></table></figure>
@@ -487,11 +488,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,23 +500,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -523,11 +508,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

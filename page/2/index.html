@@ -190,10 +190,7 @@
 </blockquote>
 </blockquote>
 <h3 id="1-pakage-json"><a href="#1-pakage-json" class="headerlink" title="1.pakage.json"></a>1.pakage.json</h3><p>安装相关功能的插件：devDependencies =&gt; {clean-webpack-plugin,cross-env}</p>
-<h3 id="2-webpack-base-config-js"><a href="#2-webpack-base-config-js" class="headerlink" title="2.webpack.base.config.js"></a>2.webpack.base.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new webpack.Provideplugin(&#123;&#125;),</span><br><span class="line">        new webpack.DefinePlugin(&#123;</span><br><span class="line">            &apos;process.env&apos;: &#123;</span><br><span class="line">                NODE_ENV: JSON.stringify(process.env.NODE_ENV || &apos;development&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-webpack-prod-config-js"><a href="#3-webpack-prod-config-js" class="headerlink" title="3.webpack.prod.config.js"></a>3.webpack.prod.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const cleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;)</span><br><span class="line">const Path = require(&apos;path&apos;)</span><br><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/dist/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new cleanWebpackPlugin([&apos;dist&apos;], &#123;</span><br><span class="line">            root: path.resolve(__dirname, &apos;../dist&apos;)</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-main-js-调用"><a href="#4-main-js-调用" class="headerlink" title="4.main.js 调用"></a>4.main.js 调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const baseUrl = &#123;</span><br><span class="line">    development: &apos;--------&apos;, // 测试地址</span><br><span class="line">    production: &apos;--------&apos; // 生产地址</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">baseUrl: baseUrl[process.env.NODE_ENV]</span><br></pre></td></tr></table></figure>
-
+        
       
 
       
@@ -357,19 +354,7 @@
 <p>1.引入jQ <br>2.引入viewer <br> 3.正确使用viewer</p>
 </blockquote>
 </blockquote>
-<h3 id="1-项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤"><a href="#1-项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤" class="headerlink" title="1.项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤 "></a>1.项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤 <br></h3><h5 id="a-首先需要添加项目中jquery、viewerjs的依赖"><a href="#a-首先需要添加项目中jquery、viewerjs的依赖" class="headerlink" title="a.首先需要添加项目中jquery、viewerjs的依赖"></a>a.首先需要添加项目中jquery、viewerjs的依赖<br></h5><pre><code>`npm install jquery viewerjs --save-dev`
-</code></pre><h5 id="b-在build目录中配置webpack-base-config-js"><a href="#b-在build目录中配置webpack-base-config-js" class="headerlink" title="b.在build目录中配置webpack.base.config.js  "></a>b.在build目录中配置webpack.base.config.js  <br></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">        </span><br><span class="line">        resolve: &#123;</span><br><span class="line">            extensions: [<span class="string">'.js'</span>, <span class="string">'.vue'</span>],</span><br><span class="line">            alias: &#123;</span><br><span class="line">                <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</span><br><span class="line">                <span class="string">'@'</span>: resolve(<span class="string">'../src'</span>),</span><br><span class="line">                <span class="string">'jquery'</span>: <span class="string">'jquery'</span> </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        plugins: [</span><br><span class="line">          <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">              $: <span class="string">"jquery"</span>,</span><br><span class="line">              jQuery: <span class="string">"jquery"</span></span><br><span class="line">          &#125;)</span><br><span class="line">       ],</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h5 id="c-在-vue文件中引入"><a href="#c-在-vue文件中引入" class="headerlink" title="c.在.vue文件中引入  "></a>c.在.vue文件中引入  <br></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">'jquery'</span></span><br><span class="line"><span class="keyword">import</span> Viewer <span class="keyword">from</span> <span class="string">'viewerjs'</span></span><br></pre></td></tr></table></figure>
-<p>###2.项目中使用viewerjs</p>
-<p>#####html代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'display:none;'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"image"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">'(item, index) in urlArr'</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">"item.url"</span> <span class="attr">:alt</span>=<span class="string">"item.title"</span> <span class="attr">:id</span>=<span class="string">'"a" + index'</span> <span class="attr">:key</span>=<span class="string">'index'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>#####js代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(substr === <span class="string">'jpg'</span> || substr === <span class="string">'png'</span>) &#123;</span><br><span class="line">      <span class="comment">//jpg png 图片  引用viewer.js</span></span><br><span class="line">      <span class="keyword">let</span> that = <span class="keyword">this</span>;</span><br><span class="line">      setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//生成viewer实例</span></span><br><span class="line">        <span class="keyword">var</span> viewer = <span class="keyword">new</span> Viewer(<span class="built_in">document</span>.getElementById(<span class="string">'image'</span>));</span><br><span class="line">        <span class="comment">//点击当前图片触发展示当前图片的放大图</span></span><br><span class="line">        <span class="keyword">let</span> imgIndex = <span class="number">0</span>;</span><br><span class="line">        that.urlArr.map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> ( item.url === url ) &#123;</span><br><span class="line">                imgIndex = index</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        $(<span class="string">'#a'</span> + imgIndex).trigger(<span class="string">"click"</span>)</span><br><span class="line">      &#125;, <span class="number">200</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//这里检查是否是PDF word 等其他url  如果是则链接新的窗口打开查看</span></span><br><span class="line">    <span class="built_in">window</span>.open(url,<span class="string">'_blank'</span>) </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>#####注意事项：</p>
-<p>######a.页面中隐藏有一个div，专门存放图片列表 urlArr</p>
-<p>######b.动态获取、加载图片需要时间，这里设置setTimeout 200毫秒 ，this重新指向that</p>
-<p>######c.动态绑定id，用jQ的trigger触发对应图片的 viewer </p>
-<p>###参考文献</p>
-<p>#####<a href="http://fengyuanchen.github.io/viewerjs/" target="_blank" rel="noopener">viewerjs使用手册</a></p>
-
+        
       
 
       
@@ -446,15 +431,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
+        
       
 
       
@@ -607,11 +585,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,23 +597,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,11 +605,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>

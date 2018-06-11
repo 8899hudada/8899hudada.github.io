@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="从输入URL到页面加载的过程? 从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T05:59:25.656Z">
+<meta property="og:updated_time" content="2018-06-11T06:34:12.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从url输入到页面加载的过程--完善前端体系">
 <meta name="twitter:description" content="从输入URL到页面加载的过程? 从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优">
@@ -180,8 +180,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="从输入URL到页面加载的过程"><a href="#从输入URL到页面加载的过程" class="headerlink" title="从输入URL到页面加载的过程?"></a>从输入URL到页面加载的过程?</h3><ol>
-<li><p>从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）<br>浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优化，如多个空白tab会合并成一个进程）<br>多线程的浏览器内核: GUI线程 JS引擎线程 事件触发线程 定时器线程 网络请求线程<br>解析URL: protocol host port path query fragment</p>
-</li>
+<li>从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）<br>浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优化，如多个空白tab会合并成一个进程）<br>多线程的浏览器内核: GUI线程 JS引擎线程 事件触发线程 定时器线程 网络请求线程<br>解析URL: protocol host port path query fragment</li>
+</ol>
+<a id="more"></a>
+<ol start="2">
 <li><p>开启网络线程到发出一个完整的http请求（这一部分涉及到dns查询，tcp/ip请求，五层因特网协议栈等知识）<br>dns查询: 如果浏览器有缓存，直接使用浏览器缓存，否则使用本机缓存，再没有的话就是用host, 如果本地没有，就向dns域名服务器查询（当然，中间可能还会经过路由，也有缓存等），查询到对应的IP. 需要知道dns解析是很耗时的，因此如果解析域名过多，会让首屏加载变得过慢，可以考虑 dns-prefetch优化。<br>tcp/ip请求构建: http的本质就是 tcp/ip请求 , 三次握手  四次挥手（因为是全双工的，所以需要四次挥手）. get和post本质都是tcp/ip, get会产生一个tcp数据包，post两个。<br>五层因特网协议栈: 应用层(dns,http) DNS解析成IP并发送http请求  传输层(tcp,udp) 建立tcp连接（三次握手）  网络层(IP,ARP) IP寻址  数据链路层(PPP) 封装成帧 物理层(利用物理介质传输比特流)物理传输（然后传输的时候通过双绞线，电磁波等各种介质）</p>
 </li>
 <li><p>从服务器接收到请求到对应后台接收到请求（这一部分可能涉及到负载均衡，安全拦截以及后台内部的处理等等）<br>简单的说：用户发起的请求都指向调度服务器（反向代理服务器，譬如安装了nginx控制负载均衡），然后调度服务器根据实际的调度算法，分配不同的请求给对应集群中的服务器执行，然后调度器等待实际服务器的HTTP响应，并将它反馈给用户。<br>后台的处理: 一般有的后端是有统一的验证的，如安全拦截，跨域验证 , 如果这一步不符合规则，就直接返回了相应的http报文（如拒绝请求等）, 然后当验证通过后，才会进入实际的后台代码，此时是程序接收到请求，然后执行（譬如查询数据库，大量计算等等） ,等程序执行完毕后，就会返回一个http响应包（一般这一步也会经过多层封装）, 然后就是将这个包从后端发送到前端，完成交互</p>
@@ -485,11 +487,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,23 +499,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,11 +507,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>
