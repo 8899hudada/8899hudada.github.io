@@ -9,14 +9,14 @@
   <title>vue基于viewer图片查看器 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
-<meta name="keywords" content="vue viewer">
+<meta name="keywords" content="vue,viewer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue基于viewer图片查看器">
 <meta property="og:url" content="https://8899hudada.github.io/2018/03/08/vue基于viewer图片查看器/index.html">
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T06:36:05.939Z">
+<meta property="og:updated_time" content="2018-06-11T07:53:55.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue基于viewer图片查看器">
 <meta name="twitter:description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
@@ -93,6 +93,8 @@
 					<a class="mail" target="_blank" href="/yao13hu@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+			<!--音乐播放插件-->
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=86 src="//music.163.com/outchain/player?type=2&id=25721157&auto=0&height=66"></iframe>
 		</nav>
 	</header>		
 </div>
@@ -244,7 +246,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue viewer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">viewer</a>
         		</li>
       		
 		</ul>
@@ -324,7 +330,7 @@
     </a>
   
   
-    <a href="/2015/04/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/05/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hello World</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -493,39 +499,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">http js</a>
+                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,7 +519,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
               </li>
             
             <div class="clearfix"></div>
@@ -620,7 +626,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">沉淀技术&lt;br&gt;&lt;br&gt;不断突破&lt;br&gt;&lt;br&gt;实现人生自由！！！</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">talk is cheap &lt;br&gt;&lt;br&gt;show me the code ！&lt;br&gt;&lt;br&gt;沉淀技术&lt;br&gt;&lt;br&gt;不断突破&lt;br&gt;&lt;br&gt;实现人生自由！！！</div>
   	  	
     	</section>
     

@@ -9,14 +9,14 @@
   <title>vue 内部运行机制 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1. new Vue() new Vue() 后， Vue 会调用 _init 函数进行初始化，也就是这里的 init 过程，它会初始化生命周期、事件、 props、 methods、 data、 computed 与 watch 等。其中最重要的是通过 Object.defineProperty 设置 setter 与 getter 函数，用来实现「响应式」以及「依赖收集」">
-<meta name="keywords" content="vue">
+<meta name="keywords" content="随笔,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue 内部运行机制">
 <meta property="og:url" content="https://8899hudada.github.io/2018/06/11/vue-内部运行机制/index.html">
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="1. new Vue() new Vue() 后， Vue 会调用 _init 函数进行初始化，也就是这里的 init 过程，它会初始化生命周期、事件、 props、 methods、 data、 computed 与 watch 等。其中最重要的是通过 Object.defineProperty 设置 setter 与 getter 函数，用来实现「响应式」以及「依赖收集」">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T06:59:40.412Z">
+<meta property="og:updated_time" content="2018-06-11T07:51:53.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 内部运行机制">
 <meta name="twitter:description" content="1. new Vue() new Vue() 后， Vue 会调用 _init 函数进行初始化，也就是这里的 init 过程，它会初始化生命周期、事件、 props、 methods、 data、 computed 与 watch 等。其中最重要的是通过 Object.defineProperty 设置 setter 与 getter 函数，用来实现「响应式」以及「依赖收集」">
@@ -93,6 +93,8 @@
 					<a class="mail" target="_blank" href="/yao13hu@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+			<!--音乐播放插件-->
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=86 src="//music.163.com/outchain/player?type=2&id=25721157&auto=0&height=66"></iframe>
 		</nav>
 	</header>		
 </div>
@@ -241,6 +243,10 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
@@ -482,39 +488,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">http js</a>
+                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -522,7 +508,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
               </li>
             
             <div class="clearfix"></div>
@@ -609,7 +615,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">沉淀技术&lt;br&gt;&lt;br&gt;不断突破&lt;br&gt;&lt;br&gt;实现人生自由！！！</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">talk is cheap &lt;br&gt;&lt;br&gt;show me the code ！&lt;br&gt;&lt;br&gt;沉淀技术&lt;br&gt;&lt;br&gt;不断突破&lt;br&gt;&lt;br&gt;实现人生自由！！！</div>
   	  	
     	</section>
     
