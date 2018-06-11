@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>杂记 | 胡大大的博客</title>
+  <title>vw 实现移动端适配 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="css序列123456789101112131415161718192021222324li &amp;#123;    color: red;&amp;#125;li:first-child,li:nth-child(2n + 4),li:nth-child(3n + 6),li:nth-child(5n + 10),li:nth-child(7n + 14),li:nth-child(11n + 22),li">
-<meta name="keywords" content="js">
+  <meta name="description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
+<meta name="keywords" content="vue,H5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杂记">
-<meta property="og:url" content="https://8899hudada.github.io/2018/05/30/杂记/index.html">
+<meta property="og:title" content="vw 实现移动端适配">
+<meta property="og:url" content="https://8899hudada.github.io/2018/06/11/vw-实现移动端适配/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="css序列123456789101112131415161718192021222324li &amp;#123;    color: red;&amp;#125;li:first-child,li:nth-child(2n + 4),li:nth-child(3n + 6),li:nth-child(5n + 10),li:nth-child(7n + 14),li:nth-child(11n + 22),li">
+<meta property="og:description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T06:35:12.209Z">
+<meta property="og:updated_time" content="2018-06-11T08:56:30.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杂记">
-<meta name="twitter:description" content="css序列123456789101112131415161718192021222324li &amp;#123;    color: red;&amp;#125;li:first-child,li:nth-child(2n + 4),li:nth-child(3n + 6),li:nth-child(5n + 10),li:nth-child(7n + 14),li:nth-child(11n + 22),li">
+<meta name="twitter:title" content="vw 实现移动端适配">
+<meta name="twitter:description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-杂记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vw-实现移动端适配" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      杂记
+      vw 实现移动端适配
     </h1>
   
 
         
-        <a href="/2018/05/30/杂记/" class="archive-article-date">
-  	<time datetime="2018-05-30T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
+        <a href="/2018/06/11/vw-实现移动端适配/" class="archive-article-date">
+  	<time datetime="2018-06-11T08:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
 </a>
         
         
@@ -184,26 +184,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="css序列"><a href="#css序列" class="headerlink" title="css序列"></a>css序列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">li &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line">li:first-child,</span><br><span class="line">li:nth-child(2n + 4),</span><br><span class="line">li:nth-child(3n + 6),</span><br><span class="line">li:nth-child(5n + 10),</span><br><span class="line">li:nth-child(7n + 14),</span><br><span class="line">li:nth-child(11n + 22),</span><br><span class="line">li:nth-child(13n + 26),</span><br><span class="line">li:nth-child(17n + 34),</span><br><span class="line">li:nth-child(19n + 38),</span><br><span class="line">li:nth-child(23n + 46),</span><br><span class="line">li:nth-child(29n + 58),</span><br><span class="line">li:nth-child(31n + 62) &#123;</span><br><span class="line">    color: #ddd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文本末尾... --&gt;</span><br><span class="line">.hideInline &#123;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    white-space: nowrap;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h4 id="如何在Vue项目中使用vw实现移动端适配"><a href="#如何在Vue项目中使用vw实现移动端适配" class="headerlink" title="如何在Vue项目中使用vw实现移动端适配"></a>如何在Vue项目中使用vw实现移动端适配</h4><blockquote>
+<p><a href="https://www.w3cplus.com/mobile/vw-layout-in-vue.html" target="_blank" rel="noopener">原文-vw</a></p>
+</blockquote>
 <a id="more"></a>
-<h3 id="img-srcset"><a href="#img-srcset" class="headerlink" title="img srcset"></a>img srcset</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot; srcset=&quot;/static/logo_EN@2x.png 1x, /static/logo_EN@2x.png  2x, /static/logo_EN@3x.png 3x&quot;&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><p>a.    控制台显示打包结果:   webpack –display-modules –sort-modules-by size<br>b.    可视化分析依赖:  webpack –profile –json &gt; stats.json  (webpack analyse)</p>
-<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><blockquote>
-<p>Object</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const arr = [ 1, 2, 3, 4, NaN];</span><br><span class="line">//使用</span><br><span class="line">if(arr.includes(3))&#123;</span><br><span class="line">    console.log(true);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const cars = &#123; &apos;BMW&apos;: 3, &apos;Tesla&apos;: 2, &apos;Toyota&apos;: 1 &#125;;</span><br><span class="line">const values = Object.values(cars);</span><br><span class="line">console.log(values); // [3, 2, 1]</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>padStart  padEnd</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;5&apos;.padStart(10) // &apos;          5&apos;</span><br><span class="line">&apos;5&apos;.padStart(10, &apos;=*&apos;) //&apos;=*=*=*=*=5&apos;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>async/await</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">async function getAmount2(userId) &#123;</span><br><span class="line">    var user = await getUser(userId);</span><br><span class="line">    var amount = await getBankBalance(user);</span><br><span class="line">    console.log(amount);</span><br><span class="line">&#125;</span><br><span class="line">getAmount(&apos;1&apos;); //$1,000</span><br><span class="line">getAmount2(&apos;1&apos;); //$1,000</span><br><span class="line"></span><br><span class="line">function getUser(userId) &#123;</span><br><span class="line">    return new Promise(resolve =&gt; &#123;</span><br><span class="line">	        setTimeout(() =&gt; &#123;</span><br><span class="line">	        resolve(&apos;john&apos;)</span><br><span class="line">	    &#125;, 1000)</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function getBankBalance(user) &#123;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">            if(user == &apos;john&apos;) &#123;</span><br><span class="line">                resolve(&apos;$1,000&apos;);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                reject(unknown user);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, 1000)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用 try catch</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">async function doubleAndAdd(a, b) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        a = await doubleAfterlSec(a);</span><br><span class="line">        b = await doubleAfterlSec(b);</span><br><span class="line">    &#125; catch (e) &#123;</span><br><span class="line">        return NaN; // return something</span><br><span class="line">    &#125;</span><br><span class="line">    return a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 用法</span><br><span class="line">doubleAndAdd(&apos;one&apos;, 2).then(console.log) //NaN</span><br><span class="line">doubleAndAdd(1, 2).then(console.log) // 6</span><br><span class="line">function doubleAfterlSec(param) &#123;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        setTimeout(function() &#123;</span><br><span class="line">            let val = param * 2;</span><br><span class="line">            isNaN(val) &gt; reject(NaN) : resolve(val);</span><br><span class="line">        &#125;, 1000);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//Option 3 - 不要做任何事情，在function外捕获</span><br><span class="line">//因为异步/等待返回一个Promise，我们可以捕捉整个函数的错误</span><br><span class="line">async function doubleAndAdd(a, b) &#123;</span><br><span class="line">    a = await doubleAfter1Sec(a);</span><br><span class="line">    b = await doubleAfter1Sec(b);</span><br><span class="line">    return a + b;</span><br><span class="line">&#125;</span><br><span class="line">//用法</span><br><span class="line">doubleAndAdd(&apos;one&apos;, 2)</span><br><span class="line">    .then(console.log)</span><br><span class="line">    .catch(console.log); // 👈👈🏼&lt;------- use &quot;catch&quot;</span><br><span class="line">function doubleAfter1Sec(param) &#123;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        setTimeout(function() &#123;</span><br><span class="line">            let val = param * 2;</span><br><span class="line">            isNaN(val) ? reject(NaN) : resolve(val);</span><br><span class="line">        &#125;, 1000);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-运行js-判定-适配手机的dpr"><a href="#1-运行js-判定-适配手机的dpr" class="headerlink" title="1. 运行js 判定 适配手机的dpr"></a>1. 运行js 判定 适配手机的dpr</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">if (!dpr &amp;&amp; !scale) &#123;</span><br><span class="line">        var isAndroid = win.navigator.appVersion.match(/android/gi);</span><br><span class="line">        var isIPhone = win.navigator.appVersion.match(/iphone/gi);</span><br><span class="line">        var devicePixelRatio = win.devicePixelRatio;</span><br><span class="line">        if (isIPhone) &#123; // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span><br><span class="line">            if (devicePixelRatio &gt;= 3 &amp;&amp; (!dpr || dpr &gt;= 3)) &#123;</span><br><span class="line">                dpr = 3;</span><br><span class="line">            &#125; else if (devicePixelRatio &gt;= 2 &amp;&amp; (!dpr || dpr &gt;= 2))&#123;</span><br><span class="line">                dpr = 2;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                dpr = 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123; // 其他设备下，仍旧使用1倍的方案</span><br><span class="line">            dpr = 1;</span><br><span class="line">        &#125;</span><br><span class="line">        scale = 1 / dpr;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-flexible实际上就是能过JS来动态改写meta标签"><a href="#2-flexible实际上就是能过JS来动态改写meta标签" class="headerlink" title="2. flexible实际上就是能过JS来动态改写meta标签"></a>2. flexible实际上就是能过JS来动态改写meta标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var metaEl = doc.createElement(&apos;meta&apos;);</span><br><span class="line">    var scale = isRetina ? 0.5:1;</span><br><span class="line">    metaEl.setAttribute(&apos;name&apos;, &apos;viewport&apos;);</span><br><span class="line">    metaEl.setAttribute(&apos;content&apos;, &apos;initial-scale=&apos; + scale + &apos;, maximum-scale=&apos; + scale + &apos;, minimum-scale=&apos; + scale + &apos;, user-scalable=no&apos;);</span><br><span class="line">    if (docEl.firstElementChild) &#123;</span><br><span class="line">        document.documentElement.firstElementChild.appendChild(metaEl);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        var wrap = doc.createElement(&apos;div&apos;);</span><br><span class="line">        wrap.appendChild(metaEl);</span><br><span class="line">        documen.write(wrap.innerHTML);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem"><a href="#3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem" class="headerlink" title="3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)"></a>3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//npm install postcss-loader</span><br><span class="line">    module.exports = &#123;</span><br><span class="line">        module: &#123;</span><br><span class="line">            loaders: [</span><br><span class="line">                &#123;</span><br><span class="line">                    test: /\.css$/,</span><br><span class="line">                    loader: &quot;style-loader!css-loader!postcss-loader&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        postcss: function() &#123;</span><br><span class="line">            return [px2rem(&#123;remUnit: 75&#125;)];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-sass-混合函数处理"><a href="#4-sass-混合函数处理" class="headerlink" title="4. sass 混合函数处理"></a>4. sass 混合函数处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@mixin font-dpr($font-size)&#123;</span><br><span class="line">    font-size: $font-size;</span><br><span class="line">    [data-dpr=&quot;2&quot;] &amp; &#123;</span><br><span class="line">        font-size: $font-size * 2;</span><br><span class="line">&#125;</span><br><span class="line">    [data-dpr=&quot;3&quot;] &amp; &#123;</span><br><span class="line">        font-size: $font-size * 3;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@include font-dpr(16px);</span><br></pre></td></tr></table></figure>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><ol>
+<li>使用vw来实现页面的适配，并且通过PostCSS的插件postcss-px-to-viewport把px转换成vw。这样的好处是，我们在撸码的时候，不需要进行任何的计算，你只需要根据设计图写px单位</li>
+<li>为了更好的实现长宽比，特别是针对于img、vedio和iframe元素，通过PostCSS插件postcss-aspect-ratio-mini来实现，在实际使用中，只需要把对应的宽和高写进去即可</li>
+<li>为了解决1px的问题，使用PostCSS插件postcss-write-svg,自动生成border-image或者background-image的图片</li>
+</ol>
+<h2 id="scss"><a href="#scss" class="headerlink" title="scss"></a>scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.selector &#123;</span><br><span class="line">    height: 64px; /*px*/</span><br><span class="line">    font-size: 28px; /*px*/</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">    /*no*/</span><br><span class="line">&#125;</span><br><span class="line">.selector &#123;</span><br><span class="line">    width: 2rem;</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;1&quot;] .selector &#123;</span><br><span class="line">    height: 32px;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;2&quot;] .selector &#123;</span><br><span class="line">    height: 64px;</span><br><span class="line">    font-size: 28px;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;3&quot;] .selector &#123;</span><br><span class="line">    height: 96px;</span><br><span class="line">    font-size: 42px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -242,7 +237,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
         		</li>
       		
 		</ul>
@@ -298,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/05/30/杂记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/06/11/vw-实现移动端适配/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/31/some-面试题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          some 面试题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/21/http通信协议/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">http通信协议笔记</div>
+    <a href="/2018/06/11/vue-内部运行机制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue 内部运行机制</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -350,7 +340,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#css序列"><span class="toc-number">1.</span> <span class="toc-text">css序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#img-srcset"><span class="toc-number">2.</span> <span class="toc-text">img srcset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack"><span class="toc-number">3.</span> <span class="toc-text">webpack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6"><span class="toc-number">4.</span> <span class="toc-text">ES6</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#如何在Vue项目中使用vw实现移动端适配"><span class="toc-number">1.</span> <span class="toc-text">如何在Vue项目中使用vw实现移动端适配</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-运行js-判定-适配手机的dpr"><span class="toc-number"></span> <span class="toc-text">1. 运行js 判定 适配手机的dpr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-flexible实际上就是能过JS来动态改写meta标签"><span class="toc-number"></span> <span class="toc-text">2. flexible实际上就是能过JS来动态改写meta标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem"><span class="toc-number"></span> <span class="toc-text">3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-sass-混合函数处理"><span class="toc-number"></span> <span class="toc-text">4. sass 混合函数处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number"></span> <span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scss"><span class="toc-number"></span> <span class="toc-text">scss</span></a>
                     </div>
                 </span>
             </div>
@@ -373,30 +363,6 @@
 
 
 <!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-    <span class="btn-bg"></span>
-    <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#css序列"><span class="toc-number">1.</span> <span class="toc-text">css序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#img-srcset"><span class="toc-number">2.</span> <span class="toc-text">img srcset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack"><span class="toc-number">3.</span> <span class="toc-text">webpack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6"><span class="toc-number">4.</span> <span class="toc-text">ES6</span></a></li></ol>
-   </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
      
 <!-- 目录内容结束 -->
           </div>
