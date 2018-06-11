@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>学习类Class简记 | 胡大大的博客</title>
+  <title>Archives: 2017 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="类 ： class symbols objects decorators  1. class 一种原型链的语法糖12345678910111213141516171819class Fruit &amp;#123;    constructor(name, calories) &amp;#123;        this.name = name        this.calories = calories">
-<meta name="keywords" content="js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="学习类Class简记">
-<meta property="og:url" content="https://8899hudada.github.io/2018/04/02/学习类Class简记/index.html">
+  <meta name="description" content="乐观 积极 快">
+<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
+<meta property="og:type" content="website">
+<meta property="og:title" content="胡大大的博客">
+<meta property="og:url" content="https://8899hudada.github.io/archives/2017/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="类 ： class symbols objects decorators  1. class 一种原型链的语法糖12345678910111213141516171819class Fruit &amp;#123;    constructor(name, calories) &amp;#123;        this.name = name        this.calories = calories">
+<meta property="og:description" content="乐观 积极 快">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T06:34:54.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习类Class简记">
-<meta name="twitter:description" content="类 ： class symbols objects decorators  1. class 一种原型链的语法糖12345678910111213141516171819class Fruit &amp;#123;    constructor(name, calories) &amp;#123;        this.name = name        this.calories = calories">
+<meta name="twitter:title" content="胡大大的博客">
+<meta name="twitter:description" content="乐观 积极 快">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,233 +160,62 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-学习类Class简记" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      学习类Class简记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/02/01/hello-world/" class="archive-article-date">
+  	<time datetime="2017-02-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/02/01/hello-world/">Hello World</a>
     </h1>
   
 
-        
-        <a href="/2018/04/02/学习类Class简记/" class="archive-article-date">
-  	<time datetime="2018-04-02T02:02:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
-</a>
-        
-        
-          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>类 ： class symbols objects decorators</p>
-</blockquote>
-<h3 id="1-class-一种原型链的语法糖"><a href="#1-class-一种原型链的语法糖" class="headerlink" title="1. class 一种原型链的语法糖"></a>1. class 一种原型链的语法糖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Fruit &#123;</span><br><span class="line">    constructor(name, calories) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.calories = calories</span><br><span class="line">        this.pieces = 1</span><br><span class="line">    &#125;</span><br><span class="line">    chop () &#123;</span><br><span class="line">        this.pieces++</span><br><span class="line">    &#125;</span><br><span class="line">    bite (person) &#123;</span><br><span class="line">        if (this.piecess &lt; 1) return</span><br><span class="line">        const calories = this.calories/this.pieces</span><br><span class="line">        person.satiety += calories</span><br><span class="line">        this.calories -= calories</span><br><span class="line">        this.pieces--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">util.inherits(Banana,Fruit)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="2-symbols-协议-命名冲突"><a href="#2-symbols-协议-命名冲突" class="headerlink" title="2.symbols 协议/命名冲突"></a>2.symbols 协议/命名冲突</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const first = Symbol()</span><br><span class="line">object.getOwnPropertySymbol()</span><br><span class="line">Symbol.for(key) //获取symbols</span><br><span class="line">Symbol.keyFor(symbol) // 来提取符号的key</span><br><span class="line">Symbol.match() // 正则</span><br><span class="line">Symbol.iterator</span><br></pre></td></tr></table></figure>
-<h3 id="3-objects"><a href="#3-objects" class="headerlink" title="3.objects"></a>3.objects</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object.assign(&#123;&#125;, options)</span><br><span class="line">Object.is</span><br><span class="line"></span><br><span class="line">Object.create()</span><br></pre></td></tr></table></figure>
-<h3 id="4-js规范-保存函数功能的单一性-避免重复的代码"><a href="#4-js规范-保存函数功能的单一性-避免重复的代码" class="headerlink" title="4. js规范 保存函数功能的单一性 避免重复的代码"></a>4. js规范 保存函数功能的单一性 避免重复的代码</h3><p>async/await  &gt; promise<br>Eslint - plugin - prettier</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3, 4]</span><br><span class="line">.map(item =&gt; item*2)</span><br><span class="line">.filter(item =&gt; item &gt; 2)</span><br><span class="line">.forEach(item =&gt; console.log(item))</span><br></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/04/02/学习类Class简记/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/04/04/px2rem-以及-css模块化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          px2rem 以及 css模块化
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/04/01/webpack-打包配置NODE-ENV/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">webpack 打包配置NODE_ENV</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-class-一种原型链的语法糖"><span class="toc-number">1.</span> <span class="toc-text">1. class 一种原型链的语法糖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-symbols-协议-命名冲突"><span class="toc-number">2.</span> <span class="toc-text">2.symbols 协议/命名冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-objects"><span class="toc-number">3.</span> <span class="toc-text">3.objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-js规范-保存函数功能的单一性-避免重复的代码"><span class="toc-number">4.</span> <span class="toc-text">4. js规范 保存函数功能的单一性 避免重复的代码</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
-<!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-    <span class="btn-bg"></span>
-    <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-class-一种原型链的语法糖"><span class="toc-number">1.</span> <span class="toc-text">1. class 一种原型链的语法糖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-symbols-协议-命名冲突"><span class="toc-number">2.</span> <span class="toc-text">2.symbols 协议/命名冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-objects"><span class="toc-number">3.</span> <span class="toc-text">3.objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-js规范-保存函数功能的单一性-避免重复的代码"><span class="toc-number">4.</span> <span class="toc-text">4. js规范 保存函数功能的单一性 避免重复的代码</span></a></li></ol>
-   </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -410,8 +238,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
