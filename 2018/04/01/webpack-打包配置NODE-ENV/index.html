@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="这是webpack打包时的主要两个功能：   清除dist文件 配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod    1.pakage.json安装相关功能的插件：devDependencies =&amp;gt; {clean-webpack-plugin,cross-env} 2.webpack.base.con">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T01:57:31.716Z">
+<meta property="og:updated_time" content="2018-06-11T01:59:09.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack 打包配置NODE_ENV">
 <meta name="twitter:description" content="这是webpack打包时的主要两个功能：   清除dist文件 配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod    1.pakage.json安装相关功能的插件：devDependencies =&amp;gt; {clean-webpack-plugin,cross-env} 2.webpack.base.con">
@@ -191,7 +191,7 @@
 <h3 id="1-pakage-json"><a href="#1-pakage-json" class="headerlink" title="1.pakage.json"></a>1.pakage.json</h3><p>安装相关功能的插件：devDependencies =&gt; {clean-webpack-plugin,cross-env}</p>
 <h3 id="2-webpack-base-config-js"><a href="#2-webpack-base-config-js" class="headerlink" title="2.webpack.base.config.js"></a>2.webpack.base.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new webpack.Provideplugin(&#123;&#125;),</span><br><span class="line">        new webpack.DefinePlugin(&#123;</span><br><span class="line">            &apos;process.env&apos;: &#123;</span><br><span class="line">                NODE_ENV: JSON.stringify(process.env.NODE_ENV || &apos;development&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="3-webpack-prod-config-js"><a href="#3-webpack-prod-config-js" class="headerlink" title="3.webpack.prod.config.js"></a>3.webpack.prod.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const cleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;)</span><br><span class="line">const Path = require(&apos;path&apos;)</span><br><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/dist/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new cleanWebpackPlugin([&apos;dist&apos;], &#123;</span><br><span class="line">            root: path.resolve(__dirname, &apos;../dist&apos;)</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-main-js"><a href="#4-main-js" class="headerlink" title="4.main.js"></a>4.main.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const baseUrl = &#123;</span><br><span class="line">    development: &apos;--------&apos;, // 测试地址</span><br><span class="line">    production: &apos;--------&apos; // 生产地址</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">baseUrl: baseUrl[process.env.NODE_ENV]</span><br></pre></td></tr></table></figure>
+<h3 id="4-main-js-调用"><a href="#4-main-js-调用" class="headerlink" title="4.main.js 调用"></a>4.main.js 调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const baseUrl = &#123;</span><br><span class="line">    development: &apos;--------&apos;, // 测试地址</span><br><span class="line">    production: &apos;--------&apos; // 生产地址</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">baseUrl: baseUrl[process.env.NODE_ENV]</span><br></pre></td></tr></table></figure>
 
       
 
@@ -301,11 +301,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/08/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/02/学习类Class简记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          学习类Class简记
         
       </div>
     </a>
@@ -339,7 +339,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pakage-json"><span class="toc-number">1.</span> <span class="toc-text">1.pakage.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-webpack-base-config-js"><span class="toc-number">2.</span> <span class="toc-text">2.webpack.base.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-webpack-prod-config-js"><span class="toc-number">3.</span> <span class="toc-text">3.webpack.prod.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-main-js"><span class="toc-number">4.</span> <span class="toc-text">4.main.js</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pakage-json"><span class="toc-number">1.</span> <span class="toc-text">1.pakage.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-webpack-base-config-js"><span class="toc-number">2.</span> <span class="toc-text">2.webpack.base.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-webpack-prod-config-js"><span class="toc-number">3.</span> <span class="toc-text">3.webpack.prod.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-main-js-调用"><span class="toc-number">4.</span> <span class="toc-text">4.main.js 调用</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -451,11 +451,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">px2rem cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">http js</a>
               </li>
             
             <div class="clearfix"></div>

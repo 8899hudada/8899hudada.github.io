@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>Archives: 2018 | 胡大大的博客</title>
+  <title>实现vue双向数据绑定 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/archives/2018/index.html">
+  <meta name="description" content="myvue Object对象的defineProperty属性，重写data的set和get函数来实现的  123#app &amp;#123;    text-align: center;&amp;#125; 1234567&amp;lt;div id=&quot;app&quot;&amp;gt;    &amp;lt;form&amp;gt;        &amp;lt;input type=&quot;text&quot; v-model=&quot;number&quot;&amp;gt;        &amp;">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现vue双向数据绑定">
+<meta property="og:url" content="https://8899hudada.github.io/2018/06/01/实现vue双向数据绑定/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="myvue Object对象的defineProperty属性，重写data的set和get函数来实现的  123#app &amp;#123;    text-align: center;&amp;#125; 1234567&amp;lt;div id=&quot;app&quot;&amp;gt;    &amp;lt;form&amp;gt;        &amp;lt;input type=&quot;text&quot; v-model=&quot;number&quot;&amp;gt;        &amp;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-11T03:34:52.594Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="实现vue双向数据绑定">
+<meta name="twitter:description" content="myvue Object对象的defineProperty属性，重写data的set和get函数来实现的  123#app &amp;#123;    text-align: center;&amp;#125; 1234567&amp;lt;div id=&quot;app&quot;&amp;gt;    &amp;lt;form&amp;gt;        &amp;lt;input type=&quot;text&quot; v-model=&quot;number&quot;&amp;gt;        &amp;">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -158,188 +159,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-实现vue双向数据绑定" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/11/vue-内部运行机制/" class="archive-article-date">
-  	<time datetime="2018-06-11T03:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/11/vue-内部运行机制/">vue 内部运行机制</a>
+    <h1 class="article-title" itemprop="name">
+      实现vue双向数据绑定
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/css-init/" class="archive-article-date">
-  	<time datetime="2018-06-04T03:51:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/css-init/">css init</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/从url输入到页面加载的过程-完善前端体系/" class="archive-article-date">
-  	<time datetime="2018-06-04T03:37:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/从url输入到页面加载的过程-完善前端体系/">从url输入到页面加载的过程--完善前端体系</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">http js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/02/简单实现vue双向数据绑定/" class="archive-article-date">
-  	<time datetime="2018-06-02T03:35:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/02/简单实现vue双向数据绑定/">简单实现vue双向数据绑定</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/实现vue双向数据绑定/" class="archive-article-date">
+        
+        <a href="/2018/06/01/实现vue双向数据绑定/" class="archive-article-date">
   	<time datetime="2018-06-01T03:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/01/实现vue双向数据绑定/">实现vue双向数据绑定</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="myvue"><a href="#myvue" class="headerlink" title="myvue"></a>myvue</h3><blockquote>
+<p>Object对象的defineProperty属性，重写data的set和get函数来实现的</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#app &#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"number"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">v-click</span>=<span class="string">"increment"</span>&gt;</span>添加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-bind</span>=<span class="string">"number"</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myVue</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>._init(options);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myVue.prototype._init = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.$options = options;</span><br><span class="line">    <span class="keyword">this</span>.$el = <span class="built_in">document</span>.querySelector(options.el);</span><br><span class="line">    <span class="keyword">this</span>.$data = options.data;</span><br><span class="line">    <span class="keyword">this</span>.$methods = options.methods;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>._binding = &#123;&#125;;</span><br><span class="line">    <span class="keyword">this</span>._obverse(<span class="keyword">this</span>.$data);</span><br><span class="line">    <span class="keyword">this</span>._complie(<span class="keyword">this</span>.$el);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myVue.prototype._obverse = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">    <span class="built_in">Object</span>.keys(obj).forEach(<span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">            _this._binding[key] = &#123;</span><br><span class="line">                _directives: []</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="built_in">console</span>.log(_this._binding[key])</span><br><span class="line">            <span class="keyword">var</span> value = obj[key];</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> value === <span class="string">'object'</span>) &#123;</span><br><span class="line">                _this._obverse(value);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> binding = _this._binding[key];</span><br><span class="line">            <span class="built_in">Object</span>.defineProperty(_this.$data, key, &#123;</span><br><span class="line">                enumerable: <span class="literal">true</span>,</span><br><span class="line">                configurable: <span class="literal">true</span>,</span><br><span class="line">                get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>获取<span class="subst">$&#123;value&#125;</span>`</span>);</span><br><span class="line">                    <span class="keyword">return</span> value;</span><br><span class="line">                &#125;,</span><br><span class="line">                set: <span class="function"><span class="keyword">function</span> (<span class="params">newVal</span>) </span>&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>更新<span class="subst">$&#123;newVal&#125;</span>`</span>);</span><br><span class="line">                    <span class="keyword">if</span> (value !== newVal) &#123;</span><br><span class="line">                        value = newVal;</span><br><span class="line">                        binding._directives.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">                            item.update();</span><br><span class="line">                        &#125;)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myVue.prototype._complie = <span class="function"><span class="keyword">function</span> (<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> nodes = root.children;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; nodes.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> node = nodes[i];</span><br><span class="line">        <span class="keyword">if</span> (node.children.length) &#123;</span><br><span class="line">            <span class="keyword">this</span>._complie(node);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (node.hasAttribute(<span class="string">'v-click'</span>)) &#123;</span><br><span class="line">            node.onclick = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> attrVal = nodes[i].getAttribute(<span class="string">'v-click'</span>);</span><br><span class="line">                <span class="keyword">return</span> _this.$methods[attrVal].bind(_this.$data);</span><br><span class="line">            &#125;)();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (node.hasAttribute(<span class="string">'v-model'</span>) &amp;&amp; (node.tagName == <span class="string">'INPUT'</span> || node.tagName == <span class="string">'TEXTAREA'</span>)) &#123;</span><br><span class="line">            node.addEventListener(<span class="string">'input'</span>, (<span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> attrVal = node.getAttribute(<span class="string">'v-model'</span>);</span><br><span class="line">                _this._binding[attrVal]._directives.push(<span class="keyword">new</span> Watcher(</span><br><span class="line">                    <span class="string">'input'</span>,</span><br><span class="line">                    node,</span><br><span class="line">                    _this,</span><br><span class="line">                    attrVal,</span><br><span class="line">                    <span class="string">'value'</span></span><br><span class="line">                ))</span><br><span class="line"></span><br><span class="line">                <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                    _this.$data[attrVal] =  nodes[key].value;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)(i));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (node.hasAttribute(<span class="string">'v-bind'</span>)) &#123;</span><br><span class="line">            <span class="keyword">var</span> attrVal = node.getAttribute(<span class="string">'v-bind'</span>);</span><br><span class="line">            _this._binding[attrVal]._directives.push(<span class="keyword">new</span> Watcher(</span><br><span class="line">                <span class="string">'text'</span>,</span><br><span class="line">                node,</span><br><span class="line">                _this,</span><br><span class="line">                attrVal,</span><br><span class="line">                <span class="string">'innerHTML'</span></span><br><span class="line">            ))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Watcher</span>(<span class="params">name, el, vm, exp, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;         <span class="comment">//指令名称，例如文本节点，该值设为"text"</span></span><br><span class="line">    <span class="keyword">this</span>.el = el;             <span class="comment">//指令对应的DOM元素</span></span><br><span class="line">    <span class="keyword">this</span>.vm = vm;             <span class="comment">//指令所属myVue实例</span></span><br><span class="line">    <span class="keyword">this</span>.exp = exp;           <span class="comment">//指令对应的值，本例如"number"</span></span><br><span class="line">    <span class="keyword">this</span>.attr = attr;         <span class="comment">//绑定的属性值，本例为"innerHTML"</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.update();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Watcher.prototype.update = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.el[<span class="keyword">this</span>.attr] = <span class="keyword">this</span>.vm.$data[<span class="keyword">this</span>.exp];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> app = <span class="keyword">new</span> myVue(&#123;</span><br><span class="line">        el:<span class="string">'#app'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            number: <span class="number">0</span>,</span><br><span class="line">            count: <span class="number">0</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            increment: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.number ++;</span><br><span class="line">            &#125;,</span><br><span class="line">            incre: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.count ++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -351,212 +229,127 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/06/01/实现vue双向数据绑定/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/杂记/" class="archive-article-date">
-  	<time datetime="2018-05-30T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/06/02/简单实现vue双向数据绑定/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          简单实现vue双向数据绑定
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/30/杂记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">杂记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/杂记/">杂记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#myvue"><span class="toc-number">1.</span> <span class="toc-text">myvue</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/21/http通信协议/" class="archive-article-date">
-  	<time datetime="2018-04-21T02:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/21/http通信协议/">http通信协议笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/04/px2rem-以及-css模块化/" class="archive-article-date">
-  	<time datetime="2018-04-04T02:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/04/px2rem-以及-css模块化/">px2rem 以及 css模块化</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">px2rem cssMoudle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/02/学习类Class简记/" class="archive-article-date">
-  	<time datetime="2018-04-02T02:02:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/02/学习类Class简记/">学习类Class简记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/01/webpack-打包配置NODE-ENV/" class="archive-article-date">
-  	<time datetime="2018-04-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/01/webpack-打包配置NODE-ENV/">webpack 打包配置NODE_ENV</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -580,8 +373,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

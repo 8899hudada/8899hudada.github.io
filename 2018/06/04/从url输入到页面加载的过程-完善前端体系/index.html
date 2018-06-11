@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>Archives: 2018 | 胡大大的博客</title>
+  <title>从url输入到页面加载的过程--完善前端体系 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/archives/2018/index.html">
+  <meta name="description" content="从输入URL到页面加载的过程? 从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优">
+<meta name="keywords" content="http js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从url输入到页面加载的过程--完善前端体系">
+<meta property="og:url" content="https://8899hudada.github.io/2018/06/04/从url输入到页面加载的过程-完善前端体系/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="从输入URL到页面加载的过程? 从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-11T03:40:01.961Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="从url输入到页面加载的过程--完善前端体系">
+<meta name="twitter:description" content="从输入URL到页面加载的过程? 从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -158,112 +159,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-从url输入到页面加载的过程-完善前端体系" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/11/vue-内部运行机制/" class="archive-article-date">
-  	<time datetime="2018-06-11T03:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/11/vue-内部运行机制/">vue 内部运行机制</a>
+    <h1 class="article-title" itemprop="name">
+      从url输入到页面加载的过程--完善前端体系
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/css-init/" class="archive-article-date">
-  	<time datetime="2018-06-04T03:51:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/css-init/">css init</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/从url输入到页面加载的过程-完善前端体系/" class="archive-article-date">
+        
+        <a href="/2018/06/04/从url输入到页面加载的过程-完善前端体系/" class="archive-article-date">
   	<time datetime="2018-06-04T03:37:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/从url输入到页面加载的过程-完善前端体系/">从url输入到页面加载的过程--完善前端体系</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="从输入URL到页面加载的过程"><a href="#从输入URL到页面加载的过程" class="headerlink" title="从输入URL到页面加载的过程?"></a>从输入URL到页面加载的过程?</h3><ol>
+<li><p>从浏览器接收url到开启网络请求线程（这一部分可以展开浏览器的机制以及进程与线程之间的关系）<br>浏览器是多进程的，有一个主控进程，以及每一个tab页面都会新开一个进程（某些情况下多个tab会合并进程）Browser进程：浏览器的主进程（负责协调、主控），只有一个,浏览器渲染进程（内核）：默认每个Tab页面一个进程，互不影响，控制页面渲染，脚本执行，事件处理等（有时候会优化，如多个空白tab会合并成一个进程）<br>多线程的浏览器内核: GUI线程 JS引擎线程 事件触发线程 定时器线程 网络请求线程<br>解析URL: protocol host port path query fragment</p>
+</li>
+<li><p>开启网络线程到发出一个完整的http请求（这一部分涉及到dns查询，tcp/ip请求，五层因特网协议栈等知识）<br>dns查询: 如果浏览器有缓存，直接使用浏览器缓存，否则使用本机缓存，再没有的话就是用host, 如果本地没有，就向dns域名服务器查询（当然，中间可能还会经过路由，也有缓存等），查询到对应的IP. 需要知道dns解析是很耗时的，因此如果解析域名过多，会让首屏加载变得过慢，可以考虑 dns-prefetch优化。<br>tcp/ip请求构建: http的本质就是 tcp/ip请求 , 三次握手  四次挥手（因为是全双工的，所以需要四次挥手）. get和post本质都是tcp/ip, get会产生一个tcp数据包，post两个。<br>五层因特网协议栈: 应用层(dns,http) DNS解析成IP并发送http请求  传输层(tcp,udp) 建立tcp连接（三次握手）  网络层(IP,ARP) IP寻址  数据链路层(PPP) 封装成帧 物理层(利用物理介质传输比特流)物理传输（然后传输的时候通过双绞线，电磁波等各种介质）</p>
+</li>
+<li><p>从服务器接收到请求到对应后台接收到请求（这一部分可能涉及到负载均衡，安全拦截以及后台内部的处理等等）<br>简单的说：用户发起的请求都指向调度服务器（反向代理服务器，譬如安装了nginx控制负载均衡），然后调度服务器根据实际的调度算法，分配不同的请求给对应集群中的服务器执行，然后调度器等待实际服务器的HTTP响应，并将它反馈给用户。<br>后台的处理: 一般有的后端是有统一的验证的，如安全拦截，跨域验证 , 如果这一步不符合规则，就直接返回了相应的http报文（如拒绝请求等）, 然后当验证通过后，才会进入实际的后台代码，此时是程序接收到请求，然后执行（譬如查询数据库，大量计算等等） ,等程序执行完毕后，就会返回一个http响应包（一般这一步也会经过多层封装）, 然后就是将这个包从后端发送到前端，完成交互</p>
+</li>
+<li><p>后台和前台的http交互（这一部分包括http头部、响应码、报文结构、cookie等知识，可以提下静态资源的cookie优化，以及编码解码，如gzip压缩等）<br>通用头部: 请求的web服务器地址  请求方式  请求的返回状态码  请求的远程服务器地址<br> 200——表明该请求被成功地完成，所请求的资源发送回客户端<br> 304——自从上次请求后，请求的网页未修改过，请客户端使用本地缓存<br> 400——客户端请求有错（譬如可以是安全模块拦截）<br> 401——请求未经授权<br> 403——禁止访问（譬如可以是未登录时禁止）<br> 404——资源未找到<br> 500——服务器内部错误<br> 503——服务不可用<br> 1xx——指示信息，表示请求已接收，继续处理 2xx——成功，表示请求已被成功接收、理解、接受 3xx——重定向，要完成请求必须进行更进一步的操作 4xx——客户端错误，请求有语法错误或请求无法实现 5xx——服务器端错误，服务器未能实现合法的请求<br>请求头部： Host请求的服务器URL 接收类型（对标服务端返回的Content-Type） Cookie   Connection（如keep-alive） User-Agent<br>响应头部：服务器端允许的请求Headers 请求方法 Origin头部 Content-Type Max-age Cache-Control Keep-Alive Server<br>请求/响应体<br>cookie以及优化： 浏览器本地就有这个cookie了，以后访问同域名下的页面时，自动带上cookie，自动检验，在有效时间内无需二次登陆。 cookie中设置 httponly（这样就无法通过js操作了） 优化： 将静态资源分组，分别放到不同的子域名下，而子域名请求时，是不会带上父级域名的cookie的，所以就避免了浪费<br>http1.1起，默认使用长连接，使用长连接会有这一行 Connection:keep-alive  注意： keep-alive不会永远保持，它有一个持续时间，一般在服务器中配置（如apache），另外长连接需要客户端和服务器都支持时才有效。<br>简述下http2.0的一些特性：多路复用（即一个tcp/ip连接可以请求多个资源） 首部压缩  二进制分帧  服务器端推送  请求优先级</p>
+</li>
+<li><p>单独拎出来的缓存问题，http的缓存（这部分包括http缓存头部，etag，catch-control等）<br>两种类型： 强缓存（ 200fromcache）与 协商缓存（ 304）<br>E-tag相比Last-Modified？<br>Last-Modified：表明服务端的文件最后何时改变的 它有一个缺陷就是只能精确到1s， 然后还有一个问题就是有的服务端的文件会周期性的改变，导致缓存失效<br>E-tag：是一种指纹机制，代表文件相关指纹 只有文件变才会变，也只要文件变就会变， 也没有精确时间的限制，只要文件一变，立马E-tag就不一样了</p>
+</li>
+<li><p>浏览器接收到http数据包后的解析流程（解析html-词法分析然后解析成dom树、解析css生成css规则树、合并成render树，然后layout、painting渲染、复合图层的合成、GPU绘制、外链资源的处理、loaded和domcontentloaded等）<br>渲染步骤大致可以分为以下几步：<br>解析HTML，构建DOM树  解析CSS，生成CSS规则树 合并DOM树和CSS规则，生成render树<br>布局render树（Layout/reflow），负责各元素尺寸、位置的计算  绘制render树（paint），绘制页面像素信息<br>浏览器会将各层的信息发送给GPU，GPU会将各层合成（composite），显示在屏幕上  回流、重绘（offset(Top/Left/Width/Height) scroll(Top/Left/Width/Height) cilent(Top/Left/Width/Height) width,height 调用了getComputedStyle()或者IE的currentStyle）<br>domcontentloaded：事件触发时，仅当DOM加载完成<br>loaded：事件触发时，页面上所有的DOM，样式表，脚本，图片都已经加载完成了</p>
+</li>
+<li><p>CSS的可视化格式模型（元素的渲染规则，如包含块，控制框，BFC，IFC等概念）<br>如何触发BFC？ 元素 float属性不为none  position为absolute或fixed display为inline-block,flex,inline-flex，table，table-cell，table-caption overflow不为 visible<br>display:table  它本身不产生BFC，但是它会产生匿名框（包含 display:table-cell的框），而这个匿名框产生BFC。</p>
+</li>
+<li><p>JS引擎解析过程（JS的解释阶段，预处理阶段，执行阶段生成执行上下文，VO，作用域链、回收机制等等）<br>JS引擎的处理过程可以简述如下：词法分析 =&gt; 词元  语法分析 =&gt; 语法树  翻译器=&gt; 将代码转为字节码   字节码解释器 =&gt; 机器码  最终计算机执行的就是机器码<br>即时编译: 核心的 JIT编译器将源码编译成机器码运行<br>GC时，停止响应其他操作， 避免GC造成的长时间停止响应。 分代回收: 多回收“临时对象”区 少回收“持久对象”区 减少每次需遍历的对象，从而减少每次GC的耗时</p>
+</li>
+<li><p>其它（可以拓展不同的知识模块，如跨域，web安全，hybrid模式等等内容）</p>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -275,288 +244,127 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/06/04/从url输入到页面加载的过程-完善前端体系/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/02/简单实现vue双向数据绑定/" class="archive-article-date">
-  	<time datetime="2018-06-02T03:35:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/06/04/css-init/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          css init
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/02/简单实现vue双向数据绑定/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单实现vue双向数据绑定</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/02/简单实现vue双向数据绑定/">简单实现vue双向数据绑定</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#从输入URL到页面加载的过程"><span class="toc-number">1.</span> <span class="toc-text">从输入URL到页面加载的过程?</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/01/实现vue双向数据绑定/" class="archive-article-date">
-  	<time datetime="2018-06-01T03:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/01/实现vue双向数据绑定/">实现vue双向数据绑定</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/30/杂记/" class="archive-article-date">
-  	<time datetime="2018-05-30T02:29:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/杂记/">杂记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/21/http通信协议/" class="archive-article-date">
-  	<time datetime="2018-04-21T02:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/21/http通信协议/">http通信协议笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/04/px2rem-以及-css模块化/" class="archive-article-date">
-  	<time datetime="2018-04-04T02:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/04/px2rem-以及-css模块化/">px2rem 以及 css模块化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">px2rem cssMoudle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/02/学习类Class简记/" class="archive-article-date">
-  	<time datetime="2018-04-02T02:02:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/02/学习类Class简记/">学习类Class简记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/01/webpack-打包配置NODE-ENV/" class="archive-article-date">
-  	<time datetime="2018-04-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/01/webpack-打包配置NODE-ENV/">webpack 打包配置NODE_ENV</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -580,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
