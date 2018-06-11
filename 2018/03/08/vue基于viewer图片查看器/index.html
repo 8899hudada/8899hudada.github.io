@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T03:50:49.232Z">
+<meta property="og:updated_time" content="2018-06-11T06:00:36.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue基于viewer图片查看器">
 <meta name="twitter:description" content="背景：公司正在用vue开发一款后台管理系统，有一个需求要查看图片：要求图片能够预览、放大、缩小、旋转、连续播放功能，写了很久都没能达到预想要求。    然后就在网上找相关插件，也没有找到vue相关的图片插件，情急之中就找到了一个JQ插件：viewer.js。于是乎就想着怎么把这个插件搬到vue组件里面来。  在vue里使用viewer.js======  现在就有3个难题 ：  1.引入jQ 2">
@@ -370,6 +370,33 @@
   
 
 
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <span class="btn-bg"></span>
+    <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#在vue里使用viewer-js"><span class="toc-number">1.</span> <span class="toc-text">在vue里使用viewer.js</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤"><span class="toc-number"></span> <span class="toc-text">1.项目是用webpack打包的，引入jq、viewerjs网上案例很多，就直接上步骤 </span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#a-首先需要添加项目中jquery、viewerjs的依赖"><span class="toc-number">0.1.</span> <span class="toc-text">a.首先需要添加项目中jquery、viewerjs的依赖</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#b-在build目录中配置webpack-base-config-js"><span class="toc-number">0.2.</span> <span class="toc-text">b.在build目录中配置webpack.base.config.js  </span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#c-在-vue文件中引入"><span class="toc-number">0.3.</span> <span class="toc-text">c.在.vue文件中引入  </span></a></li></ol></li></ol>
+   </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+     
+<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -398,7 +425,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -460,7 +487,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,11 +495,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -484,19 +515,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
             <div class="clearfix"></div>

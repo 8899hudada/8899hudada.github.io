@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="1. 从Chrome源码看DNS解析过程客户端向域名解析服务器发起查询，然后服务器返回响应。DNS服务器nameservers是在设备接入网络的时候路由器通过DHCP发给设备的，chrome会按照nameservers的顺序发起查询，并将结果缓存，有效时间根据ttl，有效期内两次查询直接使用cache。DNS解析的结果有几种类型，最常见的是A记录和CNAME记录，A记录表示结果是一个IP地址，CN">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T02:50:19.437Z">
+<meta property="og:updated_time" content="2018-06-11T06:00:08.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http通信协议笔记">
 <meta name="twitter:description" content="1. 从Chrome源码看DNS解析过程客户端向域名解析服务器发起查询，然后服务器返回响应。DNS服务器nameservers是在设备接入网络的时候路由器通过DHCP发给设备的，chrome会按照nameservers的顺序发起查询，并将结果缓存，有效时间根据ttl，有效期内两次查询直接使用cache。DNS解析的结果有几种类型，最常见的是A记录和CNAME记录，A记录表示结果是一个IP地址，CN">
@@ -385,6 +385,33 @@ raw  可以上传json,xml,文本等
   
 
 
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <span class="btn-bg"></span>
+    <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-从Chrome源码看DNS解析过程"><span class="toc-number">1.</span> <span class="toc-text">1. 从Chrome源码看DNS解析过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H5首屏秒开方案探讨：怎样减少白屏时间"><span class="toc-number">2.</span> <span class="toc-text">H5首屏秒开方案探讨：怎样减少白屏时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端优化："><span class="toc-number">3.</span> <span class="toc-text">前端优化：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Content-Type"><span class="toc-number">4.</span> <span class="toc-text">Content-Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原生http请求-超文本传输协议"><span class="toc-number">5.</span> <span class="toc-text">原生http请求: 超文本传输协议</span></a></li></ol>
+   </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+     
+<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -413,7 +440,7 @@ raw  可以上传json,xml,文本等
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -475,7 +502,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,11 +510,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,19 +530,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
             <div class="clearfix"></div>

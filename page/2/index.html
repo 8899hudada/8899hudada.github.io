@@ -160,6 +160,95 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-webpack-打包配置NODE-ENV" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/01/webpack-打包配置NODE-ENV/">webpack 打包配置NODE_ENV</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/01/webpack-打包配置NODE-ENV/" class="archive-article-date">
+  	<time datetime="2018-04-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>这是webpack打包时的主要两个功能：</p>
+<blockquote>
+<ol>
+<li>清除dist文件</li>
+<li>配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod</li>
+</ol>
+</blockquote>
+</blockquote>
+<h3 id="1-pakage-json"><a href="#1-pakage-json" class="headerlink" title="1.pakage.json"></a>1.pakage.json</h3><p>安装相关功能的插件：devDependencies =&gt; {clean-webpack-plugin,cross-env}</p>
+<h3 id="2-webpack-base-config-js"><a href="#2-webpack-base-config-js" class="headerlink" title="2.webpack.base.config.js"></a>2.webpack.base.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new webpack.Provideplugin(&#123;&#125;),</span><br><span class="line">        new webpack.DefinePlugin(&#123;</span><br><span class="line">            &apos;process.env&apos;: &#123;</span><br><span class="line">                NODE_ENV: JSON.stringify(process.env.NODE_ENV || &apos;development&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-webpack-prod-config-js"><a href="#3-webpack-prod-config-js" class="headerlink" title="3.webpack.prod.config.js"></a>3.webpack.prod.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const cleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;)</span><br><span class="line">const Path = require(&apos;path&apos;)</span><br><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/dist/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new cleanWebpackPlugin([&apos;dist&apos;], &#123;</span><br><span class="line">            root: path.resolve(__dirname, &apos;../dist&apos;)</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-main-js-调用"><a href="#4-main-js-调用" class="headerlink" title="4.main.js 调用"></a>4.main.js 调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const baseUrl = &#123;</span><br><span class="line">    development: &apos;--------&apos;, // 测试地址</span><br><span class="line">    production: &apos;--------&apos; // 生产地址</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">baseUrl: baseUrl[process.env.NODE_ENV]</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/01/webpack-打包配置NODE-ENV/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
     <article id="post-touchEvent" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -234,6 +323,9 @@
 
 
 
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
   
     <article id="post-vue基于viewer图片查看器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -329,6 +421,9 @@
 
 
 
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -411,6 +506,9 @@
 
 
 
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
   
   
     <nav id="page-nav">
@@ -447,7 +545,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -509,7 +607,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -517,11 +615,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hello gitBlog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,19 +635,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">http js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
             <div class="clearfix"></div>
