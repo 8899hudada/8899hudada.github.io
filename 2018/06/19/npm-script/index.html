@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
   <title>npm-script | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="npm script （from掘金小册） 两个小时学习 npm script    Let’s go ,Be a Power User of Everything">
+  <meta name="description" content="npm script 笔记 （from掘金小册） 两个小时学习 npm script    Let’s go ,Be a Power User of Everything">
 <meta name="keywords" content="掘金小册,npm script">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm-script">
 <meta property="og:url" content="https://8899hudada.github.io/2018/06/19/npm-script/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="npm script （from掘金小册） 两个小时学习 npm script    Let’s go ,Be a Power User of Everything">
+<meta property="og:description" content="npm script 笔记 （from掘金小册） 两个小时学习 npm script    Let’s go ,Be a Power User of Everything">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=eslint&step_word=&hs=0&pn=3&spn=0&di=6449780730&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1766163589%2C3785499802&os=478310038%2C2250140192&simid=0%2C0&adpicid=0&lpn=0&ln=166&fr=&fmq=1529457289646_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=11&oriquery=&objurl=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F4340772-bea77f051e95f2be.png&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bt455v_z%26e3Bv54AzdH3Fw6ptvsjAzdH3Fn9mal&gsm=0&rpstart=0&rpnum=0&islist=&querylist=">
-<meta property="og:updated_time" content="2018-06-20T03:03:10.354Z">
+<meta property="og:updated_time" content="2018-07-18T03:44:14.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm-script">
-<meta name="twitter:description" content="npm script （from掘金小册） 两个小时学习 npm script    Let’s go ,Be a Power User of Everything">
+<meta name="twitter:description" content="npm script 笔记 （from掘金小册） 两个小时学习 npm script    Let’s go ,Be a Power User of Everything">
 <meta name="twitter:image" content="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=eslint&step_word=&hs=0&pn=3&spn=0&di=6449780730&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1766163589%2C3785499802&os=478310038%2C2250140192&simid=0%2C0&adpicid=0&lpn=0&ln=166&fr=&fmq=1529457289646_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=11&oriquery=&objurl=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F4340772-bea77f051e95f2be.png&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bt455v_z%26e3Bv54AzdH3Fw6ptvsjAzdH3Fn9mal&gsm=0&rpstart=0&rpnum=0&islist=&querylist=">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
@@ -186,11 +186,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="npm-script-（from掘金小册）"><a href="#npm-script-（from掘金小册）" class="headerlink" title="npm script （from掘金小册）"></a>npm script （from掘金小册）</h3><blockquote>
+        <h3 id="npm-script-笔记-（from掘金小册）"><a href="#npm-script-笔记-（from掘金小册）" class="headerlink" title="npm script 笔记 （from掘金小册）"></a>npm script 笔记 （from掘金小册）</h3><blockquote>
 <p>两个小时学习 npm script  <br>  Let’s go ,<br>Be a Power User of Everything<br><a id="more"></a></p>
 </blockquote>
 <h3 id="1-2-运行多个-npm-script"><a href="#1-2-运行多个-npm-script" class="headerlink" title="1.2 运行多个 npm script"></a>1.2 运行多个 npm script</h3><p>*比 npm 内置的多命令运行机制更好用的解决方案：npm-run-all</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Expected linebreaks to be &apos;LF&apos; but found &apos;CRLF&apos;  linebreak-style </span><br><span class="line">linebreak-style: [&quot;error&quot;, &quot;windows&quot;]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&amp;&amp; 串行多个命令   &amp; 并行多个命令  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Expected linebreaks to be &apos;LF&apos; but found &apos;CRLF&apos;  linebreak-style </span><br><span class="line">linebreak-style: [&quot;error&quot;, &quot;windows&quot;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;semi&quot;: &quot;error&quot;,  js语句末尾强制要加分号  如果不加的话删除这一项即可</span><br></pre></td></tr></table></figure>
 <p><img src="https://image.baidu.com/search/detail?ct=503316480&amp;z=0&amp;ipn=d&amp;word=eslint&amp;step_word=&amp;hs=0&amp;pn=3&amp;spn=0&amp;di=6449780730&amp;pi=0&amp;rn=1&amp;tn=baiduimagedetail&amp;is=0%2C0&amp;istype=0&amp;ie=utf-8&amp;oe=utf-8&amp;in=&amp;cl=2&amp;lm=-1&amp;st=undefined&amp;cs=1766163589%2C3785499802&amp;os=478310038%2C2250140192&amp;simid=0%2C0&amp;adpicid=0&amp;lpn=0&amp;ln=166&amp;fr=&amp;fmq=1529457289646_R&amp;fm=&amp;ic=undefined&amp;s=undefined&amp;se=&amp;sme=&amp;tab=0&amp;width=undefined&amp;height=undefined&amp;face=undefined&amp;ist=&amp;jit=&amp;cg=&amp;bdtype=11&amp;oriquery=&amp;objurl=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F4340772-bea77f051e95f2be.png&amp;fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bt455v_z%26e3Bv54AzdH3Fw6ptvsjAzdH3Fn9mal&amp;gsm=0&amp;rpstart=0&amp;rpnum=0&amp;islist=&amp;querylist=" alt="我是图片"></p>
 <p><a href="https://www.cnblogs.com/my93/p/5681879.html" target="_blank" rel="noopener">eslint 书写规范</a></p>
@@ -227,7 +230,130 @@
 <li>postcover，清理掉临时文件，并且在浏览器中预览覆盖率报告；</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/package.json b/package.json</span><br><span class="line">index 8f67810..d297f2e 100644</span><br><span class="line">--- a/package.json</span><br><span class="line">+++ b/package.json</span><br><span class="line">@@ -4,13 +4,17 @@</span><br><span class="line">   scripts: &#123;</span><br><span class="line">+    &quot;precover&quot;: &quot;rm -rf coverage&quot;,</span><br><span class="line">+    &quot;cover&quot;: &quot;nyc --reporter=html npm test&quot;,</span><br><span class="line">+    &quot;postcover&quot;: &quot;rm -rf .nyc_output &amp;&amp; opn coverage/index.html&quot;</span><br><span class="line">   &#125;,</span><br><span class="line">@@ -22,7 +26,15 @@</span><br><span class="line">   &quot;devDependencies&quot;: &#123;</span><br><span class="line">     &quot;npm-run-all&quot;: &quot;^4.1.2&quot;,</span><br><span class="line">+    &quot;nyc&quot;: &quot;^11.3.0&quot;,</span><br><span class="line">+    &quot;opn-cli&quot;: &quot;^3.1.0&quot;,</span><br><span class="line">     &quot;stylelint&quot;: &quot;^8.2.0&quot;,</span><br><span class="line">     &quot;stylelint-config-standard&quot;: &quot;^17.0.0&quot;</span><br><span class="line">+  &#125;,</span><br><span class="line">+  &quot;nyc&quot;: &#123;</span><br><span class="line">+    &quot;exclude&quot;: [</span><br><span class="line">+      &quot;**/*.spec.js&quot;,</span><br><span class="line">+      &quot;.*.js&quot;</span><br><span class="line">+    ]</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-在-npm-script-中使用变量"><a href="#2-2-在-npm-script-中使用变量" class="headerlink" title="2.2 在 npm script 中使用变量"></a>2.2 在 npm script 中使用变量</h3>
+<h3 id="2-2-在-npm-script-中使用变量"><a href="#2-2-在-npm-script-中使用变量" class="headerlink" title="2.2 在 npm script 中使用变量"></a>2.2 在 npm script 中使用变量</h3><ol>
+<li>查看所有的npm环境变量： npm run env | grep npm_package | sort</li>
+<li>调用环境变量（直接在 npm script 给想要引用的变量前面加上 $ 符号即可）：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dummy&quot;: &quot;echo $npm_package_name&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="2-3-实现命令行自动补全（Windows下还没支持？）"><a href="#2-3-实现命令行自动补全（Windows下还没支持？）" class="headerlink" title="2.3 实现命令行自动补全（Windows下还没支持？）"></a>2.3 实现命令行自动补全（Windows下还没支持？）</h3><h4 id="2-3-1-当npm-script太多了，可以查找"><a href="#2-3-1-当npm-script太多了，可以查找" class="headerlink" title="2.3.1 当npm script太多了，可以查找"></a>2.3.1 当npm script太多了，可以查找</h4><ol>
+<li>npm run | less （这里的 less 不是 css 领域的 less，而是 linux 里面的工具）</li>
+<li>输入 /  和 对应的npm script 的关键字 敲回车  </li>
+<li>选中对应的npm script（选中即为复制）</li>
+<li>shift + zz 退出shell</li>
+<li>npm run 上面复制的npm script</li>
+</ol>
+<hr>
+<h4 id="2-3-2"><a href="#2-3-2" class="headerlink" title="2.3.2"></a>2.3.2</h4><ol>
+<li>npm run 空格 tab （查看当前需要run的命令）</li>
+</ol>
+<h3 id="3-1-实现-npm-script-跨平台兼容-（mac-Windows）"><a href="#3-1-实现-npm-script-跨平台兼容-（mac-Windows）" class="headerlink" title="3.1 实现 npm script 跨平台兼容 （mac Windows）"></a>3.1 实现 npm script 跨平台兼容 （mac Windows）</h3><h4 id="3-1-1-文件系统操作的跨平台兼容"><a href="#3-1-1-文件系统操作的跨平台兼容" class="headerlink" title="3.1.1 文件系统操作的跨平台兼容"></a>3.1.1 文件系统操作的跨平台兼容</h4><ol>
+<li>rimraf 或 del-cli，用来删除文件和目录，实现类似于 rm -rf 的功能；</li>
+<li>cpr，用于拷贝、复制文件和目录，实现类似于 cp -r 的功能；</li>
+<li>make-dir-cli，用于创建目录，实现类似于 mkdir -p 的功能；</li>
+</ol>
+<ul>
+<li>npm i rimraf cpr make-dir-cli -D<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- &quot;cover:cleanup&quot;: &quot;rm -rf coverage &amp;&amp; rm -rf .nyc_output&quot;,</span><br><span class="line">+ &quot;cover:cleanup&quot;: &quot;rimraf coverage &amp;&amp; rimraf .nyc_output&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="3-1-2-用-cross-var-引用变量"><a href="#3-1-2-用-cross-var-引用变量" class="headerlink" title="3.1.2 用 cross-var 引用变量"></a>3.1.2 用 cross-var 引用变量</h4><p>Linux 和 Windows 下引用变量的方式是不同的，Linux 下直接可以用 $npm_package_name，而 Windows 下必须使用 %npm_package_name%，我们可以使用 cross-var 实现跨平台的变量引用，具体步骤如下：<br>第 1 步，安装 cross-var 为开发依赖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i cross-var -D</span><br><span class="line"># npm install cross-var --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>第 2 步，改写引用变量 npm script，具体 diff 如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">-    &quot;cover:archive&quot;: &quot;mkdir -p coverage_archive/$npm_package_version &amp;&amp; cp -r coverage/* coverage_archive/$npm_package_version&quot;,</span><br><span class="line">+    &quot;cover:archive&quot;: &quot;cross-var \&quot;mkdir -p coverage_archive/$npm_package_version &amp;&amp; cp -r coverage/* coverage_archive/$npm_package_version\&quot;&quot;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="3-1-2-用-cross-env-设置环境变量"><a href="#3-1-2-用-cross-env-设置环境变量" class="headerlink" title="3.1.2 用 cross-env 设置环境变量"></a>3.1.2 用 cross-env 设置环境变量</h4><p>第 1 步，添加 cross-env 到开发依赖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i cross-env -D</span><br><span class="line"># npm install cross-env --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>第 2 步，改写使用了环境变量的 npm script：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">-    &quot;test&quot;: &quot;NODE_ENV=test mocha tests/&quot;,</span><br><span class="line">+    &quot;test&quot;: &quot;cross-env NODE_ENV=test mocha tests/&quot;,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-2-把庞大的-npm-script-拆到单独文件中"><a href="#3-2-把庞大的-npm-script-拆到单独文件中" class="headerlink" title="3.2 把庞大的 npm script 拆到单独文件中"></a>3.2 把庞大的 npm script 拆到单独文件中</h3><ol>
+<li><p>安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i scripty -D</span><br><span class="line"># npm install scripty --save-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>准备目录和文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p scripts/cover</span><br><span class="line">// 里命名为 scripts 是 scripty 默认的，实际上是可以自定义的</span><br><span class="line">touch scripts/cover.sh</span><br><span class="line">touch scripts/cover/serve.sh</span><br><span class="line">touch scripts/cover/open.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>创建的文件对应npm script 里面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;cover&quot;: &quot;scripty&quot;,</span><br><span class="line">  &quot;cover:serve&quot;: &quot;scripty&quot;,</span><br><span class="line">  &quot;cover:open&quot;: &quot;scripty&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p>给所有脚本增加可执行权限是必须的，否则 scripty 执行时会报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R a+x scripts/**/*.sh</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>对应脚本里面写入相应的命令行操作<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env bash</span><br><span class="line"></span><br><span class="line">http-server coverage_archive/$npm_package_version -p $npm_package_config_port</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="3-3-用-node-js-脚本替代复杂的-npm-script"><a href="#3-3-用-node-js-脚本替代复杂的-npm-script" class="headerlink" title="3.3 用 node.js 脚本替代复杂的 npm script"></a>3.3 用 node.js 脚本替代复杂的 npm script</h4><ol>
+<li><p>安装 shelljs 依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i shelljs -D</span><br><span class="line"># npm install shelljs --save-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建 Node.js 脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch scripts/cover.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 Node.js 实现同等功能<br>shelljs 为我们提供了各种常见命令的跨平台支持，比如 cp、mkdir、rm、cd 等命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const &#123; rm, cp, mkdir, exec, echo &#125; = require(&apos;shelljs&apos;);</span><br><span class="line">const chalk = require(&apos;chalk&apos;);</span><br><span class="line"></span><br><span class="line">console.log(chalk.green(&apos;1. remove old coverage reports...&apos;));</span><br><span class="line">rm(&apos;-rf&apos;, &apos;coverage&apos;);</span><br><span class="line">rm(&apos;-rf&apos;, &apos;.nyc_output&apos;);</span><br><span class="line"></span><br><span class="line">console.log(chalk.green(&apos;2. run test and collect new coverage...&apos;));</span><br><span class="line">exec(&apos;nyc --reporter=html npm run test&apos;);</span><br><span class="line"></span><br><span class="line">console.log(chalk.green(&apos;3. archive coverage report by version...&apos;));</span><br><span class="line">mkdir(&apos;-p&apos;, &apos;coverage_archive/$npm_package_version&apos;);</span><br><span class="line">cp(&apos;-r&apos;, &apos;coverage/*&apos;, &apos;coverage_archive/$npm_package_version&apos;);</span><br><span class="line"></span><br><span class="line">console.log(chalk.green(&apos;4. open coverage report for preview...&apos;));</span><br><span class="line">exec(&apos;npm-run-all --parallel cover:serve cover:open&apos;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对应修改npm script</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">     &quot;test&quot;: &quot;cross-env NODE_ENV=test mocha tests/&quot;,</span><br><span class="line">-    &quot;cover&quot;: &quot;scripty&quot;,</span><br><span class="line">+    &quot;cover&quot;: &quot;node scripts/cover.js&quot;,</span><br><span class="line">     &quot;cover:open&quot;: &quot;scripty&quot;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="4-1-文件变化时自动运行-npm-script"><a href="#4-1-文件变化时自动运行-npm-script" class="headerlink" title="4.1 文件变化时自动运行 npm script"></a>4.1 文件变化时自动运行 npm script</h4><h3 id="1-单元测试自动化"><a href="#1-单元测试自动化" class="headerlink" title="1. 单元测试自动化"></a>1. 单元测试自动化</h3><p>幸运的是，mocha 本身支持 –watch 参数<br>“watch:test”: “npm t – –watch”,</p>
+<h3 id="2-代码检查自动化"><a href="#2-代码检查自动化" class="headerlink" title="2. 代码检查自动化"></a>2. 代码检查自动化</h3><ol>
+<li><p>安装项目依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i onchange -D</span><br><span class="line"># npm install onchange --save-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加 npm script</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+    &quot;watch&quot;: &quot;npm-run-all --parallel watch:*&quot;,</span><br><span class="line">+    &quot;watch:lint&quot;: &quot;onchange -i \&quot;**/*.js\&quot; \&quot;**/*.less\&quot; -- npm run lint&quot;,</span><br><span class="line">     &quot;watch:test&quot;: &quot;npm t -- --watch&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>关于改动的几点说明：</p>
+<ul>
+<li>watch:lint 里面的文件匹配模式可以使用通配符，但是模式两边使用了转义的双引号，这样是跨平台兼容的；</li>
+<li>watch:lint 里面的 -i 参数是让 onchange 在启动时就运行一次 – 之后的命令，即代码没变化的时候，变化前后的对比大多数时候还是有价值的；</li>
+<li>watch 命令实际上是使用了 npm-run-all 来运行所有的 watch 子命令；</li>
+</ul>
+<h4 id="4-2-在-Git-Hooks-中执行-npm-script"><a href="#4-2-在-Git-Hooks-中执行-npm-script" class="headerlink" title="4.2 在 Git Hooks 中执行 npm script"></a>4.2 在 Git Hooks 中执行 npm script</h4><p>Git 在代码版本管理之外，也提供了类似 npm script 里 pre、post 的钩子机制，叫做 Git Hooks，钩子机制能让我们在代码 commit、push 之前（后）做自己想做的事情</p>
+<ol>
+<li><p>安装项目依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i husky lint-staged -D</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加 npm script</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">+    &quot;precommit&quot;: &quot;npm run lint&quot;,</span><br><span class="line">+    &quot;prepush&quot;: &quot;npm run test&quot;,</span><br><span class="line">     &quot;lint&quot;: &quot;npm-run-all --parallel lint:*&quot;,</span><br><span class="line">     &quot;lint:js&quot;: &quot;eslint *.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 lint-staged 改进 pre-commit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   &quot;scripts&quot;: &#123;</span><br><span class="line">-    &quot;precommit&quot;: &quot;npm run lint&quot;,</span><br><span class="line">+    &quot;precommit&quot;: &quot;lint-staged&quot;,</span><br><span class="line">     &quot;prepush&quot;: &quot;npm run test&quot;,</span><br><span class="line">     &quot;lint&quot;: &quot;npm-run-all --parallel lint:*&quot;,</span><br><span class="line">   &#125;,</span><br><span class="line">+  &quot;lint-staged&quot;: &#123;</span><br><span class="line">+    &quot;*.js&quot;: &quot;eslint&quot;,</span><br><span class="line">+    &quot;*.less&quot;: &quot;stylelint&quot;,</span><br><span class="line">+    &quot;*.css&quot;: &quot;stylelint&quot;,</span><br><span class="line">+    &quot;*.json&quot;: &quot;jsonlint --quiet&quot;,</span><br><span class="line">+    &quot;*.md&quot;: &quot;markdownlint --config .markdownlint.json&quot;</span><br><span class="line">+  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="4-4-使用-npm-script-实现构建流水线"><a href="#4-4-使用-npm-script-实现构建流水线" class="headerlink" title="4.4 使用 npm script 实现构建流水线"></a>4.4 使用 npm script 实现构建流水线</h4><p>例如：项目目录结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">client</span><br><span class="line">├── images</span><br><span class="line">│   └── schedule.png</span><br><span class="line">├── index.html</span><br><span class="line">├── scripts</span><br><span class="line">│   └── main.js</span><br><span class="line">└── styles</span><br><span class="line">    └── main.css</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p>准备构建目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+    &quot;prebuild&quot;: &quot;rm -rf dist &amp;&amp; mkdir -p dist/&#123;images,styles,scripts&#125;&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>准备脚本目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir scripts/build</span><br><span class="line">touch scripts/build.sh</span><br><span class="line">touch scripts/build/&#123;images,styles,scripts&#125;.sh</span><br><span class="line">chmod -R a+x scripts</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">scripts</span><br><span class="line">├── build</span><br><span class="line">│   ├── hash.sh</span><br><span class="line">│   ├── images.sh</span><br><span class="line">│   ├── scripts.sh</span><br><span class="line">│   └── styles.sh</span><br><span class="line">├── build.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>构建</li>
+</ol>
+<ul>
+<li><p>图片构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 安装依赖</span><br><span class="line">npm i imagemin-cli -D</span><br><span class="line">// 然后在 scripts/build/images.sh 中添加如下内容：</span><br><span class="line">imagemin client/images/* --out-dir=dist/images</span><br><span class="line">// 然后在 package.json 中添加 build:images 命令：</span><br><span class="line">+    &quot;build:images&quot;: &quot;scripty&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>样式构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm i cssmin -D</span><br><span class="line">// scripts/build/styles.sh</span><br><span class="line">for file in client/styles/*.css</span><br><span class="line">do</span><br><span class="line">  lessc $file | cssmin &gt; dist/styles/$(basename $file)</span><br><span class="line">done</span><br><span class="line">// 然后在 package.json 中添加 build:styles 命令：</span><br><span class="line">+    &quot;build:styles&quot;: &quot;scripty&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JS 构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm i uglify-es -D</span><br><span class="line">// 然后在 scripts/build/scripts.sh 中添加: </span><br><span class="line">for file in client/scripts/*.js</span><br><span class="line">do</span><br><span class="line">  ./node_modules/uglify-es/bin/uglifyjs $file --mangle &gt; dist/scripts/$(basename $file)</span><br><span class="line">done</span><br><span class="line">// 然后在 package.json 中添加 build:scripts 命令：</span><br><span class="line">+    &quot;build:scripts&quot;: &quot;scripty&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>尝试运行 npm run prebuild &amp;&amp; npm run build:scripts，然后观察 dist 目录的变化，应该能看到被 uglify-es 压缩后的代码。</p>
+<ol start="4">
+<li>资源版本号和引用替换<br>为了实现这个过程，我们需要引入两个小工具：</li>
+</ol>
+<ul>
+<li>hashmark，自动添加版本号</li>
+<li>replaceinfiles，自动完成引用替换，它需要家版本号过程的输出作为输入</li>
+</ul>
+<p>首先安装依赖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hashmark replaceinfiles -D</span><br></pre></td></tr></table></figure></p>
+<p>然后在 scripts/build/hash.sh 中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 给图片资源加上版本号，并且替换引用</span><br><span class="line">hashmark -c dist -r -l 8 &apos;**/*.&#123;png,jpg&#125;&apos; &apos;&#123;dir&#125;/&#123;name&#125;.&#123;hash&#125;&#123;ext&#125;&apos; | replaceinfiles -S -s &apos;dist/**/*.css&apos; -d &apos;&#123;dir&#125;/&#123;base&#125;&apos;</span><br><span class="line"></span><br><span class="line"># 给 js、css 资源加上版本号，并且替换引用</span><br><span class="line">hashmark -c dist -r -l 8 &apos;**/*.&#123;css,js&#125;&apos; &apos;&#123;dir&#125;/&#123;name&#125;.&#123;hash&#125;&#123;ext&#125;&apos; | replaceinfiles -S -s &apos;client/index.html&apos; -d &apos;dist/index.html&apos;</span><br></pre></td></tr></table></figure></p>
+<p>然后在 package.json 中添加 build:hash 命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+    &quot;build:hash&quot;: &quot;scripty&quot;,</span><br></pre></td></tr></table></figure></p>
+<p> package.json 中添加 build 命令把所有的步骤串起来，完整的 diff 如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-    &quot;client:static-server&quot;: &quot;http-server client/&quot;</span><br><span class="line">+    &quot;client:static-server&quot;: &quot;http-server client/&quot;,</span><br><span class="line">+    &quot;prebuild&quot;: &quot;rm -rf dist &amp;&amp; mkdir -p dist/&#123;images,styles,scripts&#125;&quot;,</span><br><span class="line">+    &quot;build&quot;: &quot;scripty&quot;,</span><br><span class="line">+    &quot;build:images&quot;: &quot;scripty&quot;,</span><br><span class="line">+    &quot;build:scripts&quot;: &quot;scripty&quot;,</span><br><span class="line">+    &quot;build:styles&quot;: &quot;scripty&quot;,</span><br><span class="line">+    &quot;build:hash&quot;: &quot;scripty&quot;</span><br></pre></td></tr></table></figure></p>
+<p>其中 scripts/build.sh 的内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for step in &apos;images&apos; &apos;scripts&apos; &apos;styles&apos; &apos;hash&apos;</span><br><span class="line">do</span><br><span class="line">  npm run build:$step</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -378,7 +504,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-script-（from掘金小册）"><span class="toc-number">1.</span> <span class="toc-text">npm script （from掘金小册）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-运行多个-npm-script"><span class="toc-number">2.</span> <span class="toc-text">1.2 运行多个 npm script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-给-npm-script-传递参数和添加注释"><span class="toc-number">3.</span> <span class="toc-text">1.3 给 npm script 传递参数和添加注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-使用-npm-script-的钩子"><span class="toc-number">4.</span> <span class="toc-text">2.1 使用 npm script 的钩子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#增加覆盖率收集"><span class="toc-number">4.1.</span> <span class="toc-text">增加覆盖率收集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-在-npm-script-中使用变量"><span class="toc-number">5.</span> <span class="toc-text">2.2 在 npm script 中使用变量</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-script-笔记-（from掘金小册）"><span class="toc-number">1.</span> <span class="toc-text">npm script 笔记 （from掘金小册）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-运行多个-npm-script"><span class="toc-number">2.</span> <span class="toc-text">1.2 运行多个 npm script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-给-npm-script-传递参数和添加注释"><span class="toc-number">3.</span> <span class="toc-text">1.3 给 npm script 传递参数和添加注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-使用-npm-script-的钩子"><span class="toc-number">4.</span> <span class="toc-text">2.1 使用 npm script 的钩子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#增加覆盖率收集"><span class="toc-number">4.1.</span> <span class="toc-text">增加覆盖率收集</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-在-npm-script-中使用变量"><span class="toc-number">5.</span> <span class="toc-text">2.2 在 npm script 中使用变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-实现命令行自动补全（Windows下还没支持？）"><span class="toc-number">6.</span> <span class="toc-text">2.3 实现命令行自动补全（Windows下还没支持？）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-当npm-script太多了，可以查找"><span class="toc-number">6.1.</span> <span class="toc-text">2.3.1 当npm script太多了，可以查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2"><span class="toc-number">6.2.</span> <span class="toc-text">2.3.2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-实现-npm-script-跨平台兼容-（mac-Windows）"><span class="toc-number">7.</span> <span class="toc-text">3.1 实现 npm script 跨平台兼容 （mac Windows）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-文件系统操作的跨平台兼容"><span class="toc-number">7.1.</span> <span class="toc-text">3.1.1 文件系统操作的跨平台兼容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-用-cross-var-引用变量"><span class="toc-number">7.2.</span> <span class="toc-text">3.1.2 用 cross-var 引用变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-用-cross-env-设置环境变量"><span class="toc-number">7.3.</span> <span class="toc-text">3.1.2 用 cross-env 设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-把庞大的-npm-script-拆到单独文件中"><span class="toc-number">8.</span> <span class="toc-text">3.2 把庞大的 npm script 拆到单独文件中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-用-node-js-脚本替代复杂的-npm-script"><span class="toc-number">8.1.</span> <span class="toc-text">3.3 用 node.js 脚本替代复杂的 npm script</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-文件变化时自动运行-npm-script"><span class="toc-number">8.2.</span> <span class="toc-text">4.1 文件变化时自动运行 npm script</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-单元测试自动化"><span class="toc-number">9.</span> <span class="toc-text">1. 单元测试自动化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-代码检查自动化"><span class="toc-number">10.</span> <span class="toc-text">2. 代码检查自动化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-在-Git-Hooks-中执行-npm-script"><span class="toc-number">10.1.</span> <span class="toc-text">4.2 在 Git Hooks 中执行 npm script</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-使用-npm-script-实现构建流水线"><span class="toc-number">10.2.</span> <span class="toc-text">4.4 使用 npm script 实现构建流水线</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -495,27 +621,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">easy-mock</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">moment-format</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lodash</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -524,6 +630,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">npm script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,11 +653,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">toc</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sublime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">easy-mock</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">moment-format</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">lodash</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -563,15 +693,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">base64</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
