@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>Tag: 移动端 | 胡大大的博客</title>
+  <title>git 使用详解 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/tags/移动端/index.html">
+  <meta name="description" content="git 使用详解 笔记">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 使用详解">
+<meta property="og:url" content="https://8899hudada.github.io/2018/07/18/git-使用详解/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="git 使用详解 笔记">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-19T07:36:32.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="git 使用详解">
+<meta name="twitter:description" content="git 使用详解 笔记">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -160,62 +161,280 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git-使用详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/26/touchEvent/" class="archive-article-date">
-  	<time datetime="2018-03-26T07:32:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/26/touchEvent/">触摸事件</a>
+    <h1 class="article-title" itemprop="name">
+      git 使用详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/07/18/git-使用详解/" class="archive-article-date">
+  	<time datetime="2018-07-18T04:29:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
+</a>
+        
+        
+          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git 使用详解 笔记</p>
+<a id="more"></a>
+<hr>
+<h2 id="Feature-Branching-极力推荐的工作流"><a href="#Feature-Branching-极力推荐的工作流" class="headerlink" title="Feature Branching(极力推荐的工作流):"></a>Feature Branching(极力推荐的工作流):</h2><ol>
+<li>任何新的功能（feature）或 bug 修复全都新建一个 branch 来写</li>
+<li>branch 写完后，合并到 master，然后删掉这个 branch</li>
+</ol>
+<ul>
+<li>操作 （所在分支）</li>
+<li>git pull  (master)</li>
+<li>git chekcout books 在分支上开发 (master to books)<br>(开发完成后 ， git add .   git commit -m ‘books功能完成’)</li>
+<li>git checkout master (books to master)</li>
+<li>git pull # merge 之前 pull 一下，让 master 更新到和远程仓库同步 (master)</li>
+<li>git checkout books (master to books)</li>
+<li>git rebase master (books)</li>
+<li>git checkout master (books to master)</li>
+<li>git merge books (master)</li>
+<li>git push  (master)</li>
+<li>git branch -d books (master)</li>
+<li>git push origin -d books (master)<br>本地提交代码后 删除本地分支、 用 -d 参数把远程仓库的 branch 也删了</li>
+</ul>
+<hr>
+<ol>
+<li>git clone https:git地址</li>
+<li>git log</li>
+<li>git status</li>
+<li>git add </li>
+<li>git commit (按一下 “i”（小写）来切换到插入模式 要按 ESC 键返回到命令模式，然后连续输入两个大写的 “Z” （用 Shift 键或 Capslock 键都可以） 就保存并退出了)</li>
+<li>git pull  (git fetch  &amp;&amp; git merge)</li>
+<li>git push<br>当前 commit 在哪里，HEAD 就在哪里，这是一个永远自动指向当前 commit 的引用，所以你永远可以用 HEAD 来操作当前 commit</li>
+<li>git branch feature1</li>
+<li>git checkout feature1  (git checkout -b 名称)</li>
+<li>git branch -d 名称</li>
+<li>git config</li>
+<li>git push –set-upstream origin feature111</li>
+<li>git push origin branch_name(本地的新分支)</li>
+<li>git merge feature1</li>
+<li>git merge –abort (Git 仓库就会回到 merge 前的状态)</li>
+<li>git merge origin/HEAD</li>
+<li>git log -p （查看commit日志信息）</li>
+<li>git log –stat （查看commit日志 简略信息）</li>
+<li>git show</li>
+<li>git show 5e68b0d8 (查看某个commit的详细改动)</li>
+<li>git show 5e68b0d8 shoppingList.txt （看指定 commit 中的指定文件）</li>
+<li>git diff (比对工作目录和暂存区)</li>
+<li>git diff –staged (比对暂存区和上一条提交)</li>
+</ol>
+<hr>
+<ol start="23">
+<li>git checkout branch1 (先切换到某个分支 然后rebase master 分支，和merge是相反的)</li>
+<li>git rebase master </li>
+<li>git checkout master</li>
+<li>git merge branch1</li>
+</ol>
+<hr>
+<ol start="27">
+<li>git commit –amend （编辑当前commit 生成一条新的 commit）</li>
+<li>git rebase -i HEAD^^ （把当前 commit （ HEAD 所指向的 commit） rebase 到 HEAD 之前 2 个的 commit 上：git rebase –interactive 相对commit）</li>
+<li>git reset –hard HEAD^（撤销刚刚commit的代码：git reset –hard 目标commit）</li>
+</ol>
+<hr>
+<ol start="30">
+<li><p>git rebase –onto HEAD^^ HEAD^ branch1<br>（以倒数第二个 commit 为起点（起点不包含在 rebase 序列里哟），branch1 为终点）<br>git rebase –onto 第3个commit 第4个commit branch1</p>
+</li>
+<li><p>当错误的 commit 已经被 push 上去时的解决方案</p>
+</li>
+</ol>
+<ul>
+<li>如果出错内容在私有 branch：在本地把内容修正后，强制 push (push -f）一次就可以解决  git push origin branch1 -f （强制提交自己的分支到远程仓库）</li>
+<li>如果出错内容在 master：不要强制 push，而要用 revert 把写错的 commit 撤销   （用法很简单，你希望撤销哪个 commit，就把它填在后面：git revert HEAD^） 可以，但是要想清楚，revert 是强行在你的commits链条上去除某一个环节，因此不是非常确定对后续的commit没有任何影响的话，最好还是不要乱用</li>
+</ul>
+<ol start="32">
+<li><p>git reset –hard HEAD^ （在最新的 commit 写错时，可以用 reset –hard 来把 commit 撤销；reset 的本质：移动 HEAD 以及它所指向的 branch；参数 –hard ：在 reset –hard 后，所有的改动都被擦掉了；参数 –soft ：在重置 HEAD 和 branch 时，保留工作目录和暂存区中的内容，并把重置 HEAD 所带来的新的差异放进暂存区，可以通过 git show –stat 查看）<br>reset 如果不加参数，那么默认使用 –mixed 参数。它的行为是：保留工作目录，并且清空暂存区。（git reset HEAD^）</p>
+</li>
+<li><p>git checkout branch2 本质上的功能其实是：签出（ checkout ）指定的 commit<br>git checkout –detach =&gt; Git 就会把 HEAD 和 branch 脱离，直接指向当前 commit</p>
+</li>
+</ol>
+<p>暂存手上的工作处理其他的事务，处理完后再从暂存里读出来<br>当前分支  git stash<br>切到其他分支处理事务<br>完事后，切回当前分支 git stash pop<br>注意： 没有被 track 的文件（即从来没有被 add 过的文件不会被 stash 起来，因为 Git 会忽略它们，如果想把这些文件也一起 stash，可以加上 <code>-u</code> 参数，它是 <code>--include-untracked</code> 的简写 git stash -u<br>慎用多条stash，可以使用 git stash list ，查看全部stash列表。然后 git stash apply stash@{0}，<br>恢复之前的工作。接着 git stash drop stash@{0}，删除这个stash。</p>
+<ol start="34">
+<li><p>git checkout . &amp;&amp; git clean -xdf  =&gt; git丢弃本地修改的所有文件（新增、删除、修改）</p>
+</li>
+<li><p>找回被误删的分支<br>git reflog  (查看一下 HEAD 的移动历史)<br>git checkout c08de9a （签出到分支最后一次commit的地方）<br>git checkout -b branch1  这样，你刚删除的 branch1 就找回来了</p>
+</li>
+<li><p>.gitignore 排除不想被管理的文件和目录  常用的不上传 node_modules</p>
+</li>
+<li><p>git tag<br>// 创建带备注标签(推荐)<br>git tag -a 1.0.0 -m “这是备注信息”<br>// 指定版本发送<br>git push origin 1.0.0<br>/// 删除远程仓库对应标签<br>// Git版本 &gt; V1.7.0<br>git push origin –delete 1.0.0</p>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/07/18/git-使用详解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/09/easy-mock-moment-format-lodash/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">easy mock moment.format lodash</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature-Branching-极力推荐的工作流"><span class="toc-number">1.</span> <span class="toc-text">Feature Branching(极力推荐的工作流):</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -238,9 +457,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
