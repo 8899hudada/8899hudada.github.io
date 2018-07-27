@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>vw 实现移动端适配 | 胡大大的博客</title>
+  <title>写一个webpack插件 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
-<meta name="keywords" content="vue,H5">
+  <meta name="description" content="原文：Webpack中文文档《如何编写一个插件》一节">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vw 实现移动端适配">
-<meta property="og:url" content="https://8899hudada.github.io/2018/06/11/vw-实现移动端适配/index.html">
+<meta property="og:title" content="写一个webpack插件">
+<meta property="og:url" content="https://8899hudada.github.io/2018/07/27/写一个webpack插件/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
+<meta property="og:description" content="原文：Webpack中文文档《如何编写一个插件》一节">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T08:56:30.667Z">
+<meta property="og:updated_time" content="2018-07-27T03:33:23.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vw 实现移动端适配">
-<meta name="twitter:description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
+<meta name="twitter:title" content="写一个webpack插件">
+<meta name="twitter:description" content="原文：Webpack中文文档《如何编写一个插件》一节">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vw-实现移动端适配" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-写一个webpack插件" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vw 实现移动端适配
+      写一个webpack插件
     </h1>
   
 
         
-        <a href="/2018/06/11/vw-实现移动端适配/" class="archive-article-date">
-  	<time datetime="2018-06-11T08:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
+        <a href="/2018/07/27/写一个webpack插件/" class="archive-article-date">
+  	<time datetime="2018-07-27T02:51:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
 </a>
         
         
@@ -184,21 +184,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="如何在Vue项目中使用vw实现移动端适配"><a href="#如何在Vue项目中使用vw实现移动端适配" class="headerlink" title="如何在Vue项目中使用vw实现移动端适配"></a>如何在Vue项目中使用vw实现移动端适配</h4><blockquote>
-<p><a href="https://www.w3cplus.com/mobile/vw-layout-in-vue.html" target="_blank" rel="noopener">原文-vw</a></p>
-</blockquote>
-<a id="more"></a>
-<h3 id="1-运行js-判定-适配手机的dpr"><a href="#1-运行js-判定-适配手机的dpr" class="headerlink" title="1. 运行js 判定 适配手机的dpr"></a>1. 运行js 判定 适配手机的dpr</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">if (!dpr &amp;&amp; !scale) &#123;</span><br><span class="line">        var isAndroid = win.navigator.appVersion.match(/android/gi);</span><br><span class="line">        var isIPhone = win.navigator.appVersion.match(/iphone/gi);</span><br><span class="line">        var devicePixelRatio = win.devicePixelRatio;</span><br><span class="line">        if (isIPhone) &#123; // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span><br><span class="line">            if (devicePixelRatio &gt;= 3 &amp;&amp; (!dpr || dpr &gt;= 3)) &#123;</span><br><span class="line">                dpr = 3;</span><br><span class="line">            &#125; else if (devicePixelRatio &gt;= 2 &amp;&amp; (!dpr || dpr &gt;= 2))&#123;</span><br><span class="line">                dpr = 2;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                dpr = 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123; // 其他设备下，仍旧使用1倍的方案</span><br><span class="line">            dpr = 1;</span><br><span class="line">        &#125;</span><br><span class="line">        scale = 1 / dpr;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-flexible实际上就是能过JS来动态改写meta标签"><a href="#2-flexible实际上就是能过JS来动态改写meta标签" class="headerlink" title="2. flexible实际上就是能过JS来动态改写meta标签"></a>2. flexible实际上就是能过JS来动态改写meta标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var metaEl = doc.createElement(&apos;meta&apos;);</span><br><span class="line">    var scale = isRetina ? 0.5:1;</span><br><span class="line">    metaEl.setAttribute(&apos;name&apos;, &apos;viewport&apos;);</span><br><span class="line">    metaEl.setAttribute(&apos;content&apos;, &apos;initial-scale=&apos; + scale + &apos;, maximum-scale=&apos; + scale + &apos;, minimum-scale=&apos; + scale + &apos;, user-scalable=no&apos;);</span><br><span class="line">    if (docEl.firstElementChild) &#123;</span><br><span class="line">        document.documentElement.firstElementChild.appendChild(metaEl);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        var wrap = doc.createElement(&apos;div&apos;);</span><br><span class="line">        wrap.appendChild(metaEl);</span><br><span class="line">        documen.write(wrap.innerHTML);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem"><a href="#3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem" class="headerlink" title="3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)"></a>3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//npm install postcss-loader</span><br><span class="line">    module.exports = &#123;</span><br><span class="line">        module: &#123;</span><br><span class="line">            loaders: [</span><br><span class="line">                &#123;</span><br><span class="line">                    test: /\.css$/,</span><br><span class="line">                    loader: &quot;style-loader!css-loader!postcss-loader&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        postcss: function() &#123;</span><br><span class="line">            return [px2rem(&#123;remUnit: 75&#125;)];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-sass-混合函数处理"><a href="#4-sass-混合函数处理" class="headerlink" title="4. sass 混合函数处理"></a>4. sass 混合函数处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@mixin font-dpr($font-size)&#123;</span><br><span class="line">    font-size: $font-size;</span><br><span class="line">    [data-dpr=&quot;2&quot;] &amp; &#123;</span><br><span class="line">        font-size: $font-size * 2;</span><br><span class="line">&#125;</span><br><span class="line">    [data-dpr=&quot;3&quot;] &amp; &#123;</span><br><span class="line">        font-size: $font-size * 3;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@include font-dpr(16px);</span><br></pre></td></tr></table></figure>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><ol>
-<li>使用vw来实现页面的适配，并且通过PostCSS的插件postcss-px-to-viewport把px转换成vw。这样的好处是，我们在撸码的时候，不需要进行任何的计算，你只需要根据设计图写px单位</li>
-<li>为了更好的实现长宽比，特别是针对于img、vedio和iframe元素，通过PostCSS插件postcss-aspect-ratio-mini来实现，在实际使用中，只需要把对应的宽和高写进去即可</li>
-<li>为了解决1px的问题，使用PostCSS插件postcss-write-svg,自动生成border-image或者background-image的图片</li>
-</ol>
-<h2 id="scss"><a href="#scss" class="headerlink" title="scss"></a>scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.selector &#123;</span><br><span class="line">    height: 64px; /*px*/</span><br><span class="line">    font-size: 28px; /*px*/</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">    /*no*/</span><br><span class="line">&#125;</span><br><span class="line">.selector &#123;</span><br><span class="line">    width: 2rem;</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;1&quot;] .selector &#123;</span><br><span class="line">    height: 32px;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;2&quot;] .selector &#123;</span><br><span class="line">    height: 64px;</span><br><span class="line">    font-size: 28px;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;3&quot;] .selector &#123;</span><br><span class="line">    height: 96px;</span><br><span class="line">    font-size: 42px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p>原文：Webpack中文文档《如何编写一个插件》一节<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * webpack插件开发采用&apos;动态原型模式&apos;</span><br><span class="line"> * 插件开发，最重要的两个对象：compiler、compilation</span><br><span class="line"> * @param options</span><br><span class="line"> * @constructor</span><br><span class="line"> */</span><br><span class="line">function MyPlugin(options) &#123; // 根据 options 配置你的插件</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">// 我们可以在原型上添加一些方法</span><br><span class="line">MyPlugin.prototype.someFunc = function() &#123;/*something*/&#125;</span><br><span class="line"></span><br><span class="line">// apply方法是必须要有的，因为当我们使用一个插件时（new somePlugins(&#123;&#125;)），webpack会去寻找插件的apply方法并执行</span><br><span class="line">MyPlugin.prototype.apply = function(compiler) &#123;</span><br><span class="line">  // compiler是什么？compiler是webpack的&apos;编译器&apos;引用</span><br><span class="line"></span><br><span class="line">  // compiler.plugin(&apos;***&apos;)和compilation.plugin(&apos;***&apos;)代表什么？</span><br><span class="line">  // document.addEventListener熟悉吧？其实是类似的</span><br><span class="line">  // compiler.plugin(&apos;***&apos;)就相当于给compiler设置了事件监听</span><br><span class="line">  // 所以compiler.plugin(&apos;compile&apos;)就代表：当编译器监听到compile事件时，我们应该做些什么</span><br><span class="line"></span><br><span class="line">  // compile（&apos;编译器&apos;对&apos;开始编译&apos;这个事件的监听）</span><br><span class="line">  compiler.plugin(&quot;compile&quot;, function(params) &#123;</span><br><span class="line">    console.log(&quot;The compiler is starting to compile...&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // compilation（&apos;编译器&apos;对&apos;编译ing&apos;这个事件的监听）</span><br><span class="line">  compiler.plugin(&quot;compilation&quot;, function(compilation) &#123;</span><br><span class="line">    console.log(&quot;The compiler is starting a new compilation...&quot;);</span><br><span class="line">    // 在compilation事件监听中，我们可以访问compilation引用，它是一个代表编译过程的对象引用</span><br><span class="line">    // 我们一定要区分compiler和compilation，一个代表编译器实体，另一个代表编译过程</span><br><span class="line">    // optimize(&apos;编译过程&apos;对&apos;优化文件&apos;这个事件的监听)</span><br><span class="line">    compilation.plugin(&quot;optimize&quot;, function() &#123;</span><br><span class="line">      console.log(&quot;The compilation is starting to optimize files...&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // emit（&apos;编译器&apos;对&apos;生成最终资源&apos;这个事件的监听）</span><br><span class="line">  compiler.plugin(&quot;emit&quot;, function(compilation, callback) &#123;</span><br><span class="line">    console.log(&quot;The compilation is going to emit files...&quot;);</span><br><span class="line"></span><br><span class="line">    // compilation.chunks是块的集合（构建后将要输出的文件，即编译之后得到的结果）</span><br><span class="line">    compilation.chunks.forEach(function(chunk) &#123;</span><br><span class="line">      // chunk.modules是模块的集合（构建时webpack梳理出的依赖，即import、require的module）</span><br><span class="line">      // 形象一点说：chunk.modules是原材料，下面的chunk.files才是最终的成品</span><br><span class="line">      chunk.modules.forEach(function(module) &#123;</span><br><span class="line">        // module.fileDependencies就是具体的文件，最真实的资源【举例，在css中@import(&quot;reset.css&quot;)，这里的reset.css就是fileDependencie】</span><br><span class="line">        module.fileDependencies.forEach(function(filepath) &#123;</span><br><span class="line">          // 到这一步，就可以操作源文件了</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      // 最终生成的文件的集合</span><br><span class="line">      chunk.files.forEach(function(filename) &#123;</span><br><span class="line">        // source()可以得到每个文件的源码</span><br><span class="line">        var source = compilation.assets[filename].source();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    // callback在最后必须调用</span><br><span class="line">    callback();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 以上compiler和compilation的事件监听只是一小部分，详细API可见该链接</span><br><span class="line">https://www.webpackjs.com/concepts/plugins/</span><br><span class="line"></span><br><span class="line">module.exports = MyPlugin;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -237,11 +224,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -297,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/06/11/vw-实现移动端适配/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/07/27/写一个webpack插件/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -311,18 +294,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/15/web-上传base64-图片/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          web上传base64 图片
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/06/11/vue-内部运行机制/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue 内部运行机制</div>
+    <a href="/2018/07/27/实现一个promise-以及promise的其他用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实现一个promise 以及promise的其他用法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -349,7 +323,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#如何在Vue项目中使用vw实现移动端适配"><span class="toc-number">1.</span> <span class="toc-text">如何在Vue项目中使用vw实现移动端适配</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-运行js-判定-适配手机的dpr"><span class="toc-number"></span> <span class="toc-text">1. 运行js 判定 适配手机的dpr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-flexible实际上就是能过JS来动态改写meta标签"><span class="toc-number"></span> <span class="toc-text">2. flexible实际上就是能过JS来动态改写meta标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem"><span class="toc-number"></span> <span class="toc-text">3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-sass-混合函数处理"><span class="toc-number"></span> <span class="toc-text">4. sass 混合函数处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number"></span> <span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scss"><span class="toc-number"></span> <span class="toc-text">scss</span></a>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>

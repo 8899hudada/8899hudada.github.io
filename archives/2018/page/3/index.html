@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>vw 实现移动端适配 | 胡大大的博客</title>
+  <title>Archives: 2018 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
-<meta name="keywords" content="vue,H5">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vw 实现移动端适配">
-<meta property="og:url" content="https://8899hudada.github.io/2018/06/11/vw-实现移动端适配/index.html">
+  <meta name="description" content="乐观 积极 快">
+<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
+<meta property="og:type" content="website">
+<meta property="og:title" content="胡大大的博客">
+<meta property="og:url" content="https://8899hudada.github.io/archives/2018/page/3/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
+<meta property="og:description" content="乐观 积极 快">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T08:56:30.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vw 实现移动端适配">
-<meta name="twitter:description" content="如何在Vue项目中使用vw实现移动端适配 原文-vw">
+<meta name="twitter:title" content="胡大大的博客">
+<meta name="twitter:description" content="乐观 积极 快">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,77 +160,154 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vw-实现移动端适配" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      vw 实现移动端适配
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/04/02/学习类Class简记/" class="archive-article-date">
+  	<time datetime="2018-04-02T02:02:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/04/02/学习类Class简记/">学习类Class简记</a>
     </h1>
   
 
-        
-        <a href="/2018/06/11/vw-实现移动端适配/" class="archive-article-date">
-  	<time datetime="2018-06-11T08:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
-</a>
-        
-        
-          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="如何在Vue项目中使用vw实现移动端适配"><a href="#如何在Vue项目中使用vw实现移动端适配" class="headerlink" title="如何在Vue项目中使用vw实现移动端适配"></a>如何在Vue项目中使用vw实现移动端适配</h4><blockquote>
-<p><a href="https://www.w3cplus.com/mobile/vw-layout-in-vue.html" target="_blank" rel="noopener">原文-vw</a></p>
-</blockquote>
-<a id="more"></a>
-<h3 id="1-运行js-判定-适配手机的dpr"><a href="#1-运行js-判定-适配手机的dpr" class="headerlink" title="1. 运行js 判定 适配手机的dpr"></a>1. 运行js 判定 适配手机的dpr</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">if (!dpr &amp;&amp; !scale) &#123;</span><br><span class="line">        var isAndroid = win.navigator.appVersion.match(/android/gi);</span><br><span class="line">        var isIPhone = win.navigator.appVersion.match(/iphone/gi);</span><br><span class="line">        var devicePixelRatio = win.devicePixelRatio;</span><br><span class="line">        if (isIPhone) &#123; // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span><br><span class="line">            if (devicePixelRatio &gt;= 3 &amp;&amp; (!dpr || dpr &gt;= 3)) &#123;</span><br><span class="line">                dpr = 3;</span><br><span class="line">            &#125; else if (devicePixelRatio &gt;= 2 &amp;&amp; (!dpr || dpr &gt;= 2))&#123;</span><br><span class="line">                dpr = 2;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                dpr = 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123; // 其他设备下，仍旧使用1倍的方案</span><br><span class="line">            dpr = 1;</span><br><span class="line">        &#125;</span><br><span class="line">        scale = 1 / dpr;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-flexible实际上就是能过JS来动态改写meta标签"><a href="#2-flexible实际上就是能过JS来动态改写meta标签" class="headerlink" title="2. flexible实际上就是能过JS来动态改写meta标签"></a>2. flexible实际上就是能过JS来动态改写meta标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var metaEl = doc.createElement(&apos;meta&apos;);</span><br><span class="line">    var scale = isRetina ? 0.5:1;</span><br><span class="line">    metaEl.setAttribute(&apos;name&apos;, &apos;viewport&apos;);</span><br><span class="line">    metaEl.setAttribute(&apos;content&apos;, &apos;initial-scale=&apos; + scale + &apos;, maximum-scale=&apos; + scale + &apos;, minimum-scale=&apos; + scale + &apos;, user-scalable=no&apos;);</span><br><span class="line">    if (docEl.firstElementChild) &#123;</span><br><span class="line">        document.documentElement.firstElementChild.appendChild(metaEl);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        var wrap = doc.createElement(&apos;div&apos;);</span><br><span class="line">        wrap.appendChild(metaEl);</span><br><span class="line">        documen.write(wrap.innerHTML);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem"><a href="#3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem" class="headerlink" title="3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)"></a>3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//npm install postcss-loader</span><br><span class="line">    module.exports = &#123;</span><br><span class="line">        module: &#123;</span><br><span class="line">            loaders: [</span><br><span class="line">                &#123;</span><br><span class="line">                    test: /\.css$/,</span><br><span class="line">                    loader: &quot;style-loader!css-loader!postcss-loader&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        postcss: function() &#123;</span><br><span class="line">            return [px2rem(&#123;remUnit: 75&#125;)];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-sass-混合函数处理"><a href="#4-sass-混合函数处理" class="headerlink" title="4. sass 混合函数处理"></a>4. sass 混合函数处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@mixin font-dpr($font-size)&#123;</span><br><span class="line">    font-size: $font-size;</span><br><span class="line">    [data-dpr=&quot;2&quot;] &amp; &#123;</span><br><span class="line">        font-size: $font-size * 2;</span><br><span class="line">&#125;</span><br><span class="line">    [data-dpr=&quot;3&quot;] &amp; &#123;</span><br><span class="line">        font-size: $font-size * 3;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@include font-dpr(16px);</span><br></pre></td></tr></table></figure>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><ol>
-<li>使用vw来实现页面的适配，并且通过PostCSS的插件postcss-px-to-viewport把px转换成vw。这样的好处是，我们在撸码的时候，不需要进行任何的计算，你只需要根据设计图写px单位</li>
-<li>为了更好的实现长宽比，特别是针对于img、vedio和iframe元素，通过PostCSS插件postcss-aspect-ratio-mini来实现，在实际使用中，只需要把对应的宽和高写进去即可</li>
-<li>为了解决1px的问题，使用PostCSS插件postcss-write-svg,自动生成border-image或者background-image的图片</li>
-</ol>
-<h2 id="scss"><a href="#scss" class="headerlink" title="scss"></a>scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.selector &#123;</span><br><span class="line">    height: 64px; /*px*/</span><br><span class="line">    font-size: 28px; /*px*/</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">    /*no*/</span><br><span class="line">&#125;</span><br><span class="line">.selector &#123;</span><br><span class="line">    width: 2rem;</span><br><span class="line">    border: 1px solid #ddd;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;1&quot;] .selector &#123;</span><br><span class="line">    height: 32px;</span><br><span class="line">    font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;2&quot;] .selector &#123;</span><br><span class="line">    height: 64px;</span><br><span class="line">    font-size: 28px;</span><br><span class="line">&#125;</span><br><span class="line">[data-dpr=&quot;3&quot;] .selector &#123;</span><br><span class="line">    height: 96px;</span><br><span class="line">    font-size: 42px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/04/01/webpack-打包配置NODE-ENV/" class="archive-article-date">
+  	<time datetime="2018-04-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/04/01/webpack-打包配置NODE-ENV/">webpack 打包配置NODE_ENV</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/03/26/touchEvent/" class="archive-article-date">
+  	<time datetime="2018-03-26T07:32:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/03/26/touchEvent/">触摸事件</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/03/08/vue基于viewer图片查看器/" class="archive-article-date">
+  	<time datetime="2018-03-08T03:47:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/03/08/vue基于viewer图片查看器/">vue基于viewer图片查看器</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -241,139 +317,31 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">viewer</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/06/11/vw-实现移动端适配/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/06/15/web-上传base64-图片/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          web上传base64 图片
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/06/11/vue-内部运行机制/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue 内部运行机制</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#如何在Vue项目中使用vw实现移动端适配"><span class="toc-number">1.</span> <span class="toc-text">如何在Vue项目中使用vw实现移动端适配</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-运行js-判定-适配手机的dpr"><span class="toc-number"></span> <span class="toc-text">1. 运行js 判定 适配手机的dpr</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-flexible实际上就是能过JS来动态改写meta标签"><span class="toc-number"></span> <span class="toc-text">2. flexible实际上就是能过JS来动态改写meta标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-将px-转换成-rem-sass函数-统一转化-PostCSS-px2rem"><span class="toc-number"></span> <span class="toc-text">3.将px 转换成 rem   sass函数 统一转化  PostCSS(px2rem)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-sass-混合函数处理"><span class="toc-number"></span> <span class="toc-text">4. sass 混合函数处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number"></span> <span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scss"><span class="toc-number"></span> <span class="toc-text">scss</span></a>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2018/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
 
 
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -396,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
