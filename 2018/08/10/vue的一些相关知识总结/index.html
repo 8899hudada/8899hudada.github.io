@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>Tag: cssMoudle | 胡大大的博客</title>
+  <title>vue-react-的一些相关知识总结 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/tags/cssMoudle/index.html">
+  <meta name="description" content="最近的一年微信收藏的关于 vue 文章，大概过一下，顺带记个笔记">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-react-的一些相关知识总结">
+<meta property="og:url" content="https://8899hudada.github.io/2018/08/10/vue的一些相关知识总结/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="最近的一年微信收藏的关于 vue 文章，大概过一下，顺带记个笔记">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-14T10:33:44.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="vue-react-的一些相关知识总结">
+<meta name="twitter:description" content="最近的一年微信收藏的关于 vue 文章，大概过一下，顺带记个笔记">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -160,66 +161,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue的一些相关知识总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/04/px2rem-以及-css模块化/" class="archive-article-date">
-  	<time datetime="2018-04-04T02:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/04/px2rem-以及-css模块化/">px2rem 以及 css模块化</a>
+    <h1 class="article-title" itemprop="name">
+      vue-react-的一些相关知识总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/10/vue的一些相关知识总结/" class="archive-article-date">
+  	<time datetime="2018-08-10T07:28:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+        
+          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近的一年微信收藏的关于 vue 文章，大概过一下，顺带记个笔记</p>
+<a id="more"></a>
+<ol>
+<li><p>vue生命周期<br>beforeCreate / created<br>beforeMount / mounted<br>beforeUpdate / updated<br>beforeDestroy / destroy</p>
+</li>
+<li><p>小程序生命周期<br>onLoad  onShow  onReady<br>onHide onShow  onUnload</p>
+</li>
+</ol>
+<p>数据请求:<br>vue一般会在 created或者 mounted中请求数据，<br>而小程序会在 onLoad或者 onShow中请求数据。</p>
+<p>React 中的 Transaction 设计: React 将整个的函数执行过程包裹上了 Transaction，在函数执行前与执行后分别有 initialize 和 close 两个方法。这样的话 React 就有时机在函数执行过程中，涉及到 setState 的执行，都将缓存下来，在 close 的时候进入到 React 的 state 更新逻辑进行更新判断操作，并最终更新到前台的 DOM 上。</p>
+<h4 id="webpack-打包体积优化-依赖插件执行webpack分析json文件"><a href="#webpack-打包体积优化-依赖插件执行webpack分析json文件" class="headerlink" title="webpack 打包体积优化:  依赖插件执行webpack分析json文件"></a>webpack 打包体积优化:  依赖插件执行webpack分析json文件</h4><p>webpack-bundle-analyzer =&gt; webpack–profile–json&gt;stats.json</p>
+<ol>
+<li><p>设置环境变量 NODE_ENV 为 production</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">    // ...</span><br><span class="line">    new webpack.DefinePlugin(&#123;  </span><br><span class="line">        &apos;process.env&apos;: &#123;</span><br><span class="line">            NODE_ENV: JSON.stringify(&apos;production&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;),</span><br><span class="line">    // ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>css-loader: css-loader 在 webpack 默认不开启压缩，需要设置 css-loader?minimize</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">        &#123;</span><br><span class="line">            test: /\.css$/,</span><br><span class="line">            use: ExtractTextPlugin.extract(&#123;</span><br><span class="line">                fallback: &apos;style-loader&apos;,</span><br><span class="line">                use: &apos;css-loader?minimize&apos;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>antd: 因为并没有使用 antd 的所有组件，所以按需加载是必需的 =&gt; bebel-plugin-import<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 在 babel 配置中添加</span><br><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: [</span><br><span class="line">        [</span><br><span class="line">            &quot;import&quot;, </span><br><span class="line">            &#123;</span><br><span class="line">                &quot;libraryName&quot;: &quot;antd&quot;, </span><br><span class="line">                &quot;libraryDirectory&quot;: &quot;es&quot;, </span><br><span class="line">                &quot;style&quot;: &quot;css&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">        // ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li><p>moment： moment 库的体积开销主要是 i18n 文件，配置 webpack 将用不到 i18n 文件不打包即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn/)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>lodash: lodash看上去就是一些工具函数,也需要按需加载 =&gt; babel-plugin-lodash</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 在 babel 配置中添加</span><br><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: [</span><br><span class="line">        &quot;lodash&quot;</span><br><span class="line">        // ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>webpack4 的两个坑<br>extract-text-webpack-plugin =&gt; mini-css-extract-plugin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">- const ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;)</span><br><span class="line">+ const MiniCssExtractPlugin = require(&apos;mini-css-extract-plugin&apos;)</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.css$/,</span><br><span class="line">-       use: ExtractTextPlugin.extract(&#123;</span><br><span class="line">-         use: [&#123;</span><br><span class="line">-           loader: &apos;css-loader&apos;,</span><br><span class="line">-           options: &#123;</span><br><span class="line">-             minimize: process.env.NODE_ENV === &apos;production&apos;</span><br><span class="line">-           &#125;</span><br><span class="line">-         &#125;],</span><br><span class="line">-         fallback: &apos;vue-style-loader&apos;</span><br><span class="line">-       &#125;)</span><br><span class="line">+       use: [</span><br><span class="line">+         MiniCssExtractPlugin.loader,</span><br><span class="line">+         &#123;</span><br><span class="line">+           loader: &apos;css-loader&apos;,</span><br><span class="line">+           options: &#123;</span><br><span class="line">+           minimize: process.env.NODE_ENV === &apos;production&apos;</span><br><span class="line">+         &#125;</span><br><span class="line">+       ],</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins:[</span><br><span class="line">-   new ExtractTextPlugin(&#123;</span><br><span class="line">+   new MiniCssExtractPlugin(&#123;</span><br><span class="line">      filename: &apos;css/[name].css&apos;,</span><br><span class="line">    &#125;),</span><br><span class="line">  ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>html-webpack-plugin =&gt; 这个插件升级到最新版本，一般情况没啥问题，但是有个坑，最好是把chunksSortMode这个选项设置为none<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;)</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  plugins:[</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &apos;index.html&apos;,</span><br><span class="line">      template: &apos;index.html&apos;,</span><br><span class="line">      inject: true,</span><br><span class="line">      hash: true,</span><br><span class="line">      chunksSortMode: &apos;none&apos; //如果使用webpack4将该配置项设置为&apos;none&apos;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>node基于v8运行时只能是单线程<br>happypack  =&gt; 可以使用多进程的方式运行loader，和压缩js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&apos;path&apos;)</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.js$/,</span><br><span class="line">        // loader: &apos;babel-loader&apos;</span><br><span class="line">        loader: &apos;happypack/loader?id=babel&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new require(&apos;happypack&apos;)(&#123;</span><br><span class="line">      id: &apos;babel&apos;,</span><br><span class="line">      loaders: [&apos;babel-loader&apos;]</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">px2rem</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cssMoudle</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/08/10/vue的一些相关知识总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/27/写一个webpack插件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">写一个webpack插件</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#webpack-打包体积优化-依赖插件执行webpack分析json文件"><span class="toc-number">1.</span> <span class="toc-text">webpack 打包体积优化:  依赖插件执行webpack分析json文件</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -242,9 +402,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
