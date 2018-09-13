@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>Archives: 2018/4 | 胡大大的博客</title>
+  <title>react性能优化 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/archives/2018/04/index.html">
+  <meta name="description" content="属性传递优化事件申明时的this绑定方法12345678&amp;lt;button onClick=&amp;#123;this.onClick.bind(this)&amp;#125;&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;button onClick=&amp;#123;() =&amp;gt; this.onClick()&amp;#125;&amp;gt;&amp;lt;/button&amp;gt;constructor (props) &amp;#12">
+<meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react性能优化">
+<meta property="og:url" content="https://8899hudada.github.io/2018/09/13/react性能优化/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="属性传递优化事件申明时的this绑定方法12345678&amp;lt;button onClick=&amp;#123;this.onClick.bind(this)&amp;#125;&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;button onClick=&amp;#123;() =&amp;gt; this.onClick()&amp;#125;&amp;gt;&amp;lt;/button&amp;gt;constructor (props) &amp;#12">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-13T09:02:31.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="react性能优化">
+<meta name="twitter:description" content="属性传递优化事件申明时的this绑定方法12345678&amp;lt;button onClick=&amp;#123;this.onClick.bind(this)&amp;#125;&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;button onClick=&amp;#123;() =&amp;gt; this.onClick()&amp;#125;&amp;gt;&amp;lt;/button&amp;gt;constructor (props) &amp;#12">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -160,184 +161,213 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-react性能优化" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react性能优化
+    </h1>
+  
+
+        
+        <a href="/2018/09/13/react性能优化/" class="archive-article-date">
+  	<time datetime="2018-09-13T08:42:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-13</time>
+</a>
+        
+        
+          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<ol>
+<li>属性传递优化<br>事件申明时的this绑定方法<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;<span class="keyword">this</span>.onClick.bind(<span class="keyword">this</span>)&#125;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;button onClick=&#123;() =&gt; <span class="keyword">this</span>.onClick()&#125;&gt;&lt;/button&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constructor</span> (props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="keyword">this</span>.onClick = <span class="keyword">this</span>.onClick.bind(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>三种声明方式的比较：①②相对于③，再次执行时都要再渲染一编render()里的bind函数和函数声明式，而③的绑定函数只执行一次，并不会每次执行时都进行调用，对于性能方面，显然③方式会比①②更好，而且②相对①对性能的影响会低一点。所以三者对性能优化的优先级为③＞②＞①</p>
+<p> React中，组件嵌套是十分常见的，在父组件往子组件传递对象时，应该将对象的key和value在render()内先定义再使用，不然每一次使用子组件时都会生成新的对象进行传递。(先声明, 再使用)</p>
+<ol start="2">
+<li><p>多组件优化<br>在父组件因状态的变化更改，而子组件并没有状态变化时，若子组件随着父组件一起更新，会造成比较大的性能浪费，为减少子组件额外渲染而浪费性能<br>① shouldComponentUpdate(nextProps, nextState)<br>② React.PureComponent 替换 React.Component<br>③ ImmutableJS</p>
+</li>
+<li><p>加key</p>
+</li>
+<li><p>redux性能优化 使用reselect库<br>在调用到已经执行过的数据时，react不会再次对数据进行渲染，而是从reselector中取出缓存数据加载，减少了重新渲染，达到性能优化的效果。</p>
+</li>
+<li><p>用函数子组件进行UI和逻辑的分离, 数据的变更改变尽量少的组件</p>
+</li>
+<li><p>一些与状态无关的属性不要放在state里, 避免数据改变重新渲染dom</p>
+</li>
+<li><p>浅层数据对比的组件 尽量用 PureComponent</p>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/21/http通信协议/" class="archive-article-date">
-  	<time datetime="2018-04-21T02:40:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/21/http通信协议/">http通信协议笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/09/13/react性能优化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/04/px2rem-以及-css模块化/" class="archive-article-date">
-  	<time datetime="2018-04-04T02:22:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/13/依赖注入-虚拟dom函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue的虚拟dom的update</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/04/px2rem-以及-css模块化/">px2rem 以及 css模块化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">px2rem</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cssMoudle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/02/学习类Class简记/" class="archive-article-date">
-  	<time datetime="2018-04-02T02:02:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/02/学习类Class简记/">学习类Class简记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/01/webpack-打包配置NODE-ENV/" class="archive-article-date">
-  	<time datetime="2018-04-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/01/webpack-打包配置NODE-ENV/">webpack 打包配置NODE_ENV</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+        
+    </div>
+</aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -360,8 +390,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
