@@ -53,7 +53,7 @@
 		  <h1 class="header-author"><a href="/">胡大大</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">大前端的铺路石</p>
+		<p class="header-subtitle">乐观 积极 快 用技术成就梦想</p>
 		
 
 		<nav class="header-menu">
@@ -115,7 +115,7 @@
 			  <h1 class="header-author js-header-author">胡大大</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>大前端的铺路石<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>乐观 积极 快 用技术成就梦想<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -162,20 +162,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-react的理解-事件周期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-HTTPS和HTTP的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/29/react的理解-事件周期/">react的理解 事件周期</a>
+      <a class="article-title" href="/2016/12/27/HTTPS和HTTP的区别/">HTTPS和HTTP的区别</a>
     </h1>
   
 
         
-        <a href="/2016/06/29/react的理解-事件周期/" class="archive-article-date">
-  	<time datetime="2016-06-29T02:48:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-29</time>
+        <a href="/2016/12/27/HTTPS和HTTP的区别/" class="archive-article-date">
+  	<time datetime="2016-12-27T03:31:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-27</time>
 </a>
         
         
@@ -183,8 +183,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>组件化 (封装、复用), 单向props<br>componentWillMount/componentDidMount componentWillReceiveProps shouldComponentUpdate componentWillUpdate/componentUpdated unMount/componentWillUnmount</p>
-
+        <p>主要对比HTTPS和HTTP的优缺点<br>
+        
       
 
       
@@ -197,7 +197,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
         		</li>
       		
 		</ul>
@@ -207,7 +207,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/29/react的理解-事件周期/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/27/HTTPS和HTTP的区别/">展开全文 >></a>
         </p>
       
 
@@ -240,20 +240,20 @@
      
 <!-- 目录内容结束 -->
   
-    <article id="post-vue的理解-事件周期-vuex-异步处理-diff算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-给定一个数组arr，选出-n-个数的和等于m-答穷举之法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/28/vue的理解-事件周期-vuex-异步处理-diff算法/">vue的理解 事件周期 vuex 异步处理 diff算法</a>
+      <a class="article-title" href="/2016/12/11/给定一个数组arr，选出-n-个数的和等于m-答穷举之法/">给定一个数组arr，选出 n 个数的和等于m 答穷举之法</a>
     </h1>
   
 
         
-        <a href="/2016/06/28/vue的理解-事件周期-vuex-异步处理-diff算法/" class="archive-article-date">
-  	<time datetime="2016-06-28T02:46:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-28</time>
+        <a href="/2016/12/11/给定一个数组arr，选出-n-个数的和等于m-答穷举之法/" class="archive-article-date">
+  	<time datetime="2016-12-11T03:30:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-11</time>
 </a>
         
         
@@ -262,7 +262,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <a id="more"></a>
-<p>响应式 Object.defineProperty(obj, ‘name’, { get:()=&gt; {}, set: () =&gt; {} })<br>模板引擎 with(this) { return _c() }<br>渲染 updateComponent<br>beforeCreate/created boforeMount/mounted beforeUpdate/updated beforeDestroy/destroyed<br>vuex<br>diff算法<br>vm._update(vnode) {<br>    const prevVnode = vm._vnode<br>    vm._vnode = vnode<br>    if (!prevVnode) {<br>        vm.$el = vm.<strong>patch</strong>(vm.$el,vnode)<br>    } else {<br>        vm.$el = vm.<strong>patch</strong>(prevVnode,vnode)<br>    }<br>}<br>function updateComponent () {<br>    vm._update(vm._render())<br>}</p>
+<p>function f($n, $arr) { //$n是目标数字，$arr是数字组成的数组<br>if (empty($arr)) return false; //如果数组没有元素，返回<br>if (in_array($n, $arr)) return [$n];//如果期望的值已经存在，直接返回这个值<br>foreach($arr as $k =&gt; $v) { //遍历数组<br>if ($v &gt; $n) continue; //比指定数还大，过<br>$copy = $arr; //复制数组<br>unset($copy[$k]); //去掉复制数组中已经被选中的数字<br>$next = f($n - $v, $copy); //递归计算<br>if(! empty($next)) return array_merge([$v], $next); //合并结果集<br>}<br>return false;//没找到啊<br>}<br>$arr = [99.1, 92.2, 60, 50, 49.5, 45.7, 25.1, 20, 7.4, 13, 10, 7, 2.1, 2, 1];<br>$data = f(100, $arr);<br>print_r($data);//Array ( [0] =&gt; 60 [1] =&gt; 20 [2] =&gt; 13 [3] =&gt; 7 )<br>$data = f(105, $arr);<br>print_r($data);//Array ( [0] =&gt; 60 [1] =&gt; 20 [2] =&gt; 13 [3] =&gt; 10 [4] =&gt; 2 )</p>
 
       
 
@@ -276,7 +276,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -286,7 +286,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/28/vue的理解-事件周期-vuex-异步处理-diff算法/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/12/11/给定一个数组arr，选出-n-个数的和等于m-答穷举之法/">展开全文 >></a>
         </p>
       
 
@@ -319,20 +319,20 @@
      
 <!-- 目录内容结束 -->
   
-    <article id="post-检查是否为空对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hybrid通信的实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/13/检查是否为空对象/">检查是否为空对象</a>
+      <a class="article-title" href="/2016/11/23/hybrid通信的实现原理/">hybrid通信的实现原理</a>
     </h1>
   
 
         
-        <a href="/2016/05/13/检查是否为空对象/" class="archive-article-date">
-  	<time datetime="2016-05-13T02:44:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-13</time>
+        <a href="/2016/11/23/hybrid通信的实现原理/" class="archive-article-date">
+  	<time datetime="2016-11-23T03:28:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-23</time>
 </a>
         
         
@@ -340,7 +340,553 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有时候需要对参数进行空对象的检测<br>
+        <p>1.H5向Native通信<br>H5打开一个原生界面，H5只作为一个入口，后续逻辑均在原生界面处理 (原生已封装实现此功能，可供H5直接调用，不必重复造轮子，节省H5开发成本)<br>H5唤起一个原生界面执行一些逻辑，需要将结果返回给H5<br>2.Native向H5通信<br>通常表现原生界面将某些结果传给H5页面或触发某些H5的行为 (通过WebView去加载JavaScript的方法或回调函数/Native容器（Activity或ViewController（iOS））向H5暴露生命周期状态)<br>3.H5页面之间通信<br>如果H5项目有多个独立页面，页面之间可能需要通信 (在实现上应抽象封装一个公共的WebView，统一接收H5事件注册及事件触发通知)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hybird</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/23/hybrid通信的实现原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-死锁的条件是什么？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/20/死锁的条件是什么？/">死锁的条件是什么？</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/20/死锁的条件是什么？/" class="archive-article-date">
+  	<time datetime="2016-11-20T03:18:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-20</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>（1）互斥（mutualexclusion），一个资源每次只能被一个进程使用<br>（2）不可抢占（nopreemption），进程已获得的资源，在未使用完之前，不能强行剥夺<br>（3）占有并等待（hold andwait），一个进程因请求资源而阻塞时，对已获得的资源保持不放<br>（4）环形等待（circularwait），若干进程之间形成一种首尾相接的循环等待资源关系</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/20/死锁的条件是什么？/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-请描述一下cookies，sessionStorage和localStorage的区别？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/19/请描述一下cookies，sessionStorage和localStorage的区别？/">请描述一下cookies，sessionStorage和localStorage的区别？</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/19/请描述一下cookies，sessionStorage和localStorage的区别？/" class="archive-article-date">
+  	<time datetime="2016-11-19T03:16:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-19</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>cookie:一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效，也可设置过期时间,每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题<br>sessionStorage: 仅在当前会话下有效，关闭页面或浏览器后被清除<br>localStorage: 除非被清除，否则永久保存,仅在客户端（即浏览器）中保存，不参与和服务器的通信</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/19/请描述一下cookies，sessionStorage和localStorage的区别？/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-fetch和ajax的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/24/fetch和ajax的区别/">fetch和ajax的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2016/10/24/fetch和ajax的区别/" class="archive-article-date">
+  	<time datetime="2016-10-24T03:15:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-24</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>fetch()返回的promise将不会拒绝http的错误状态，即使响应是一个HTTP 404或者500。 服务器端返回 状态码 400 500的时候 不会reject Response.ok 属性为 true。 2、在默认情况下 fetch不会接受或者发送cookies ，要发送 cookies，必须设置 credentials 选项。 credentials: ‘include’</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/24/fetch和ajax的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-用CSS实现一个三角形" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/用CSS实现一个三角形/">用CSS实现一个三角形</a>
+    </h1>
+  
+
+        
+        <a href="/2016/10/08/用CSS实现一个三角形/" class="archive-article-date">
+  	<time datetime="2016-10-08T03:13:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-08</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: red transparent transparent transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/08/用CSS实现一个三角形/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-跨域实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/22/跨域实现/">跨域实现</a>
+    </h1>
+  
+
+        
+        <a href="/2016/09/22/跨域实现/" class="archive-article-date">
+  	<time datetime="2016-09-22T03:11:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-22</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、 通过jsonp跨域<br>2、 document.domain + iframe跨域<br>3、 location.hash + iframe<br>4、 window.name + iframe跨域<br>5、 postMessage跨域<br>6、 跨域资源共享（CORS）<br>7、 nginx代理跨域<br>8、 nodejs中间件代理跨域<br>9、 WebSocket协议跨域</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/09/22/跨域实现/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-异步事件的执行顺序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/15/异步事件的执行顺序/">异步事件的执行顺序</a>
+    </h1>
+  
+
+        
+        <a href="/2016/09/15/异步事件的执行顺序/" class="archive-article-date">
+  	<time datetime="2016-09-15T02:59:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-15</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>异步事件的执行顺序:</p>
+<p>script(主程序代码)—&gt;process.nextTick—&gt;Promises…——&gt;setTimeout——&gt;setInterval——&gt;setImmediate——&gt; I/O——&gt;UI rendering</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/09/15/异步事件的执行顺序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-itorator-for-of" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/12/itorator-for-of/">itorator for of</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/12/itorator-for-of/" class="archive-article-date">
+  	<time datetime="2016-08-12T02:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-12</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>itorator for of 的实现<br>
         
       
 
@@ -364,558 +910,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/13/检查是否为空对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-前端性能优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/08/前端性能优化/">前端性能优化</a>
-    </h1>
-  
-
-        
-        <a href="/2016/05/08/前端性能优化/" class="archive-article-date">
-  	<time datetime="2016-05-08T02:43:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-08</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<p>请减少HTTP请求基本原理<br>请正确理解 Reflow 和 Repaint<br>请减少对DOM的操作<br>使用JSON格式来进行数据交换<br>使用CDN加速（内容分发网络）<br>CSS和JavaScript的压缩，直接减少下载的文件体积<br>压缩图片和使用图片Sprite技术<br>注意控制Cookie大小和污染</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/08/前端性能优化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-react的组件类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/26/react的组件类型/">react的组件类型</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/26/react的组件类型/" class="archive-article-date">
-  	<time datetime="2016-04-26T02:39:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-26</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>（class、functional、受控组建、非受控组建）的区别</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/26/react的组件类型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-回流-重绘-bfc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/回流-重绘-bfc/">回流 重绘 bfc</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/14/回流-重绘-bfc/" class="archive-article-date">
-  	<time datetime="2016-04-14T02:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-14</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>回流 (重新渲染)   重绘 (简单的修改)<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/14/回流-重绘-bfc/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-单线程-异步线程执行机制-deferred-promise、async-await-fetch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/21/单线程-异步线程执行机制-deferred-promise、async-await-fetch/">单线程 异步线程执行机制 deferred promise、async await fetch</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/21/单线程-异步线程执行机制-deferred-promise、async-await-fetch/" class="archive-article-date">
-  	<time datetime="2016-03-21T02:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>js是单线程的，浏览器是多线程的，其异步也得靠其他线程来监听事件的响应，并将回调函数推入到任务队列等待执行。单线程所做的就是执行栈中的同步任务，执行完毕后，再从任务队列中取出一个事件（没有事件的话，就等待事件），然后开始执行栈中相关的同步任务，不断的这样循环<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异步</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/21/单线程-异步线程执行机制-deferred-promise、async-await-fetch/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-手写依赖注入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/16/手写依赖注入/">手写依赖注入</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/16/手写依赖注入/" class="archive-article-date">
-  	<time datetime="2016-03-16T02:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-16</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>手写依赖注入:</p>
-<ol>
-<li>通过正则表达式来提取function中的参数列表</li>
-<li>根据参数列表寻找依赖 取得了参数列表，就等于取得了依赖列表，剩下的工作就是将依赖当做参数传入</li>
-<li>传递依赖项参数并实例化
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/16/手写依赖注入/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-一个URL从输入到页面渲染的简要梳理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/24/一个URL从输入到页面渲染的简要梳理/">一个URL从输入到页面渲染的简要梳理</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/24/一个URL从输入到页面渲染的简要梳理/" class="archive-article-date">
-  	<time datetime="2016-02-24T02:25:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-24</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前端所有的网络传输的到页面渲染的整个过程,需要的知识点非常多,这里就简化一下</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/24/一个URL从输入到页面渲染的简要梳理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-css3动画性能问题，怎么优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/03/css3动画性能问题，怎么优化/">css3动画性能问题，怎么优化</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/03/css3动画性能问题，怎么优化/" class="archive-article-date">
-  	<time datetime="2016-02-03T02:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-03</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一般简单的h5动画有3种方法: css3 canvas jq<br>主要讲这三种的优化和区别</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/03/css3动画性能问题，怎么优化/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/08/12/itorator-for-of/">展开全文 >></a>
         </p>
       
 
@@ -950,7 +945,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
@@ -1047,7 +1042,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1055,7 +1050,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1075,11 +1074,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hybird</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">hybird</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1087,11 +1086,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1103,11 +1098,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1116,6 +1115,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sublime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1147,15 +1150,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1172,6 +1175,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">mobile</a>
               </li>
             
             <div class="clearfix"></div>
