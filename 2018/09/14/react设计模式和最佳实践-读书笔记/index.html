@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>胡大大的博客</title>
+  <title>react设计模式和最佳实践(读书笔记) | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/page/7/index.html">
+  <meta name="description" content="国外很火的一本书, 居然有大佬翻译成中文了,果断买了,发现并没有太多react设计模式的内容,大都是一些常用的用法,就当温故而知新了对应书书的每一章,写个笔记,书的目录1 React 基础2 整理代码3 开发真正可复用的组件4 组合一切5 恰当地获取数据6 为浏览器编写代码7 美化组件8 服务端渲染的乐趣与益处9 提升应用性能10 测试与调试11 需要避免的反模式12 未来的行动">
+<meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react设计模式和最佳实践(读书笔记)">
+<meta property="og:url" content="https://8899hudada.github.io/2018/09/14/react设计模式和最佳实践-读书笔记/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="国外很火的一本书, 居然有大佬翻译成中文了,果断买了,发现并没有太多react设计模式的内容,大都是一些常用的用法,就当温故而知新了对应书书的每一章,写个笔记,书的目录1 React 基础2 整理代码3 开发真正可复用的组件4 组合一切5 恰当地获取数据6 为浏览器编写代码7 美化组件8 服务端渲染的乐趣与益处9 提升应用性能10 测试与调试11 需要避免的反模式12 未来的行动">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-16T10:56:16.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="react设计模式和最佳实践(读书笔记)">
+<meta name="twitter:description" content="国外很火的一本书, 居然有大佬翻译成中文了,果断买了,发现并没有太多react设计模式的内容,大都是一些常用的用法,就当温故而知新了对应书书的每一章,写个笔记,书的目录1 React 基础2 整理代码3 开发真正可复用的组件4 组合一切5 恰当地获取数据6 为浏览器编写代码7 美化组件8 服务端渲染的乐趣与益处9 提升应用性能10 测试与调试11 需要避免的反模式12 未来的行动">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -160,584 +161,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-前端性能优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-react设计模式和最佳实践-读书笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/08/前端性能优化/">前端性能优化</a>
+    <h1 class="article-title" itemprop="name">
+      react设计模式和最佳实践(读书笔记)
     </h1>
   
 
         
-        <a href="/2016/05/08/前端性能优化/" class="archive-article-date">
-  	<time datetime="2016-05-08T02:43:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-08</time>
+        <a href="/2018/09/14/react设计模式和最佳实践-读书笔记/" class="archive-article-date">
+  	<time datetime="2018-09-14T06:55:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-14</time>
 </a>
         
+        
+          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>请减少HTTP请求基本原理<br>请正确理解 Reflow 和 Repaint<br>请减少对DOM的操作<br>使用JSON格式来进行数据交换<br>使用CDN加速（内容分发网络）<br>CSS和JavaScript的压缩，直接减少下载的文件体积<br>压缩图片和使用图片Sprite技术<br>注意控制Cookie大小和污染</p>
+        <p>国外很火的一本书, 居然有大佬翻译成中文了,果断买了,发现并没有太多react设计模式的内容,大都是一些常用的用法,就当温故而知新了<br>对应书书的每一章,写个笔记,书的目录<br>1 React 基础<br>2 整理代码<br>3 开发真正可复用的组件<br>4 组合一切<br>5 恰当地获取数据<br>6 为浏览器编写代码<br>7 美化组件<br>8 服务端渲染的乐趣与益处<br>9 提升应用性能<br>10 测试与调试<br>11 需要避免的反模式<br>12 未来的行动</p>
+<a id="more"></a>
+<h3 id="1-React-基础"><a href="#1-React-基础" class="headerlink" title="1. React 基础"></a>1. React 基础</h3><p>React 是最流行的 UI 开发库之一<br>声明式编程 &gt; 命令式编程  忽略中间执行步骤,只关心结果<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> toLowerCase = <span class="function"><span class="params">input</span> =&gt;</span> input.map(</span><br><span class="line">      value =&gt; value.toLowerCase()</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> toLowerCase = <span class="function"><span class="params">input</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> output = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; input.length; i++) &#123;</span><br><span class="line">    output.push(input[i].toLowerCase())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>元素最重要的属性是 type，另一个比较特殊的属性是 children，它是可选的，用于表示<br>元素的直接后代。<br>type 属性很重要，因为它告诉 React 如何处理元素本身。实际上，如果 type 属性是字符串，<br>那么元素就表示 DOM 节点;如果 type 属性是函数，那么元素就是组件。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">    type: Title,</span><br><span class="line">    props: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    children: <span class="string">'Hello, Title!'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当元素的 type 属性是函数时，React 会调用它，传入 props 来取回底层元素。React 会一直 对返回结果递归地执行相同的操作，直到取回完整的 DOM 节点树，然后就可以将它渲染到屏幕。 这个过程称作一致性比较，React DOM 和 React Native 都利用它在各自的平台上创建 UI。</p>
+<h3 id="2-整理代码"><a href="#2-整理代码" class="headerlink" title="2. 整理代码"></a>2. 整理代码</h3><p>jsx : JSX 仅仅是语法糖，是一种函数,在浏览器中运行前需要转译成 JavaScript, 实际上，运行 Babel 时会将<div>转换成 React.createElement(‘div’)，编写模板时要始终牢记这一点</div></p>
+<p>class 和 for 都是 JavaScript 的保留字, 使用时:</p>
+<label classname="awesome-label" htmlfor="name">
 
-      
+<p>JSX 可以利用行内条件来判断:<br>存在判断</p>
+<div><br>  {isLoggedIn &amp;&amp; <loginbutton>}<br></loginbutton></div><br>三元判断<br><div><br>      {isLoggedIn ? <logoutbutton> : <loginbutton>}<br></loginbutton></logoutbutton></div><br>函数条件判断<br> <div><br>      {this.canShowSecretData() &amp;&amp; <secretdata>}<br></secretdata></div>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/08/前端性能优化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-react的组件类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/26/react的组件类型/">react的组件类型</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/26/react的组件类型/" class="archive-article-date">
-  	<time datetime="2016-04-26T02:39:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-26</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>（class、functional、受控组建、非受控组建）的区别</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/26/react的组件类型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-回流-重绘-bfc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/回流-重绘-bfc/">回流 重绘 bfc</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/14/回流-重绘-bfc/" class="archive-article-date">
-  	<time datetime="2016-04-14T02:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-14</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>回流 (重新渲染)   重绘 (简单的修改)<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/14/回流-重绘-bfc/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-单线程-异步线程执行机制-deferred-promise、async-await-fetch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/21/单线程-异步线程执行机制-deferred-promise、async-await-fetch/">单线程 异步线程执行机制 deferred promise、async await fetch</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/21/单线程-异步线程执行机制-deferred-promise、async-await-fetch/" class="archive-article-date">
-  	<time datetime="2016-03-21T02:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-21</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>js是单线程的，浏览器是多线程的，其异步也得靠其他线程来监听事件的响应，并将回调函数推入到任务队列等待执行。单线程所做的就是执行栈中的同步任务，执行完毕后，再从任务队列中取出一个事件（没有事件的话，就等待事件），然后开始执行栈中相关的同步任务，不断的这样循环<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">异步</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/21/单线程-异步线程执行机制-deferred-promise、async-await-fetch/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-手写依赖注入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/16/手写依赖注入/">手写依赖注入</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/16/手写依赖注入/" class="archive-article-date">
-  	<time datetime="2016-03-16T02:29:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-16</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>手写依赖注入:</p>
+<p>函数式编程基础<br>JavaScript 的函数是一等对象<br>高阶函数接受一个函数作为参数，也可以传入其他参数， 最后返回另一个函数。返回的函数通常会添加一些增强的特殊行为<br>纯粹函数是指它不产生副作用，也就是说它不会改变自身作用域以外的任何东西<br>柯里化是函数式编程的常用技巧。柯里化过程就是将多参数函数转换成单参数函数，这些单 参数函数的返回值也是函数</p>
+<h3 id="3-开发真正可复用的组件"><a href="#3-开发真正可复用的组件" class="headerlink" title="3. 开发真正可复用的组件"></a>3. 开发真正可复用的组件</h3><p>createClass工厂方法 和 继承React.Component 的区别:<br>第一个区别在于如何定义组件期望接收的 prop 及其默认值<br>(propTypes , getDefaultProps /  ||  Button.propTypes , Button.defaultProps)<br>第二个区别是组件 初始状态 的定义方式不同<br>(getInitialState || 构造器里this.state)<br>第三个区别是函数的自动绑定<br>(this指向当前的组件 || 在当前的constracter里 this.handleClick = this.handleClick.bind(this))</p>
+<p>无状态函数: () =&gt; <button><br>没有生命周期和state,没有this指向,但是能接受父组件的props, 用于渲染<br>用个div标签包裹起来 才能获取到 组件的引用<br>const component = ReactTestUtils.renderIntoDocument(<div><button></button></div>)</button></p>
+<p>setState({}) 异步<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shouleKeepSomethingInReactState</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (canICalculateItFormProps()) &#123;</span><br><span class="line">        <span class="comment">// 不要把props里的数据复制到状态里</span></span><br><span class="line">        <span class="comment">// 直接在render()方法里计算即可</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!amIUsingItRenderMethod()) &#123;</span><br><span class="line">        <span class="comment">// 不要把没有参与渲染的数据放进状态里</span></span><br><span class="line">        <span class="comment">// 比如API订阅的部分就适合放在外部</span></span><br><span class="line">        <span class="comment">// 模块的自定义私有字段 或 变量</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>props类型检查 (类型和是否必须传入)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Profile.propTypes = &#123;</span><br><span class="line">  user: React.PropTypes.shape(&#123;</span><br><span class="line">    name: React.PropTypes.string.isRequired,</span><br><span class="line">    surname: React.PropTypes.string,</span><br><span class="line">  &#125;).isRequired,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可复用组件 : 通过定义通用的集合属性，对该列表组件做一些抽象并与显示的数据解耦<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> List = <span class="function">(<span class="params">&#123; collection, textKey, titleKey &#125;</span>) =&gt;</span> (</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &#123;collection.map(<span class="function"><span class="params">item</span> =&gt;</span></span><br><span class="line">            &lt;Item</span><br><span class="line">                key=&#123;item.id&#125;</span><br><span class="line">                text=&#123;item[textKey]&#125;</span><br><span class="line">                title=&#123;item[titleKey]&#125;</span><br><span class="line">            /&gt;</span><br><span class="line">        )&#125;</span><br><span class="line">    &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="4-组合一切"><a href="#4-组合一切" class="headerlink" title="4. 组合一切"></a>4. 组合一切</h3><p>children 是一个特殊的 prop，拥有者组件可以将它传递给渲染方法内定义的组件</p>
+<p>容器组件与表现组件模式<br>UI 定义在表现组件中，并且表现组件以 prop 的形式从容器组件接收数据。 因为表现组件通常不含逻辑，所以可以将它创建为函数式无状态组件。</p>
+<p>mixin的淘汰</p>
 <ol>
-<li>通过正则表达式来提取function中的参数列表</li>
-<li>根据参数列表寻找依赖 取得了参数列表，就等于取得了依赖列表，剩下的工作就是将依赖当做参数传入</li>
-<li>传递依赖项参数并实例化
-        
+<li>mixin 只能和 createClass 工厂方法搭配使用</li>
+<li>mixin 的另一个常见问题是冲突。实际上，虽然 React 确实可以聪明地合并生命周期回调， 但如果两个 mixin 定义或调用了同样的函数名，抑或在状态中使用了相同的属性，那么 React 对 此无能为力。</li>
+</ol>
+<p>高阶组件<br>const HoC = Component =&gt; EnhancedComponent<br>这比用 mixin 具有很多优势:首先没有污染任何状态，其次不需要组件来实现任何方法。这意味着组件和高阶组件没有耦合，可以在整个应用中复用它们。<br>再次强调，用 props 代替状态能分离组件与逻辑，这样一来，我们就可以在风格指南中使用 组件，忽略任何复杂逻辑，只传入 props 即可</p>
+<p>recompose 略过</p>
+<p>函数子组件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> FunctionAsChild = <span class="function">(<span class="params">&#123; children &#125;</span>) =&gt;</span> children()</span><br><span class="line">FunctionAsChild.propTypes = &#123;</span><br><span class="line">  children: React.PropTypes.func.isRequired,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>首要优点是，可以像高阶组件那样封装组件，在运行时为它们传递变量而不是固定属性<br>其次，以这种方式组合组件不要求 children 函数使用预定义的 prop 名称。<br>最后，封装器的可复用程度很高，因为它不关心子组件要接收什么，只期望传入一个函数 (按函数子组件模式编写的组件也可以用于应用的不同部分，托管各种各样的子 组件)</p>
+<h3 id="5-恰当的获取数据"><a href="#5-恰当的获取数据" class="headerlink" title="5. 恰当的获取数据"></a>5. 恰当的获取数据</h3><p>– 未完待续   –</p>
+<h3 id="6-为浏览器编写代码"><a href="#6-为浏览器编写代码" class="headerlink" title="6. 为浏览器编写代码"></a>6. 为浏览器编写代码</h3><h3 id="7-美化组件"><a href="#7-美化组件" class="headerlink" title="7. 美化组件"></a>7. 美化组件</h3><h3 id="8-服务端渲染的乐趣与益处"><a href="#8-服务端渲染的乐趣与益处" class="headerlink" title="8. 服务端渲染的乐趣与益处"></a>8. 服务端渲染的乐趣与益处</h3><h3 id="9-提升应用性能"><a href="#9-提升应用性能" class="headerlink" title="9. 提升应用性能"></a>9. 提升应用性能</h3><h3 id="10-测试与调试"><a href="#10-测试与调试" class="headerlink" title="10. 测试与调试"></a>10. 测试与调试</h3><h3 id="11-需要避免的反模式"><a href="#11-需要避免的反模式" class="headerlink" title="11. 需要避免的反模式"></a>11. 需要避免的反模式</h3><h3 id="12-未来的行动"><a href="#12-未来的行动" class="headerlink" title="12. 未来的行动"></a>12. 未来的行动</h3></label>
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/16/手写依赖注入/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-一个URL从输入到页面渲染的简要梳理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/24/一个URL从输入到页面渲染的简要梳理/">一个URL从输入到页面渲染的简要梳理</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/24/一个URL从输入到页面渲染的简要梳理/" class="archive-article-date">
-  	<time datetime="2016-02-24T02:25:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-24</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前端所有的网络传输的到页面渲染的整个过程,需要的知识点非常多,这里就简化一下</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/24/一个URL从输入到页面渲染的简要梳理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-css3动画性能问题，怎么优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/03/css3动画性能问题，怎么优化/">css3动画性能问题，怎么优化</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/03/css3动画性能问题，怎么优化/" class="archive-article-date">
-  	<time datetime="2016-02-03T02:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-03</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一般简单的h5动画有3种方法: css3 canvas jq<br>主要讲这三种的优化和区别</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/03/css3动画性能问题，怎么优化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-react-setState-的注意事项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/22/react-setState-的注意事项/">react setState 的注意事项</a>
-    </h1>
-  
-
-        
-        <a href="/2016/01/22/react-setState-的注意事项/" class="archive-article-date">
-  	<time datetime="2016-01-22T02:10:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-22</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在使用react的过程中,需要注意的一些异步和渲染的问题</p>
-        
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -757,16 +262,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/01/22/react-setState-的注意事项/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/09/14/react设计模式和最佳实践-读书笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/13/react性能优化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">react性能优化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -781,182 +345,38 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
-    <article id="post-react-相关知识点小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/13/react-相关知识点小结/">react 相关知识点小结</a>
-    </h1>
-  
-
-        
-        <a href="/2016/01/13/react-相关知识点小结/" class="archive-article-date">
-  	<time datetime="2016-01-13T01:57:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-13</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用react中的一些经验和基础的知识总结</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/01/13/react-相关知识点小结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-React-基础"><span class="toc-number">1.</span> <span class="toc-text">1. React 基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-整理代码"><span class="toc-number">2.</span> <span class="toc-text">2. 整理代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-开发真正可复用的组件"><span class="toc-number">3.</span> <span class="toc-text">3. 开发真正可复用的组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-组合一切"><span class="toc-number">4.</span> <span class="toc-text">4. 组合一切</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-恰当的获取数据"><span class="toc-number">5.</span> <span class="toc-text">5. 恰当的获取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-为浏览器编写代码"><span class="toc-number">6.</span> <span class="toc-text">6. 为浏览器编写代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-美化组件"><span class="toc-number">7.</span> <span class="toc-text">7. 美化组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-服务端渲染的乐趣与益处"><span class="toc-number">8.</span> <span class="toc-text">8. 服务端渲染的乐趣与益处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-提升应用性能"><span class="toc-number">9.</span> <span class="toc-text">9. 提升应用性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-测试与调试"><span class="toc-number">10.</span> <span class="toc-text">10. 测试与调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-需要避免的反模式"><span class="toc-number">11.</span> <span class="toc-text">11. 需要避免的反模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-未来的行动"><span class="toc-number">12.</span> <span class="toc-text">12. 未来的行动</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/01/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2015/02/01/hello-world/" class="archive-article-date">
-  	<time datetime="2015-02-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-02-01</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>$ hexo n == hexo new</p>
-<p>$ hexo d -g #生成部署<br>$ hexo s -g #生成预览</p>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
-        
-      
+  
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
 
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/02/01/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
+  
 
 
 <!-- 目录内容 -->
      
 <!-- 目录内容结束 -->
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
-    </nav>
-  
-
-
           </div>
         </div>
       </div>
@@ -978,8 +398,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
