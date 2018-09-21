@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>Archives: 2018 | 胡大大的博客</title>
+  <title>es6 总结(14 - 24) | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="乐观 积极 快">
-<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡大大的博客">
-<meta property="og:url" content="https://8899hudada.github.io/archives/2018/page/4/index.html">
+  <meta name="description" content="14.  Promise 对象15.  Iterator 和 for … of 循环16.  Generator 函数的语法17.  Generator 函数的异步应用18.  async 函数19.  Class 的基本语法20.  Class 的继承21.  Decorator22.  Module 的语法23.  Module 的加载实现24.  编程风格25.  读懂规则26.  Arr">
+<meta name="keywords" content="es6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6 总结(14 - 24)">
+<meta property="og:url" content="https://8899hudada.github.io/2017/09/18/es6-总结-14-24/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="乐观 积极 快">
+<meta property="og:description" content="14.  Promise 对象15.  Iterator 和 for … of 循环16.  Generator 函数的语法17.  Generator 函数的异步应用18.  async 函数19.  Class 的基本语法20.  Class 的继承21.  Decorator22.  Module 的语法23.  Module 的加载实现24.  编程风格25.  读懂规则26.  Arr">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-21T03:50:10.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡大大的博客">
-<meta name="twitter:description" content="乐观 积极 快">
+<meta name="twitter:title" content="es6 总结(14 - 24)">
+<meta name="twitter:description" content="14.  Promise 对象15.  Iterator 和 for … of 循环16.  Generator 函数的语法17.  Generator 函数的异步应用18.  async 函数19.  Class 的基本语法20.  Class 的继承21.  Decorator22.  Module 的语法23.  Module 的加载实现24.  编程风格25.  读懂规则26.  Arr">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -160,70 +161,202 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-es6-总结-14-24" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/08/vue基于viewer图片查看器/" class="archive-article-date">
-  	<time datetime="2018-03-08T03:47:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/08/vue基于viewer图片查看器/">vue基于viewer图片查看器</a>
+    <h1 class="article-title" itemprop="name">
+      es6 总结(14 - 24)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/18/es6-总结-14-24/" class="archive-article-date">
+  	<time datetime="2017-09-18T03:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
+</a>
+        
+        
+          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h2 id="14-Promise-对象"><a href="#14-Promise-对象" class="headerlink" title="14.  Promise 对象"></a>14.  Promise 对象</h2><h2 id="15-Iterator-和-for-…-of-循环"><a href="#15-Iterator-和-for-…-of-循环" class="headerlink" title="15.  Iterator 和 for … of 循环"></a>15.  Iterator 和 for … of 循环</h2><h2 id="16-Generator-函数的语法"><a href="#16-Generator-函数的语法" class="headerlink" title="16.  Generator 函数的语法"></a>16.  Generator 函数的语法</h2><h2 id="17-Generator-函数的异步应用"><a href="#17-Generator-函数的异步应用" class="headerlink" title="17.  Generator 函数的异步应用"></a>17.  Generator 函数的异步应用</h2><h2 id="18-async-函数"><a href="#18-async-函数" class="headerlink" title="18.  async 函数"></a>18.  async 函数</h2><h2 id="19-Class-的基本语法"><a href="#19-Class-的基本语法" class="headerlink" title="19.  Class 的基本语法"></a>19.  Class 的基本语法</h2><h2 id="20-Class-的继承"><a href="#20-Class-的继承" class="headerlink" title="20.  Class 的继承"></a>20.  Class 的继承</h2><h2 id="21-Decorator"><a href="#21-Decorator" class="headerlink" title="21.  Decorator"></a>21.  Decorator</h2><h2 id="22-Module-的语法"><a href="#22-Module-的语法" class="headerlink" title="22.  Module 的语法"></a>22.  Module 的语法</h2><h2 id="23-Module-的加载实现"><a href="#23-Module-的加载实现" class="headerlink" title="23.  Module 的加载实现"></a>23.  Module 的加载实现</h2><h2 id="24-编程风格"><a href="#24-编程风格" class="headerlink" title="24.  编程风格"></a>24.  编程风格</h2><h2 id="25-读懂规则"><a href="#25-读懂规则" class="headerlink" title="25.  读懂规则"></a>25.  读懂规则</h2><h2 id="26-ArrayBuffer"><a href="#26-ArrayBuffer" class="headerlink" title="26.  ArrayBuffer"></a>26.  ArrayBuffer</h2>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">viewer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2017/09/18/es6-总结-14-24/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/09/19/es6-总结-01-13/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          es6 总结(1-13章)
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/08/09/Chrome-调试/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Chrome 调试</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Promise-对象"><span class="toc-number">1.</span> <span class="toc-text">14.  Promise 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Iterator-和-for-…-of-循环"><span class="toc-number">2.</span> <span class="toc-text">15.  Iterator 和 for … of 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Generator-函数的语法"><span class="toc-number">3.</span> <span class="toc-text">16.  Generator 函数的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-Generator-函数的异步应用"><span class="toc-number">4.</span> <span class="toc-text">17.  Generator 函数的异步应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-async-函数"><span class="toc-number">5.</span> <span class="toc-text">18.  async 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-Class-的基本语法"><span class="toc-number">6.</span> <span class="toc-text">19.  Class 的基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-Class-的继承"><span class="toc-number">7.</span> <span class="toc-text">20.  Class 的继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-Decorator"><span class="toc-number">8.</span> <span class="toc-text">21.  Decorator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-Module-的语法"><span class="toc-number">9.</span> <span class="toc-text">22.  Module 的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-Module-的加载实现"><span class="toc-number">10.</span> <span class="toc-text">23.  Module 的加载实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-编程风格"><span class="toc-number">11.</span> <span class="toc-text">24.  编程风格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-读懂规则"><span class="toc-number">12.</span> <span class="toc-text">25.  读懂规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-ArrayBuffer"><span class="toc-number">13.</span> <span class="toc-text">26.  ArrayBuffer</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
+  
+
+  
+
   
 
 
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -246,8 +379,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -316,6 +449,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
@@ -325,10 +462,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -352,15 +485,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hybird</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -376,11 +517,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -400,15 +537,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
