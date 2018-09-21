@@ -162,20 +162,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-es6-总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-0-5px-像素边框" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/02/es6-总结/">es6 总结</a>
+      <a class="article-title" href="/2017/04/04/0-5px-像素边框/">0.5px 像素边框</a>
     </h1>
   
 
         
-        <a href="/2017/03/02/es6-总结/" class="archive-article-date">
-  	<time datetime="2017-03-02T03:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
+        <a href="/2017/04/04/0-5px-像素边框/" class="archive-article-date">
+  	<time datetime="2017-04-04T06:07:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-04</time>
 </a>
         
         
@@ -183,7 +183,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等</p>
+        <p>移动端1px边框问题<br>
         
       
 
@@ -197,7 +197,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -207,7 +207,85 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/02/es6-总结/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/04/04/0-5px-像素边框/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+<!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+  
+    <article id="post-vue2-0-响应式的基本思路-订阅-观察者-模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/13/vue2-0-响应式的基本思路-订阅-观察者-模式/">vue2.0 响应式的基本思路 (订阅/观察者 模式)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/13/vue2-0-响应式的基本思路-订阅-观察者-模式/" class="archive-article-date">
+  	<time datetime="2017-03-13T03:43:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+</a>
+        
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一步：将data下面的属性变为observable,使用Object.defineProperty对数据对象做属性get和set的监听,当有数据读取和赋值操作时则调用节点的指令，这样使用最通用的=等号赋值就可以触发了。//数据劫持，监控数据变化<br>第二步：实现一个消息订阅器,我们维护一个数组，这个数组，就放订阅者，一旦触发notify，订阅者就调用自己的update方法<br>第三步：实现一个 Watcher,就是执行数据变化时我们要执行的操作 (依赖收集追踪原理)<br>第四步：touch拿到依赖,视图的更新需要哪些数据的支持，并把它记录为数据的订阅者<br>最后: 我们来看用一个代理实现将我们对data的数据访问绑定在vue对象上</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/13/vue2-0-响应式的基本思路-订阅-观察者-模式/">展开全文 >></a>
         </p>
       
 
@@ -873,87 +951,9 @@
      
 <!-- 目录内容结束 -->
   
-    <article id="post-请描述一下cookies，sessionStorage和localStorage的区别？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/19/请描述一下cookies，sessionStorage和localStorage的区别？/">请描述一下cookies，sessionStorage和localStorage的区别？</a>
-    </h1>
-  
-
-        
-        <a href="/2016/11/19/请描述一下cookies，sessionStorage和localStorage的区别？/" class="archive-article-date">
-  	<time datetime="2016-11-19T03:16:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-19</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>cookie:一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效，也可设置过期时间,每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题<br>sessionStorage: 仅在当前会话下有效，关闭页面或浏览器后被清除<br>localStorage: 除非被清除，否则永久保存,仅在客户端（即浏览器）中保存，不参与和服务器的通信</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/19/请描述一下cookies，sessionStorage和localStorage的区别？/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
@@ -1054,11 +1054,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1074,10 +1078,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -1086,15 +1086,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hybird</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1166,15 +1166,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">

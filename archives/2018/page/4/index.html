@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>es6 总结 | 胡大大的博客</title>
+  <title>Archives: 2018 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
-<meta name="keywords" content="es6">
-<meta property="og:type" content="article">
-<meta property="og:title" content="es6 总结">
-<meta property="og:url" content="https://8899hudada.github.io/2017/03/02/es6-总结/index.html">
+  <meta name="description" content="乐观 积极 快">
+<meta name="keywords" content="像蜗牛一样前行 像老鹰一样翱翔">
+<meta property="og:type" content="website">
+<meta property="og:title" content="胡大大的博客">
+<meta property="og:url" content="https://8899hudada.github.io/archives/2018/page/4/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
+<meta property="og:description" content="乐观 积极 快">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-13T06:00:03.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6 总结">
-<meta name="twitter:description" content="ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
+<meta name="twitter:title" content="胡大大的博客">
+<meta name="twitter:description" content="乐观 积极 快">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,244 +160,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-es6-总结" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      es6 总结
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/03/08/vue基于viewer图片查看器/" class="archive-article-date">
+  	<time datetime="2018-03-08T03:47:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/03/08/vue基于viewer图片查看器/">vue基于viewer图片查看器</a>
     </h1>
   
 
-        
-        <a href="/2017/03/02/es6-总结/" class="archive-article-date">
-  	<time datetime="2017-03-02T03:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-02</time>
-</a>
-        
-        
-          <span class="archive-article-date">阅读量 <span id="busuanzi_value_page_pv"></span></span>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等</p>
-<a id="more"></a>
-<ol>
-<li><p>let, const<br>let 替代var<br>const 定义常量<br>都有块级作用域,</p>
-</li>
-<li><p>Set 和 Map 数据结构</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>(); </span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(); </span><br><span class="line"><span class="keyword">let</span> array = []; </span><br><span class="line"><span class="comment">// 增 </span></span><br><span class="line">map.set(<span class="string">'t'</span>, <span class="number">1</span>); </span><br><span class="line">set.add( &#123; <span class="attr">t</span> : <span class="number">1</span> &#125; ); </span><br><span class="line">array.push( &#123; <span class="attr">t</span>:<span class="number">1</span> &#125; ); </span><br><span class="line"><span class="built_in">console</span>.info( map, set, array ); <span class="comment">// Map &#123; 't' =&gt; 1 &#125; Set &#123; &#123; t: 1 &#125; &#125; [ &#123; t: 1 &#125; ] </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查 </span></span><br><span class="line"><span class="keyword">let</span> map_exist = map.has( <span class="string">'t'</span> ); </span><br><span class="line"><span class="keyword">let</span> set_exist = set.has( &#123;<span class="attr">t</span>:<span class="number">1</span>&#125; ); </span><br><span class="line"><span class="keyword">let</span> array_exist = array.find(<span class="function"><span class="params">item</span> =&gt;</span> item.t) </span><br><span class="line"><span class="built_in">console</span>.info(map_exist, set_exist, array_exist); <span class="comment">//true false &#123; t: 1 &#125; </span></span><br><span class="line"><span class="comment">// 改 </span></span><br><span class="line">map.set(<span class="string">'t'</span>, <span class="number">2</span>); </span><br><span class="line">set.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.t ? item.t = <span class="number">2</span>:<span class="string">''</span>); </span><br><span class="line">array.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.t ? item.t = <span class="number">2</span>:<span class="string">''</span>); </span><br><span class="line"><span class="built_in">console</span>.info(map, set, array); <span class="comment">// Map &#123; 't' =&gt; 2 &#125; Set &#123; &#123; t: 2 &#125; &#125; [ &#123; t: 2 &#125; ] </span></span><br><span class="line"><span class="comment">// 删 </span></span><br><span class="line">map.delete(<span class="string">'t'</span>); </span><br><span class="line">set.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.t ? set.delete(item):<span class="string">''</span>); </span><br><span class="line"><span class="keyword">let</span> index = array.findIndex(<span class="function"><span class="params">item</span> =&gt;</span> item.t); </span><br><span class="line">array.splice(index,<span class="number">1</span>); </span><br><span class="line"><span class="built_in">console</span>.info(map, set, array); <span class="comment">// Map &#123;&#125; Set &#123;&#125; []</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>class、extends、super</p>
-</li>
-</ol>
-<p>首先用class定义了一个“类”，可以看到里面有一个constructor方法，这就是构造方法，而this关键字则代表实例对象。简单地说，constructor内定义的方法和属性是实例对象自己的，而constructor外定义的方法和属性则是所有实例对象可以共享的。</p>
-<p>Class之间可以通过extends关键字实现继承，这比ES5的通过修改原型链实现继承，要清晰和方便很多。上面定义了一个Boy类，该类通过extends关键字，继承了Human类的所有属性和方法。</p>
-<p>super关键字，它指代父类的实例（即父类的this对象）。子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不调用super方法，子类就得不到this对象。</p>
-<p>ES6的继承机制，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this</p>
-<ol start="4">
-<li>arrow function 箭头函数 () =&gt; {}</li>
-</ol>
-<p>this指向父元素, 没有argument, 不能被实例化</p>
-<ol start="5">
-<li><p>template string 模板字符串<br><code>${a}</code></p>
-</li>
-<li><p>… 解构<br>[a, b] = [b, a];<br>let {id, title, data:number} = jsonData;<br>// 参数是一组无次序的值<br>function f({x, y, z}) { … }<br>f({z: 3, y: 2, x: 1});</p>
-</li>
-</ol>
-<p>default默认参数<br>function f(x = 0) { … } </p>
-<p>rest 参数<br>function fn(x, y, …rest){ console.log(rest) }</p>
-<ol start="7">
-<li>Proxy 代理</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义被监听的目标对象</span></span><br><span class="line"><span class="keyword">let</span> man = &#123; <span class="attr">name</span>: <span class="string">'Davis'</span>, <span class="attr">age</span>: <span class="number">21</span> &#125;;</span><br><span class="line"><span class="comment">//定义处理程序</span></span><br><span class="line"><span class="keyword">let</span> handle = &#123; </span><br><span class="line">    set(receiver, property, value) &#123; </span><br><span class="line">        <span class="built_in">console</span>.log(property, <span class="string">'is changed to'</span>, value); </span><br><span class="line">        receiver[property] = value; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;; </span><br><span class="line"><span class="comment">//创建代理以进行侦听 </span></span><br><span class="line">man = <span class="keyword">new</span> <span class="built_in">Proxy</span>(man, handle); </span><br><span class="line"><span class="comment">//做一些改动来触发代理 </span></span><br><span class="line">man.age = <span class="number">22</span>; <span class="comment">//age is change to 22 </span></span><br><span class="line">man.name = <span class="string">"Faker"</span>; <span class="comment">// name is change to Faker</span></span><br></pre></td></tr></table></figure>
-<ol start="8">
-<li>Promise<br>pending =&gt; resolved<br>pending =&gt; rejected<br>在Promise定义时，函数已经执行了；Promise构造函数只接受一个参数，即带有异步逻辑的函数。这个函数在 new Promise 时已经执行了。只不过在没有调用 then 之前不会 resolve 或 reject。</li>
-</ol>
-<p>在then方法中通常传递两个参数，一个 resolve 函数，一个 reject 函数。reject就是出错的时候运行的函数。resolve 函数必须返回一个值才能把链式调用进行下去。<br>resolve 返回一个新 Promise<br>返回一个新Promise之后再调用的then就是新Promise中的逻辑了。<br>resolve 返回一个值<br>返回一个值会传递到下一个then的resolve方法参数中。</p>
-<ol start="9">
-<li><p>Generator<br>function关键字与函数名之间有一个 *；<br>函数体内部使用yield语句，定义不同的内部状态；<br>第一次输出fn.next()返回一个简单的对象{value: “a”, done: false}，’a’就是f函数执行到第一个yield语句之后得到的值，false表示f函数还没有执行完，只是在这暂停。<br>第二次，返回的就是{value: “b”, done: false}，说明f函数运行到了第二个yield语句，返回的是该yield语句的返回值’b’。返回之后依然是暂停。<br>第三次，第四次同理，这样整个f函数就运行完毕了。</p>
-</li>
-<li><p>异步操作的同步化写法<br>Generator函数的暂停执行的效果，意味着可以把异步操作写在yield语句里面，等到调用next方法时再往后执行。这实际上等同于不需要写回调函数了，因为异步操作的后续操作可以放在yield语句下面，反正要等到调用next方法时再执行。所以，Generator函数的一个重要实际意义就是用来处理异步操作，改写回调函数。<br>强调：只有当yield后面跟的函数先执行完，无论执行体里面有多少异步回调，都要等所有回调先执行完，才会执行等号赋值，以及再后面的操作。这也是yield最大的特性。</p>
-</li>
-<li><p>export、import 模块化<br>export { Human, walk }<br>import { Human, walk } from ‘app.js’;</p>
-</li>
-</ol>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>1分也是爱<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixinpay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">viewer</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2017/03/02/es6-总结/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/03/13/vue2-0-响应式的基本思路-订阅-观察者-模式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue2.0 响应式的基本思路 (订阅/观察者 模式)
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/02/25/http相关的知识点/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">http相关的知识点</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    目录，不存在的…
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2018/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
   
 
 
-<!-- 目录内容 -->
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -421,8 +246,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -495,11 +320,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,10 +344,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -527,15 +352,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hybird</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,15 +432,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
