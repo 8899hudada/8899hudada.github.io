@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="重新过了一遍 阮一峰 老师的 &amp;lt;ES6入门&amp;gt; 第三版 把每章的重点做个总结 ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-21T09:57:58.363Z">
+<meta property="og:updated_time" content="2018-09-22T05:21:35.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6 总结(1-13章)">
 <meta name="twitter:description" content="重新过了一遍 阮一峰 老师的 &amp;lt;ES6入门&amp;gt; 第三版 把每章的重点做个总结 ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
@@ -337,7 +337,7 @@
 <p>WeakMap 就是为了解决这个问题而诞生的，它的键名所引用的对象都是弱引用，即垃圾回收机制不将该引用考虑在内。因此，只要所引用的对象的其他引用都被清除，垃圾回收机制就会释放该对象所占用的内存。也就是说，一旦不再需要，WeakMap 里面的键名对象和所对应的键值对会自动消失，不用手动删除引用, WeakMap结构有助于防止内存泄漏</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"><span class="keyword">let</span> array = [];</span><br><span class="line"><span class="comment">// 增</span></span><br><span class="line">map.set(<span class="string">'t'</span>, <span class="number">1</span>);</span><br><span class="line">set.add( &#123; <span class="attr">t</span> : <span class="number">1</span> &#125; );</span><br><span class="line">array.push( &#123; <span class="attr">t</span>:<span class="number">1</span> &#125; );</span><br><span class="line"><span class="built_in">console</span>.info( map, set, array ); <span class="comment">// Map &#123; 't' =&gt; 1 &#125; Set &#123; &#123; t: 1 &#125; &#125; [ &#123; t: 1 &#125; ] </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查</span></span><br><span class="line"><span class="keyword">let</span> map_exist = map.has( <span class="string">'t'</span> );</span><br><span class="line"><span class="keyword">let</span> set_exist = set.has( &#123;<span class="attr">t</span>:<span class="number">1</span>&#125; );</span><br><span class="line"><span class="keyword">let</span> array_exist = array.find(<span class="function"><span class="params">item</span> =&gt;</span> item.t)</span><br><span class="line"><span class="built_in">console</span>.info(map_exist, set_exist, array_exist); <span class="comment">//true false &#123; t: 1 &#125;</span></span><br><span class="line"><span class="comment">// 改</span></span><br><span class="line">map.set(<span class="string">'t'</span>, <span class="number">2</span>);</span><br><span class="line">set.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.t ? item.t = <span class="number">2</span>:<span class="string">''</span>);</span><br><span class="line">array.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.t ? item.t = <span class="number">2</span>:<span class="string">''</span>);</span><br><span class="line"><span class="built_in">console</span>.info(map, set, array); <span class="comment">// Map &#123; 't' =&gt; 2 &#125; Set &#123; &#123; t: 2 &#125; &#125; [ &#123; t: 2 &#125; ]</span></span><br><span class="line"><span class="comment">// 删</span></span><br><span class="line">map.delete(<span class="string">'t'</span>);</span><br><span class="line">set.forEach(<span class="function"><span class="params">item</span> =&gt;</span> item.t ? set.delete(item):<span class="string">''</span>);</span><br><span class="line"><span class="keyword">let</span> index = array.findIndex(<span class="function"><span class="params">item</span> =&gt;</span> item.t);</span><br><span class="line">array.splice(index,<span class="number">1</span>); </span><br><span class="line"><span class="built_in">console</span>.info(map, set, array); <span class="comment">// Map &#123;&#125; Set &#123;&#125; []</span></span><br></pre></td></tr></table></figure>
 <h2 id="12-Proxy"><a href="#12-Proxy" class="headerlink" title="12.  Proxy"></a>12.  Proxy</h2><p>Proxy 代理</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义被监听的目标对象</span></span><br><span class="line"><span class="keyword">let</span> man = &#123; <span class="attr">name</span>: <span class="string">'Davis'</span>, <span class="attr">age</span>: <span class="number">21</span> &#125;;</span><br><span class="line"><span class="comment">//定义处理程序</span></span><br><span class="line"><span class="keyword">let</span> handle = &#123;</span><br><span class="line">    set(receiver, property, value) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(property, <span class="string">'is changed to'</span>, value);</span><br><span class="line">        receiver[property] = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//创建代理以进行侦听</span></span><br><span class="line">man = <span class="keyword">new</span> <span class="built_in">Proxy</span>(man, handle);</span><br><span class="line"><span class="comment">//做一些改动来触发代理</span></span><br><span class="line">man.age = <span class="number">22</span>; <span class="comment">//age is change to 22</span></span><br><span class="line">man.name = <span class="string">"Faker"</span>; <span class="comment">// name is change to Faker</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义被监听的目标对象</span></span><br><span class="line"><span class="keyword">let</span> man = &#123; <span class="attr">name</span>: <span class="string">'Davis'</span>, <span class="attr">age</span>: <span class="number">21</span> &#125;;</span><br><span class="line"><span class="comment">//定义处理程序</span></span><br><span class="line"><span class="keyword">let</span> handle = &#123;</span><br><span class="line">    set(receiver, property, value) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(property, <span class="string">'is changed to'</span>, value);</span><br><span class="line">        receiver[property] = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建代理以进行侦听</span></span><br><span class="line">man = <span class="keyword">new</span> <span class="built_in">Proxy</span>(man, handle);</span><br><span class="line"><span class="comment">//做一些改动来触发代理</span></span><br><span class="line">man.age = <span class="number">22</span>; <span class="comment">//age is change to 22</span></span><br><span class="line">man.name = <span class="string">"Faker"</span>; <span class="comment">// name is change to Faker</span></span><br></pre></td></tr></table></figure>
 <h2 id="12-Proxy-1"><a href="#12-Proxy-1" class="headerlink" title="12. Proxy"></a>12. Proxy</h2><h2 id="13-Reflect"><a href="#13-Reflect" class="headerlink" title="13. Reflect"></a>13. Reflect</h2>
       
 
@@ -602,11 +602,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -646,6 +646,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -655,14 +663,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">npm script</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -678,10 +678,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
@@ -690,7 +686,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -698,15 +694,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">base64</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">base64</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -734,11 +734,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">mobile</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">mobile</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
