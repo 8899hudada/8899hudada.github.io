@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async || Class || Decorator || Module">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-25T00:53:32.089Z">
+<meta property="og:updated_time" content="2018-09-26T09:39:49.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6 总结(14 - 24章)">
 <meta name="twitter:description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async || Class || Decorator || Module">
@@ -195,7 +195,7 @@
 <p>Class之间可以通过extends关键字实现继承，这比ES5的通过修改原型链实现继承，要清晰和方便很多。上面定义了一个Boy类，该类通过extends关键字，继承了Human类的所有属性和方法。</p>
 <p>super关键字，它指代父类的实例（即父类的this对象）。子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不调用super方法，子类就得不到this对象。</p>
 <p>ES6的继承机制，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this</p>
-<h2 id="20-Class-的继承"><a href="#20-Class-的继承" class="headerlink" title="20.  Class 的继承"></a>20.  Class 的继承</h2><h2 id="21-Decorator"><a href="#21-Decorator" class="headerlink" title="21.  Decorator"></a>21.  Decorator</h2><h2 id="22-Module-的语法"><a href="#22-Module-的语法" class="headerlink" title="22.  Module 的语法"></a>22.  Module 的语法</h2><p>export、import 模块化<br>export { Human, walk }<br>import { Human, walk } from ‘app.js’;</p>
+<h2 id="20-Class-的继承"><a href="#20-Class-的继承" class="headerlink" title="20.  Class 的继承"></a>20.  Class 的继承</h2><h2 id="21-Decorator"><a href="#21-Decorator" class="headerlink" title="21.  Decorator"></a>21.  Decorator</h2><h2 id="22-Module-的语法"><a href="#22-Module-的语法" class="headerlink" title="22.  Module 的语法"></a>22.  Module 的语法</h2><p>export、import 模块化<br>export { Human, walk }<br>import { Human, walk } from ‘app.js’</p>
 <h2 id="23-Module-的加载实现"><a href="#23-Module-的加载实现" class="headerlink" title="23.  Module 的加载实现"></a>23.  Module 的加载实现</h2><h2 id="24-编程风格"><a href="#24-编程风格" class="headerlink" title="24.  编程风格"></a>24.  编程风格</h2><h2 id="25-读懂规则"><a href="#25-读懂规则" class="headerlink" title="25.  读懂规则"></a>25.  读懂规则</h2><h2 id="26-ArrayBuffer"><a href="#26-ArrayBuffer" class="headerlink" title="26.  ArrayBuffer"></a>26.  ArrayBuffer</h2>
       
 
@@ -460,19 +460,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -492,6 +488,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -504,6 +504,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -513,14 +521,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">npm script</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,11 +548,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
+                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
+                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,19 +572,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
