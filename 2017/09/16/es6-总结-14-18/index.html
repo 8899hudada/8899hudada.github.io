@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>es6 总结(14 - 24章) | 胡大大的博客</title>
+  <title>es6-总结-14-18 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async || Class || Decorator || Module 冲鸭, 2018-09-28, continuing ~~~">
+  <meta name="description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async">
 <meta name="keywords" content="es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="es6 总结(14 - 24章)">
-<meta property="og:url" content="https://8899hudada.github.io/2017/09/18/es6-总结-14-24/index.html">
+<meta property="og:title" content="es6-总结-14-18">
+<meta property="og:url" content="https://8899hudada.github.io/2017/09/16/es6-总结-14-18/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async || Class || Decorator || Module 冲鸭, 2018-09-28, continuing ~~~">
+<meta property="og:description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-29T10:06:39.683Z">
+<meta property="og:updated_time" content="2018-10-08T07:21:52.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6 总结(14 - 24章)">
-<meta name="twitter:description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async || Class || Decorator || Module 冲鸭, 2018-09-28, continuing ~~~">
+<meta name="twitter:title" content="es6-总结-14-18">
+<meta name="twitter:description" content="Promise ||  Iterator 和 for … of 循环 || Generator || async || async">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-es6-总结-14-24" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-es6-总结-14-18" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      es6 总结(14 - 24章)
+      es6-总结-14-18
     </h1>
   
 
         
-        <a href="/2017/09/18/es6-总结-14-24/" class="archive-article-date">
-  	<time datetime="2017-09-18T03:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
+        <a href="/2017/09/16/es6-总结-14-18/" class="archive-article-date">
+  	<time datetime="2017-09-16T07:10:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
 </a>
         
         
@@ -184,20 +184,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Promise ||  Iterator 和 for … of 循环 || Generator || async || async || Class || Decorator || Module</p>
-<p>冲鸭, 2018-09-28, continuing ~~~</p>
+        <p>Promise ||  Iterator 和 for … of 循环 || Generator || async || async</p>
 <a id="more"></a>
 <h2 id="14-Promise-对象"><a href="#14-Promise-对象" class="headerlink" title="14.Promise 对象"></a>14.Promise 对象</h2><p>Promise<br>pending =&gt; resolved<br>pending =&gt; rejected<br>在Promise定义时，函数已经执行了；Promise构造函数只接受一个参数，即带有异步逻辑的函数。这个函数在 new Promise 时已经执行了。只不过在没有调用 then 之前不会 resolve 或 reject。</p>
 <p>在then方法中通常传递两个参数，一个 resolve 函数，一个 reject 函数。reject就是出错的时候运行的函数。resolve 函数必须返回一个值才能把链式调用进行下去。<br>resolve 返回一个新 Promise<br>返回一个新Promise之后再调用的then就是新Promise中的逻辑了。<br>resolve 返回一个值<br>返回一个值会传递到下一个then的resolve方法参数中。</p>
 <h2 id="15-Iterator-和-for-…-of-循环"><a href="#15-Iterator-和-for-…-of-循环" class="headerlink" title="15.  Iterator 和 for … of 循环"></a>15.  Iterator 和 for … of 循环</h2><h2 id="16-Generator-函数的语法"><a href="#16-Generator-函数的语法" class="headerlink" title="16.  Generator 函数的语法"></a>16.  Generator 函数的语法</h2><p>Generator<br>function关键字与函数名之间有一个 *；<br>函数体内部使用yield语句，定义不同的内部状态；<br>第一次输出fn.next()返回一个简单的对象{value: “a”, done: false}，’a’就是f函数执行到第一个yield语句之后得到的值，false表示f函数还没有执行完，只是在这暂停。<br>第二次，返回的就是{value: “b”, done: false}，说明f函数运行到了第二个yield语句，返回的是该yield语句的返回值’b’。返回之后依然是暂停。<br>第三次，第四次同理，这样整个f函数就运行完毕了。</p>
 <h2 id="17-Generator-函数的异步应用"><a href="#17-Generator-函数的异步应用" class="headerlink" title="17.  Generator 函数的异步应用"></a>17.  Generator 函数的异步应用</h2><p>异步操作的同步化写法<br>Generator函数的暂停执行的效果，意味着可以把异步操作写在yield语句里面，等到调用next方法时再往后执行。这实际上等同于不需要写回调函数了，因为异步操作的后续操作可以放在yield语句下面，反正要等到调用next方法时再执行。所以，Generator函数的一个重要实际意义就是用来处理异步操作，改写回调函数。<br>强调：只有当yield后面跟的函数先执行完，无论执行体里面有多少异步回调，都要等所有回调先执行完，才会执行等号赋值，以及再后面的操作。这也是yield最大的特性。</p>
-<h2 id="18-async-函数"><a href="#18-async-函数" class="headerlink" title="18.  async 函数"></a>18.  async 函数</h2><h2 id="19-Class-的基本语法"><a href="#19-Class-的基本语法" class="headerlink" title="19.  Class 的基本语法"></a>19.  Class 的基本语法</h2><p>class、extends、super</p>
-<p>首先用class定义了一个“类”，可以看到里面有一个constructor方法，这就是构造方法，而this关键字则代表实例对象。简单地说，constructor内定义的方法和属性是实例对象自己的，而constructor外定义的方法和属性则是所有实例对象可以共享的。</p>
-<p>Class之间可以通过extends关键字实现继承，这比ES5的通过修改原型链实现继承，要清晰和方便很多。上面定义了一个Boy类，该类通过extends关键字，继承了Human类的所有属性和方法。</p>
-<p>super关键字，它指代父类的实例（即父类的this对象）。子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，然后对其进行加工。如果不调用super方法，子类就得不到this对象。</p>
-<p>ES6的继承机制，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this</p>
-<h2 id="20-Class-的继承"><a href="#20-Class-的继承" class="headerlink" title="20.  Class 的继承"></a>20.  Class 的继承</h2><h2 id="21-Decorator"><a href="#21-Decorator" class="headerlink" title="21.  Decorator"></a>21.  Decorator</h2><h2 id="22-Module-的语法"><a href="#22-Module-的语法" class="headerlink" title="22.  Module 的语法"></a>22.  Module 的语法</h2><p>export、import 模块化<br>export { Human, walk }<br>import { Human, walk } from ‘app.js’</p>
-<h2 id="23-Module-的加载实现"><a href="#23-Module-的加载实现" class="headerlink" title="23.  Module 的加载实现"></a>23.  Module 的加载实现</h2><h2 id="24-编程风格"><a href="#24-编程风格" class="headerlink" title="24.  编程风格"></a>24.  编程风格</h2><h2 id="25-读懂规则"><a href="#25-读懂规则" class="headerlink" title="25.  读懂规则"></a>25.  读懂规则</h2><h2 id="26-ArrayBuffer"><a href="#26-ArrayBuffer" class="headerlink" title="26.  ArrayBuffer"></a>26.  ArrayBuffer</h2>
+<h2 id="18-async-函数"><a href="#18-async-函数" class="headerlink" title="18.  async 函数"></a>18.  async 函数</h2>
       
 
       
@@ -292,7 +285,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2017/09/18/es6-总结-14-24/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2017/09/16/es6-总结-14-18/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +299,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/19/es6-总结-01-13/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/17/es6-总结-10-13/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          es6 总结(1-13章)
+          es6-总结-10-13
         
       </div>
     </a>
   
   
-    <a href="/2017/08/09/Chrome-调试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Chrome 调试</div>
+    <a href="/2017/09/15/es6-总结-19-23/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">es6-总结-19-23</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -344,7 +337,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Promise-对象"><span class="toc-number">1.</span> <span class="toc-text">14.Promise 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Iterator-和-for-…-of-循环"><span class="toc-number">2.</span> <span class="toc-text">15.  Iterator 和 for … of 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Generator-函数的语法"><span class="toc-number">3.</span> <span class="toc-text">16.  Generator 函数的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-Generator-函数的异步应用"><span class="toc-number">4.</span> <span class="toc-text">17.  Generator 函数的异步应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-async-函数"><span class="toc-number">5.</span> <span class="toc-text">18.  async 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-Class-的基本语法"><span class="toc-number">6.</span> <span class="toc-text">19.  Class 的基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-Class-的继承"><span class="toc-number">7.</span> <span class="toc-text">20.  Class 的继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-Decorator"><span class="toc-number">8.</span> <span class="toc-text">21.  Decorator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-Module-的语法"><span class="toc-number">9.</span> <span class="toc-text">22.  Module 的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-Module-的加载实现"><span class="toc-number">10.</span> <span class="toc-text">23.  Module 的加载实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-编程风格"><span class="toc-number">11.</span> <span class="toc-text">24.  编程风格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-读懂规则"><span class="toc-number">12.</span> <span class="toc-text">25.  读懂规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-ArrayBuffer"><span class="toc-number">13.</span> <span class="toc-text">26.  ArrayBuffer</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Promise-对象"><span class="toc-number">1.</span> <span class="toc-text">14.Promise 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Iterator-和-for-…-of-循环"><span class="toc-number">2.</span> <span class="toc-text">15.  Iterator 和 for … of 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Generator-函数的语法"><span class="toc-number">3.</span> <span class="toc-text">16.  Generator 函数的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-Generator-函数的异步应用"><span class="toc-number">4.</span> <span class="toc-text">17.  Generator 函数的异步应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-async-函数"><span class="toc-number">5.</span> <span class="toc-text">18.  async 函数</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -465,11 +458,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,11 +550,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+                <a href="javascript:void(0)" class="js-tag color2">base64</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">base64</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
