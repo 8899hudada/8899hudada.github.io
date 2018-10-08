@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="重新过了一遍 阮一峰 老师的 &amp;lt;ES6入门&amp;gt; 第三版 把每章的重点做个总结 ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-07T15:09:25.523Z">
+<meta property="og:updated_time" content="2018-10-08T01:14:07.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6 总结(1-13章)">
 <meta name="twitter:description" content="重新过了一遍 阮一峰 老师的 &amp;lt;ES6入门&amp;gt; 第三版 把每章的重点做个总结 ES6常用特性: let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments 等">
@@ -344,7 +344,7 @@
 <p>Proxy 支持的拦截操作一览(一共13个方法) :<br>1 get(target, propKey, receiver)  拦截对象属性的读取，比如proxy.foo和proxy[‘foo’]<br>2 set(target, propKey, value, receiver)  拦截对象属性的设置，比如proxy.foo = v或proxy[‘foo’] = v，返回一个布尔值;  set方法的第四个参数receiver，指的是原始的操作行为所在的那个对象，一般情况下是proxy实例本身<br>3 has(target, propKey)  拦截propKey in proxy的操作，返回一个布尔值<br>4 getOwnPropertyDescriptor(target, propKey) 拦截Object.getOwnPropertyDescriptor(proxy, propKey)，返回属性的描述对象<br>5 defineProperty(target, propKey, propDesc) 拦截Object.defineProperty(proxy, propKey, propDesc）、Object.defineProperties(proxy, propDescs)，返回一个布尔值<br>6 apply(target, object, args) 拦截 Proxy 实例作为函数调用的操作，比如proxy(…args)、proxy.call(object, …args)、proxy.apply(…)<br>7 construct(target, args) 拦截 Proxy 实例作为构造函数调用的操作，比如new proxy(…args)</p>
 <p>如果一个属性不可配置（configurable）且不可写（writable），则 Proxy 不能修改该属性，否则通过 Proxy 对象访问该属性会报错</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> target = <span class="built_in">Object</span>.defineProperties(&#123;&#125;, &#123;</span><br><span class="line">  foo: &#123;</span><br><span class="line">    value: <span class="number">123</span>,</span><br><span class="line">    writable: <span class="literal">false</span>,</span><br><span class="line">    configurable: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> handler = &#123;</span><br><span class="line">  get(target, propKey) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'abc'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> proxy = <span class="keyword">new</span> <span class="built_in">Proxy</span>(target, handler);</span><br><span class="line"></span><br><span class="line">proxy.foo</span><br><span class="line"><span class="comment">// TypeError: Invariant check failed</span></span><br></pre></td></tr></table></figure>
-<p>has() …. starting…starting…starting….starting…</p>
+<p>has() …. starting…starting…starting….starting…starting…</p>
 <p>Proxy.revocable()<br>this 问题<br>实例：Web 服务的客户端</p>
 <h2 id="13-Reflect"><a href="#13-Reflect" class="headerlink" title="13. Reflect"></a>13. Reflect</h2>
       
@@ -618,15 +618,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -642,11 +638,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -654,15 +650,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,7 +666,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">px2rem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cssMoudle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -694,15 +698,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -722,11 +722,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
               </li>
              
               <li class="article-tag-list-item">
