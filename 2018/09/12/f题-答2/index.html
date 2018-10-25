@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-25T09:51:27.013Z">
+<meta property="og:updated_time" content="2018-10-25T11:34:43.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="forjob2">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
@@ -188,9 +188,10 @@
 <p>原文问题链接: ‘<a href="https://juejin.im/post/5bc92e9ce51d450e8e777136&#39;" target="_blank" rel="noopener">https://juejin.im/post/5bc92e9ce51d450e8e777136&#39;</a></p>
 <p>—————- 阿里-网易-滴滴 —————-</p>
 <a id="more"></a>
-<p>————————— 阿里 —————————<br>使用过的koa2中间件<br>koa-body原理<br>介绍自己写过的中间件<br>有没有涉及到Cluster<br>介绍pm2<br>master挂了的话pm2怎么处理<br>如何和MySQL进行通信<br>——- node的东西后面再解答 ————<br>React声明周期及自己的理解</p>
-<p>–</p>
-<p>如何配置React-Router<br>路由的动态加载模块<br>服务端渲染SSR<br>介绍路由的history<br>介绍Redux数据流的流程<br>Redux如何实现多个组件之间的通信，多个组件使用相同状态如何进行管理<br>多个组件之间如何拆分各自的state，每块小的组件有自己的状态，它们之间还有一些公共的状态需要维护，如何思考这块<br>使用过的Redux中间件<br>如何解决跨域的问题<br>常见Http请求头<br>移动端适配1px的问题<br>介绍flex布局<br>其他css方式设置垂直居中<br>居中为什么要使用transform（为什么不使用marginLeft/Top）<br>使用过webpack里面哪些plugin和loader<br>webpack里面的插件是怎么实现的<br>dev-server是怎么跑起来<br>项目优化<br>抽取公共文件是怎么配置的<br>项目中如何处理安全问题<br>怎么实现this对象的深拷贝</p>
+<p>————————— 阿里 —————————<br>使用过的koa2中间件<br>koa-body原理<br>介绍自己写过的中间件<br>有没有涉及到Cluster<br>介绍pm2<br>master挂了的话pm2怎么处理<br>如何和MySQL进行通信<br>——- node的东西后面再解答 ————<br>React声明周期及自己的理解?<br>react的生命周期有:<br>(getDefaultProps  getInitialState)<br>componentWillMount render componentDidMount  完成初始化赋值, 渲染DOM, 初始数据请求并再次渲染  只执行一次<br>componentWillReciveProps(nextProps) 提前根据传入的数据 修改当前组件的state 并不会重复出发render<br>shouldComponentUpdate(nextProps, nextState) componentWillUpdate render componentDidUpdate 决定是否更新 提升性能<br>componentWillUnmount 卸载 清空定时任务 网络请求等</p>
+<p>如何配置React-Router?<br>1.标签的方式: BrowserRouter/HashRouter Router Switch exact Route  path component this.props.children redirect  通过 path 跟 Component 对应的方式<br>2.对象配置的方式: {path component indexRoute childRoutes onLeave onEnter }<br>3.按需加载的方式配置路由 提升性能 Route 可以定义 getIndexRoute getComponents getChildRoutes 几个异步函数 只有需要的时候才调用</p>
+<p>路由的动态加载模块?</p>
+<p>服务端渲染SSR<br>介绍路由的history<br>介绍Redux数据流的流程<br>Redux如何实现多个组件之间的通信，多个组件使用相同状态如何进行管理<br>多个组件之间如何拆分各自的state，每块小的组件有自己的状态，它们之间还有一些公共的状态需要维护，如何思考这块<br>使用过的Redux中间件<br>如何解决跨域的问题<br>常见Http请求头<br>移动端适配1px的问题<br>介绍flex布局<br>其他css方式设置垂直居中<br>居中为什么要使用transform（为什么不使用marginLeft/Top）<br>使用过webpack里面哪些plugin和loader<br>webpack里面的插件是怎么实现的<br>dev-server是怎么跑起来<br>项目优化<br>抽取公共文件是怎么配置的<br>项目中如何处理安全问题<br>怎么实现this对象的深拷贝</p>
 <p>————————— 网易 —————————<br>介绍redux，主要解决什么问题<br>文件上传如何做断点续传<br>表单可以跨域吗<br>promise、async有什么区别<br>搜索请求如何处理（防抖）<br>搜索请求中文如何请求<br>介绍观察者模式<br>介绍中介者模式<br>观察者和订阅-发布的区别，各自用在哪里<br>介绍react优化<br>介绍http2.0<br>通过什么做到并发请求<br>http1.1时如何复用tcp连接<br>介绍service worker<br>介绍css3中position:sticky<br>redux请求中间件如何处理并发<br>介绍Promise，异常捕获<br>介绍position属性包括CSS3新增<br>浏览器事件流向<br>介绍事件代理以及优缺点<br>React组件中怎么做事件代理<br>React组件事件代理的原理<br>介绍this各种情况<br>前端怎么控制管理路由<br>使用路由时出现问题如何解决<br>React怎么做数据的检查和变化</p>
 <p>————————— 滴滴 —————————<br>react-router怎么实现路由切换<br>react-router里的<link>标签和<a>标签有什么区别<br><a>标签默认事件禁掉之后做了什么才实现了跳转<br>React层面的性能优化<br>整个前端性能提升大致分几类<br>[x] import { Button } from ‘antd’，打包的时候只打包button，分模块加载，是怎么做到的<br>[x] 使用import时，webpack对node_modules里的依赖会做什么<br>JS异步解决方案的发展历程以及优缺点<br>Http报文的请求会有几个部分<br>cookie放哪里，cookie能做的事情和存在的价值<br>cookie和token都存放在header里面，为什么只劫持前者<br>cookie和session有哪些方面的区别<br>React中Dom结构发生变化后内部经历了哪些变化<br>React挂载的时候有3个组件，textComponent、composeComponent、domComponent，区别和关系，Dom结构发生变化时怎么区分data的变化，怎么更新，更新怎么调度，如果更新的时候还有其他任务存在怎么处理<br>key主要是解决哪一类的问题，为什么不建议用索引index（重绘）<br>Redux中异步的请求怎么处理<br>Redux中间件是什么东西，接受几个参数（两端的柯里化函数）<br>柯里化函数两端的参数具体是什么东西<br>中间件是怎么拿到store和action，然后怎么处理<br>state是怎么注入到组件的，从reducer到组件经历了什么样的过程<br>koa中response.send、response.rounded、response.json发生了什么事，浏览器为什么能识别到它是一个json结构或是html<br>koa-bodyparser怎么来解析request<br>[x] webpack整个生命周期，loader和plugin有什么区别<br>[x] 介绍AST（Abstract Syntax Tree）抽象语法树<br>安卓Activity之间数据是怎么传递的<br>安卓4.0到6.0过程中WebView对js兼容性的变化<br>WebView和原生是如何通信<br>跨域怎么解决，有没有使用过Apache等方案</a></a></p>
 
