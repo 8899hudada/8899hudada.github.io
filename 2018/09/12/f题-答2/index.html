@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-26T10:31:56.695Z">
+<meta property="og:updated_time" content="2018-10-27T02:45:19.604Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="f题-答2">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
@@ -263,10 +263,12 @@
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> logger = <span class="function"><span class="params">store</span> =&gt;</span> next =&gt; <span class="function"><span class="params">action</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'dispatching'</span>, action)</span><br><span class="line">  <span class="keyword">let</span> result = next(action)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'next state'</span>, store.getState())</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当我们调用applyMiddleware方法时</span></span><br><span class="line">applyMiddleware(store,[logger])</span><br><span class="line"></span><br><span class="line"><span class="comment">// 会依次middlewares数组中的方法，并且每次执行都重新封装store.dispatch</span></span><br><span class="line">middlewares.forEach(<span class="function"><span class="params">middleware</span> =&gt;</span></span><br><span class="line">  dispatch = middleware(store)(dispatch)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里体现了函数柯里化，每次执行一个中间件，middleware(store)(dispatch),第二个括号内的（dispatch），传递给了具体函数的next</span></span><br></pre></td></tr></table></figure>
 <p>柯里化函数两端的参数具体是什么东西?<br>middleware(store)(dispatch) 第二个括号内的（dispatch），传递给了具体函数的next</p>
 <p>state是怎么注入到组件的，从reducer到组件经历了什么样的过程?<br>react-redux connect(state, dispatch)(component)<br>store =&gt; reducers =&gt; value =&gt; this.props</p>
-<p>koa中response.send、response.rounded、response.json发生了什么事，浏览器为什么能识别到它是一个json结构或是html?</p>
-<p>koa-bodyparser怎么来解析request<br>webpack整个生命周期，loader和plugin有什么区别</p>
-<p>介绍AST（Abstract Syntax Tree）抽象语法树?<br>虚拟dom</p>
-<p>安卓Activity之间数据是怎么传递的<br>安卓4.0到6.0过程中WebView对js兼容性的变化<br>WebView和原生是如何通信<br>跨域怎么解决，有没有使用过Apache等方案</p>
+<p>koa中response.send、response.rounded、response.json发生了什么事，浏览器为什么能识别到它是一个json结构或是html?<br>koa-bodyparser怎么来解析request?</p>
+<p>webpack整个生命周期，loader和plugin有什么区别?<br>对于loader，它就是一个转换器，将A文件进行编译形成B文件，这里操作的是文件，比如将A.scss或A.less转变为B.css，单纯的文件转换过程<br>对于plugin，它就是一个扩展器，它丰富了wepack本身，针对是loader结束后，webpack打包的整个过程，它并不直接操作文件，而是基于事件机制工作，会监听webpack打包过程中的某些节点<br>run：开始编译<br>make：从entry开始递归分析依赖并对依赖进行build<br>build-moodule：使用loader加载文件并build模块<br>normal-module-loader：对loader加载的文件用acorn编译，生成抽象语法树AST<br>program：开始对AST进行遍历，当遇到require时触发call require事件<br>seal：所有依赖build完成，开始对chunk进行优化（抽取公共模块、加hash等）<br>optimize-chunk-assets：压缩代码<br>emit：把各个chunk输出到结果文件<br>通过对节点的监听，从而找到合适的节点对文件做适当的处理</p>
+<p>介绍AST（Abstract Syntax Tree）抽象语法树?<br>虚拟dom 类似 render(‘div’, ‘data-‘, text)</p>
+<p>安卓Activity之间数据是怎么传递的<br>安卓4.0到6.0过程中WebView对js兼容性的变化</p>
+<p>WebView和原生是如何通信?<br>hybird 桥 调用相应的接口</p>
+<p>跨域怎么解决，有没有使用过Apache等方案?</p>
 
       
 
@@ -535,11 +537,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,11 +609,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,11 +621,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
+                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
+                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,23 +633,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">base64</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,6 +650,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
