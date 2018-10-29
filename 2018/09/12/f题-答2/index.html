@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>f题-答2 | 胡大大的博客</title>
+  <title>题-答2 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
+  <meta name="description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://juejin.im/post/5bc92e9ce51d450e8e777136 —————- 阿里-网易-滴滴 —————-">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="f题-答2">
+<meta property="og:title" content="题-答2">
 <meta property="og:url" content="https://8899hudada.github.io/2018/09/12/f题-答2/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
+<meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://juejin.im/post/5bc92e9ce51d450e8e777136 —————- 阿里-网易-滴滴 —————-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-27T03:08:01.779Z">
+<meta property="og:updated_time" content="2018-10-28T03:15:47.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="f题-答2">
-<meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: ‘https://juejin.im/post/5bc92e9ce51d450e8e777136&amp;#39; —————- 阿里-网易-滴滴 —————-">
+<meta name="twitter:title" content="题-答2">
+<meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://juejin.im/post/5bc92e9ce51d450e8e777136 —————- 阿里-网易-滴滴 —————-">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -168,7 +168,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      f题-答2
+      题-答2
     </h1>
   
 
@@ -185,7 +185,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了</p>
-<p>原文问题链接: ‘<a href="https://juejin.im/post/5bc92e9ce51d450e8e777136&#39;" target="_blank" rel="noopener">https://juejin.im/post/5bc92e9ce51d450e8e777136&#39;</a></p>
+<p>原文问题链接: <a href="https://juejin.im/post/5bc92e9ce51d450e8e777136" target="_blank" rel="noopener">https://juejin.im/post/5bc92e9ce51d450e8e777136</a></p>
 <p>—————- 阿里-网易-滴滴 —————-</p>
 <a id="more"></a>
 <p>————————— 阿里 —————————<br>使用过的koa2中间件<br>koa-body原理<br>介绍自己写过的中间件<br>有没有涉及到Cluster<br>介绍pm2<br>master挂了的话pm2怎么处理<br>如何和MySQL进行通信<br>——- node的东西后面再解答 ————<br>React声明周期及自己的理解?<br>react的生命周期有:<br>(getDefaultProps  getInitialState)<br>componentWillMount render componentDidMount  完成初始化赋值, 渲染DOM, 初始数据请求并再次渲染  只执行一次<br>componentWillReciveProps(nextProps) 提前根据传入的数据 修改当前组件的state 并不会重复出发render<br>shouldComponentUpdate(nextProps, nextState) componentWillUpdate render componentDidUpdate 决定是否更新 提升性能<br>componentWillUnmount 卸载 清空定时任务 网络请求等</p>
@@ -268,9 +268,9 @@
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'koa-bodyparser'</span>)</span><br><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Koa()</span><br><span class="line">app.use(bodyParser())</span><br><span class="line">app.use(<span class="keyword">async</span> ctx =&gt; &#123;</span><br><span class="line">  ctx.body =  ctx.request.body</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>webpack整个生命周期，loader和plugin有什么区别?<br>对于loader，它就是一个转换器，将A文件进行编译形成B文件，这里操作的是文件，比如将A.scss或A.less转变为B.css，单纯的文件转换过程<br>对于plugin，它就是一个扩展器，它丰富了wepack本身，针对是loader结束后，webpack打包的整个过程，它并不直接操作文件，而是基于事件机制工作，会监听webpack打包过程中的某些节点<br>run：开始编译<br>make：从entry开始递归分析依赖并对依赖进行build<br>build-moodule：使用loader加载文件并build模块<br>normal-module-loader：对loader加载的文件用acorn编译，生成抽象语法树AST<br>program：开始对AST进行遍历，当遇到require时触发call require事件<br>seal：所有依赖build完成，开始对chunk进行优化（抽取公共模块、加hash等）<br>optimize-chunk-assets：压缩代码<br>emit：把各个chunk输出到结果文件<br>通过对节点的监听，从而找到合适的节点对文件做适当的处理</p>
 <p>介绍AST（Abstract Syntax Tree）抽象语法树?<br>虚拟dom 类似 render(‘div’, ‘data-‘, text)</p>
-<p>安卓Activity之间数据是怎么传递的<br>安卓4.0到6.0过程中WebView对js兼容性的变化</p>
-<p>WebView和原生是如何通信?<br>hybird 桥 调用相应的接口</p>
-<p>跨域怎么解决，有没有使用过Apache等方案?</p>
+<p>安卓Activity之间数据是怎么传递的?<br>Activity_1利用Intent的putExtra()方法来携带数据，然后Activity_2通过Intent的getExtra()方法来获取Activity_1传递过来的数据<br>利用startActivityForResult()这个方法来启动Activity_2,然后Activity_2在利用Intent和setResult()方法来向Activity_1传送数据，最后，Activity_1通过回调方法onActivityResult()来接收Activity_2数据</p>
+<p>WebView和原生是如何通信?<br>1.JSbridge：:(webviewJavascriptBridge)一种js与原生native通信的机制，可以h5与native互调<br>2.Cordova</p>
+<p>跨域怎么解决，有没有使用过Apache等方案?<br>node代理 nginx cors<br>启用Apache 的 proxy module反向代理解决js跨域问题<br>配置完成之后，访问 <a href="http://localhost/project" target="_blank" rel="noopener">http://localhost/project</a> 实际就是访问 <a href="http://ip_address/project" target="_blank" rel="noopener">http://ip_address/project</a> 上的资源 来实现跨域</p>
 <p>vue 的双向绑定的原理是什么 ?<br>vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。<br>　　具体步骤：<br>　　第一步：需要 observe 的数据对象进行递归遍历，包括子属性对象的属性，都加上 setter 和 getter<br>这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化<br>　　第二步：compile解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图<br>　　第三步：Watcher订阅者是Observer和Compile之间通信的桥梁，主要做的事情是:<br>　　1、在自身实例化时往属性订阅器(dep)里面添加自己<br>　　2、自身必须有一个update()方法<br>　　3、待属性变动dep.notice()通知时，能调用自身的 update() 方法，并触发Compile中绑定的回调，则功成身退。<br>　　第四步：MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 -&gt; 视图更新；视图交互变化(input) -&gt; 数据model变更的双向绑定效果</p>
 
       
@@ -392,7 +392,7 @@
   
   
     <a href="/2018/09/11/f题-答3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">f题-答3</div>
+      <div class="article-nav-title">题-答3</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -540,11 +540,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,10 +564,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -576,19 +576,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -600,7 +596,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,11 +612,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,15 +624,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vue react</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,15 +640,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">img</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -661,6 +653,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">img</a>
               </li>
              
               <li class="article-tag-list-item">
