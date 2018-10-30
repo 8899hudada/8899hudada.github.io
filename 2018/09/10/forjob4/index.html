@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://juejin.im/post/5bc92e9ce51d450e8e777136 —————- 沪江-饿了么-携程-喜马拉雅 —————-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-29T10:15:32.898Z">
+<meta property="og:updated_time" content="2018-10-30T00:13:41.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题-答4">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://juejin.im/post/5bc92e9ce51d450e8e777136 —————- 沪江-饿了么-携程-喜马拉雅 —————-">
@@ -256,8 +256,23 @@
 <p>父子组件之间如何通信?</p>
 <p>Redux怎么实现属性传递，介绍下原理?</p>
 <p>React-Router版本号?</p>
-<p>网站SEO怎么处理?</p>
-<p>介绍下HTTP状态码<br>403、301、302是什么<br>缓存相关的HTTP请求头<br>介绍HTTPS<br>HTTPS怎么建立安全通道<br>前端性能优化（JS原生和React）<br>用户体验做过什么优化<br>对PWA有什么了解<br>对安全有什么了解<br>介绍下数字签名的原理<br>前后端通信使用什么方案<br>RESTful常用的Method<br>介绍下跨域<br>Access-Control-Allow-Origin在服务端哪里配置<br>csrf跨站攻击怎么解决<br>前端和后端怎么联调</p>
+<p>网站SEO怎么处理?<br>前端加 meta discription keyword<br>后端 ssr</p>
+<p>介绍下HTTP状态码 403、301、302是什么?<br>403 服务器拒绝请求<br>301 永久重定向<br>302 临时重定向</p>
+<p>缓存相关的HTTP请求头?<br>尽量降低http的请求次数<br>Expires<br>Cache-Contro: Public Private no-cache no-store max-age min-fresh<br>Last-Modified/If-Modified-Since<br>ETag</p>
+<p>no-cache&gt;Expires&gt;Last-Modified 前面的生效后,后面的基本就失效了</p>
+<p>介绍HTTPS ?</p>
+<p>HTTPS怎么建立安全通道?</p>
+<p>前端性能优化（JS原生和React）?</p>
+<p>用户体验做过什么优化?</p>
+<p>对PWA有什么了解?<br>progressive web app: 渐进式网页应用<br>客户端要和推送服务进行绑定，会生成一个绑定后的推送服务API接口，服务端调用此接口，发送消息。同时，浏览器也要支持推送功能，在注册 sw 时, 加上推送功能的判断</p>
+<p>对安全有什么了解?</p>
+<p>介绍下数字签名的原理?<br>A：将明文进行摘要运算后得到摘要（消息完整性），再将摘要用A的私钥加密（身份认证），得到数字签名，将密文和数字签名一块发给B。<br>B：收到A的消息后，先将密文用自己的私钥解密，得到明文。将数字签名用A的公钥进行解密后，得到正确的摘要（解密成功说明A的身份被认证了</p>
+<p>前后端通信使用什么方案?</p>
+<p>RESTful常用的Method?</p>
+<p>介绍下跨域?</p>
+<p>Access-Control-Allow-Origin在服务端哪里配置?<br>response的header</p>
+<p>csrf跨站攻击怎么解决?<br>token post方法 http header 中加验证</p>
+<p>前端和后端怎么联调?</p>
 
       
 
@@ -522,11 +537,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
