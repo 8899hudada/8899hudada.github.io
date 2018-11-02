@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://mp.weixin.qq.com/s/vKtIJU-1j4k8dxB2mYoyuA">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-29T06:46:24.504Z">
+<meta property="og:updated_time" content="2018-11-01T11:18:25.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题-答7">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://mp.weixin.qq.com/s/vKtIJU-1j4k8dxB2mYoyuA">
@@ -238,55 +238,6 @@
 <li>有哪些排序算法，时间复杂度是多少？什么时候快排的效率最低？</li>
 </ol>
 <p>排序算法    最坏事件复杂度    平均时间复杂度    稳定度    空间复杂度<br>冒泡排序    O(n^2)    O(n^2)    稳定    O(1)<br>插入排序    O(n^2)    O(n^2)    稳定    O(1)<br>选择排序    O(n^2)    O(n^2)    稳定    O(1)<br>快速排序    O(n^2)    O(n<em>log2n)    不稳定    O(log2n)~O(n)<br>二叉树排序    O(n^2)    O(n</em>log2n)    不一定    O(n)<br>堆排序    O(n<em>log2n)    O(n</em>log2n)    不稳定    O(1)<br>整个序列已经有序或完全倒序时，快排的效率最低。</p>
-<ol start="7">
-<li>原生ajax的请求过程</li>
-</ol>
-<p>创建全平台兼容的XMLHttpRequest对象：</p>
-<p>function<br> getXHR<br>(){</p>
-<p>var<br> xhr<br>=</p>
-<p>null<br>;</p>
-<p>if<br>(<br>window<br>.<br>XMLHttpRequest<br>)</p>
-<p>{<br>// 兼容 IE7+, Firefox, Chrome, Opera, Safari<br>    xhr<br>=</p>
-<p>new</p>
-<p>XMLHttpRequest<br>();</p>
-<p>}</p>
-<p>else</p>
-<p>if</p>
-<p>(<br>window<br>.<br>ActiveXObject<br>)</p>
-<p>{</p>
-<p>try</p>
-<p>{<br>      xhr<br>=</p>
-<p>new</p>
-<p>ActiveXObject<br>(<br>“Msxml2.XMLHTTP”<br>);<br>// 即MSXML3</p>
-<p>}</p>
-<p>catch</p>
-<p>(<br>e<br>)</p>
-<p>{</p>
-<p>try</p>
-<p>{<br>        xhr<br>=</p>
-<p>new</p>
-<p>ActiveXObject<br>(<br>“Microsoft.XMLHTTP”<br>);<br>// // 兼容 IE6, IE5，很老的api,虽然浏览器支持,功能可能不完善,故不建议使用</p>
-<p>}</p>
-<p>catch</p>
-<p>(<br>e<br>)</p>
-<p>{<br>        alert<br>(<br>“您的浏览器暂不支持Ajax!”<br>);</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>return<br> xhr<br>;<br>}<br>Ajax请求数据的过程：</p>
-<p>var<br> xhr<br>=<br> getXHR<br>();<br>xhr<br>.<br>open<br>(<br>‘GET’<br>,<br> url<br>/<br>file<br>,<br>true<br>);</p>
-<p>//设置请求方式，url，以及是否异步<br>xhr<br>.<br>onreadystatechange<br>=</p>
-<p>function<br>()</p>
-<p>{</p>
-<p>//设置回调监听函数</p>
-<p>if<br>(<br>xhr<br>.</p>
-<h1 id="readyState"><a href="#readyState" class="headerlink" title="readyState"></a>readyState</h1><p>4<br>){</p>
-<p>if<br>(<br>xhr<br>.</p>
-<h1 id="status"><a href="#status" class="headerlink" title="status"></a>status</h1><p>200<br>){</p>
-<p>var<br> data<br>=<br>xhr<br>.<br>responseText<br>;<br>             console<br>.<br>log<br>(<br>data<br>);</p>
-<p>}<br>};<br>xhr<br>.<br>onerror<br>=</p>
-<p>function<br>()</p>
-<p>{<br>  console<br>.<br>log<br>(<br>“Oh, error”<br>);<br>};<br>xhr<br>.<br>send<br>();</p>
 <p>//发送请求</p>
 <ol start="8">
 <li>http状态码，cookie字段，cookie一般存的是什么，session怎么存在的？</li>
@@ -1158,8 +1109,8 @@
     </a>
   
   
-    <a href="/2018/08/10/vue的一些相关知识总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue-react-的一些相关知识总结</div>
+    <a href="/2018/09/06/forjob8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">题-答8</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -1186,7 +1137,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#readyState"><span class="toc-number">1.</span> <span class="toc-text">readyState</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#status"><span class="toc-number">2.</span> <span class="toc-text">status</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -1307,15 +1258,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1331,6 +1278,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -1343,19 +1294,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1371,7 +1310,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">npm script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1383,7 +1334,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1391,15 +1342,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">viewer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1407,7 +1350,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1419,15 +1370,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
