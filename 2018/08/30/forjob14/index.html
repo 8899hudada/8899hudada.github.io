@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://www.nowcoder.com/discuss/122092?type=2&amp;amp;order=0&amp;amp;pos=334&amp;amp;page=2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-01T15:30:16.310Z">
+<meta property="og:updated_time" content="2018-11-05T01:54:50.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题-答14">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://www.nowcoder.com/discuss/122092?type=2&amp;amp;order=0&amp;amp;pos=334&amp;amp;page=2">
@@ -188,7 +188,7 @@
 <p>原文问题链接: <a href="https://www.nowcoder.com/discuss/122092?type=2&amp;order=0&amp;pos=334&amp;page=2" target="_blank" rel="noopener">https://www.nowcoder.com/discuss/122092?type=2&amp;order=0&amp;pos=334&amp;page=2</a></p>
 <hr>
 <a id="more"></a>
-<p>happypack() 打包原理<br>react 15  16 有什么变化<br>webpack 打包速度优化 dll cache exclude happypack<br>redux 实质性的工作流</p>
+<p>happypack() 打包原理:  并行打包loader<br>react 15  16 有什么变化<br>webpack 打包速度优化 dll cache exclude happypack<br>redux 实质性的工作流<br>z-index 再fixed 中的表现<br>post-css</p>
 <p>1.JavaScript高级程序设计（红宝书），看个两三遍..其义自见，面试内容基本逃不过红宝书里的东西。继承、原型链、作用域链百考不厌。<br>2.es6标准入门（阮一峰），不要只是了解es6有哪些东西，建议直接看线上版，一个一个块去学习..面试官问es6了解哪些的时候你说的越多评价越高，比较核心的内容：箭头函数，promise,map,set,let,const,class,symbol,generator。es7:async,await<br>3.玩转数据结构（慕课网，网上可以找到百度云资源），非常重要，前端同学不要觉得数据结构没用.. 实际上了解更多的数据结构可以让你编码更加轻松和流畅（解析后台数据的时候也会更加清楚怎么做）。还有就是一定要跟着写，像链表、队列、二叉树、堆跟着写一下就好..面试过程中有遇到手写bst的add..前中后序遍历..删除节点<br>4.剑指offer和LeetCode，不管你觉得前端需不需要会算法，刷就行了<br>5.个人技术栈是vue。针对vue：双向数据绑定原理（被问到吐，最好会写一个简单的双绑），v-model原理（快手挂掉的原因），diff算法（考得较少），vue和其他框架的区别（一般react），vue代码优化，组件编写要点，vue-router原理（如何加入动态参数），vuex解决了什么有哪些模块<br>6.移动端（个人有半年左右的移动端开发经历，所以问得较多）：300ms产生原因和解决方案，点击穿透事件，如何做自适应，兼容性问题如何解决，input框被输入法遮挡解决方案<br>7.计算机网络，非常非常重要，大厂必问。osi七层模型/tcpip四层模型，http1.0 1.1 2.0区别，https原理，请求响应报文header具体内容（了解的越多越好），请求方式，各种响应码（最重要的304一定要说清楚，详见http缓存详解，cache-control），tcp/udp不同，tcp（三握四挥、syn洪泛、流量控制、拥塞控制、滑动窗口协议），dns解析，个人还被问过mac/ip。<br>8.os：进线程区别，调度和通信方式。<br>9.数据库：除了事务以外我不会..一般不会问<br>10.前端优化问题（各种方案，最好能手写）<br>11.比较常考的前端代码题：节流防抖、bind底层、extend底层、$底层、cookie封装、扁平化、柯里化、promise原理、手写闭包、手写ajax、串行ajax请求处理、url处理、promise封装ajax。<br>12.设计模式（单例、工厂、观察者、订阅发布者），最好能手写<br>13.浏览器机制（异步机制、线程宿主环境），微宏任务（非常重要），URL输入到绘制的全过程<br>14.后台（基本没被问过..），楼主也只会点点nodejs，入门级别（会写爬虫，简单搭建服务器，了解koa洋葱圈模型，express中间件写法）<br>15.html:h5相关内容，加分点：canvas 和 webgl<br>16.css：选择器相关、双列等高三列自适应布局等、垂直居中（可能不定高）、动画（多写..js动画了解jq和velocity）、css3相关（transition/transform）、bfc（形成方式）、display/position参数、flex参数，border相关绘图，box-sizing参数<br>17.spa相关（首屏加载，白屏问题，路由转换，seo）<br>18.服务器端渲染（不会问太深，加分项）<br>19.websocket原理和服务器端推送机制，长短轮询</p>
 
       
@@ -458,11 +458,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,6 +494,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -510,19 +514,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">npm script</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,11 +538,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">base64</a>
+                <a href="javascript:void(0)" class="js-tag color2">viewer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,11 +550,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+                <a href="javascript:void(0)" class="js-tag color2">base64</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -570,15 +570,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
