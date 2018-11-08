@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://www.nowcoder.com/discuss/100224?type=2&amp;amp;order=0&amp;amp;pos=262&amp;amp;page=1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-31T10:12:14.710Z">
+<meta property="og:updated_time" content="2018-11-06T10:53:02.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题-答10">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://www.nowcoder.com/discuss/100224?type=2&amp;amp;order=0&amp;amp;pos=262&amp;amp;page=1">
@@ -191,20 +191,22 @@
 <p>——————– 腾讯SNG ——————–</p>
 <p>一面</p>
 <p>介绍项目</p>
-<p>Diff算法, setState过程</p>
-<p>树的深搜与广搜</p>
+<p>Diff算法?<br>react diff算法的3个策略:<br>  tree diff: React对Virtual DOM树进行层级控制，只会对相同层级的DOM节点进行比较，即同一个父元素下的所有子节点，当发现节点已经不存在了，则会删除掉该节点下所有的子节点，不会再进行比较<br>  component diff: 如果是同一个类型的组件，则按照原策略进行Virtual DOM比较。<br>如果不是同一类型的组件，则将其判断为dirty component，从而替换整个组价下的所有子节点。<br>如果是同一个类型的组件，有可能经过一轮Virtual DOM比较下来，并没有发生变化。如果我们能够提前确切知道这一点，那么就可以省下大量的diff运算时间。因此，React允许用户通过shouldComponentUpdate()来判断该组件是否需要进行diff算法分析<br>  element diff: 当节点属于同一层级时，diff提供了3种节点操作，分别为INSERT_MARKUP(插入)，MOVE_EXISTING(移动),REMOVE_NODE(删除)</p>
+<p>setState过程?<br>setState在调用时做了两件事<br>第一，调用enqueueSetState。该方法将我们传入的 newState 添加到一个叫做_pendingStateQueue的队列中去存起来，然后执行一个enqueueUpdate方法<br>第二，如果存在 callback 就调用 enqueueCallback 将其存入一个 _pendingCallbacks 队列中存起来<br>第三: 判断是否处于 batch update<br>是 =&gt; 保存组件于 dirtyComponents 中<br>否 =&gt; 遍历所有的 dirtyComponents , 调用 updateComponent 更新 pending state or props<br>transaction(批量操作事物机制) 当所有操作均执行成功，即可以commit transaction；若有一个操作失败，则执行rollback</p>
+<p>setState是同步执行的，但是state并不一定会同步更新</p>
+<p>树的深搜与广搜?<br>深搜: 大体流程就是这样，从树的根部搜索到最末尾的分支，然后，一个节点搜索完毕后，回溯，再搜索，知道在回溯到树的根部，再由树的根部发出另一分支。搜索到目标则停止 深搜更加浪费时间<br>广搜: 是向外发散式的搜索 搜索完一层，再进入下一层，直至到达最后一层 广搜更显得盲目</p>
 <p>用户量大了，会有什么问题，怎么解决（安全，内存泄漏，性能）？</p>
 <p>输入一个url到看到页面经历了怎样的过程？</p>
-<p>缓存机制，如何缓存图片</p>
-<p>客户端渲染过程，重绘重排，如何优化</p>
-<p>localStorage使用场景</p>
-<p>封装组件和接口</p>
-<p>封装socket</p>
-<p>ServiceWorker API（关于这个API的文章正在路上）</p>
+<p>缓存机制，如何缓存图片?<br>浏览器缓存 代理服务器缓存 网关缓存</p>
+<p>客户端渲染过程，重绘重排，如何优化?</p>
+<p>localStorage使用场景?<br>localStorage可以用来统计页面访问次数 停留时间<br>sessionStorage可以用来统计当前页面元素的点击次数<br>cookie一般存储用户名密码相关信息，一般使用escape转义编码后存储</p>
+<p>封装组件和接口?<br>一个函数对应一个功能 常用的 axios api 封装</p>
+<p>封装socket?<br>用了socket.io.js的最新版本。使用过的都知道socket.io.js是基于 消息类型 来通信的，如果消息类型多了就很难维护。所以就需要对socket.io.js进行了应用层的封装<br>// 发布消息   接收消息  直接回调</p>
+<p>ServiceWorker API（关于这个API的文章正在路上）?<br>  本质上充当Web应用程序与浏览器之间的代理服务器 也可以在网络可用时作为浏览器和网络间的代理<br>  它们旨在（除其他之外）使得能够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否驻留在服务器上来采取适当的动作。他们还允许访问推送通知和后台同步API</p>
 <p>腾讯SNG二面</p>
 <p>Web性能优化方法</p>
 <p>是否了解后端</p>
-<p>浏览器链接限制如何解决</p>
+<p>浏览器链接限制如何解决<br>因为浏览并发连接数限制只是针对同一域名的，即是对同一个域名的资源加载有并发数的限制，如果将<br>资源文件分散到不同的域名下，即可实现并发数的扩展，例如一个域名是10个，两个域名就是20个并发了</p>
 <p>网络安全</p>
 <p>非递归遍历二叉树</p>
 <p>网易一面：</p>
@@ -215,7 +217,7 @@
 <p>HTTP请求的请求头和请求体</p>
 <p>状态码</p>
 <p>用过哪些git命令，git rebase和git merge的区别</p>
-<p>用typeof object = object为什么不靠谱？应该如何做？</p>
+<p>用typeof object = object为什么不靠谱？应该如何做？<br>要准确判断一个变量是否是一个对象，可以使用constructor以及instanceof判断</p>
 <p>设计求和函数sum使sum(a,b)和sum(a)(b)都能执行</p>
 <p>1+’2’+’2’; -1 +‘2’+ +2等这些输出什么？</p>
 <p>立即执行函数的输出</p>
@@ -327,8 +329,8 @@
 <p>键盘事件，编辑模式和命令模式的切换，给div加tabIndex,tabIndex的作用，各种取值的含义，focus（）函数的参数及意义等</p>
 <p>还有什么别的难点，怎么解决的？（说了state的设计等）</p>
 <p>TCP连接的三次握手</p>
-<p>HTTP1.1和HTTP2.0的区别</p>
-<p>为什么要用redux, connect函数的原理</p>
+<p>HTTP1.1和HTTP2.0的区别<br>在一个TCP连接上可以传送多个HTTP请求和响应，减少了建立和关闭连接的消耗和延迟，在HTTP1.1中默认开启Connection： keep-alive，一定程度上弥补了HTTP1.0每次请求都要创建连接的缺点<br>HTTP2.0 二进制分针传输/信道复用/header压缩/服务端推送</p>
+<p>为什么要用redux, connect函数的原理?</p>
 <p>XSS和CRSF攻击是什么？如何防范？</p>
 <p>阿里一面（电话）：</p>
 <p>以项目为重点自我介绍</p>
@@ -363,31 +365,6 @@
 <p>排序算法， 数据结构里常见的操作</p>
 <p>操作系统经典面试题</p>
 <p>自学toC</p>
-<p>文艺心：</p>
-<p>阿里一面      2018-08-03</p>
-<p>1． 自我介绍，讲一下项目</p>
-<p>2． 偏差和方差的区别？在项目中怎么体现？怎么减小？</p>
-<p>3． 精确率和召回率是什么，公式意义，</p>
-<p>4． 如何防止过拟合?L1为什么可以特征选择？L2为什么可以防止过拟合？</p>
-<p>5． 讲一下SVM，非线性时候怎么办？核函数有哪些？高斯核将特征从多少维映射到多少维？</p>
-<p>6． 核函数为什么能将线性不可分的问题映射到高纬后使其可分？</p>
-<p>7． 梯度下降法知道吗？讲一下二阶的牛顿法？</p>
-<p>8． 三次握手四次挥手？</p>
-<p>9．  TCP和UDP的区别？</p>
-<p>10．在实践中数据库如何优化</p>
-<p>11．10万个不重复的整数，求前三（类比世界杯）</p>
-<p>12．1.1的1.1次方在计算机里怎么求解？</p>
-<p>阿里二面      2018-08-07</p>
-<p>1、 自我介绍</p>
-<p>2、 项目，算法的选择，如何调参的？最终参数是什么？</p>
-<p>3、 聚类算法用过吗？讲一下</p>
-<p>4、 构造决策树，怎么计算信息熵、信息增益、然后C4.5 ID3 CART的区别</p>
-<p>5、 隐马尔可夫的原理是什么？什么是词向量？怎么在词向量里运用的？</p>
-<p>6、 二叉树的翻转，口述代码</p>
-<p>7、 中缀表达式转后缀表达式，实现计算</p>
-<p>8、  Hash的底层实现有了解吗（忘了）</p>
-<p>9、  Linux内核，以及通信</p>
-<p>10、求一个天猫的在线人数，假设其注册ID有3亿个，每个ID从登陆到退出会向一个日志文件中记下登陆时间和退出时间，要求写一个算法统计一天中论坛的用户在线分布，取样粒度为秒。（看到过忘了）</p>
 
       
 

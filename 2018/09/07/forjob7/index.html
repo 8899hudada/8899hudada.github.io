@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://mp.weixin.qq.com/s/vKtIJU-1j4k8dxB2mYoyuA">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-01T11:18:25.646Z">
+<meta property="og:updated_time" content="2018-11-06T10:57:03.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题-答7">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://mp.weixin.qq.com/s/vKtIJU-1j4k8dxB2mYoyuA">
@@ -399,16 +399,8 @@
 <p>解析html建立dom树<br>解析css构建render树（将CSS代码解析成树形的数据结构，然后结合DOM合并成render树）<br>布局render树（Layout/reflow），负责各元素尺寸、位置的计算<br>绘制render树（paint），绘制页面像素信息<br>浏览器会将各层的信息发送给GPU，GPU会将各层合成（composite），显示在屏幕上。</p>
 <p>参考： 从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</p>
 <ol start="10">
-<li>XSS和CSRF防范措施</li>
+<li>XSS和CSRF防范措施<br>（1）XSS：跨站脚本攻击<br>攻击方式：在URL或者页面输入框中插入JavaScript代码。<br>防范：<br>设置httpOnly，禁止用document.cookie操作；<br>输入检查：在用户输入的时候进行格式检查；<br>对输出转义。<br>（2）CSRF：跨站点伪造请求<br>攻击方式：攻击者通过一些技术手段欺骗用户的浏览器去访问一个自己曾经认证过的网站并执行一些操作（如发邮件，发消息，甚至财产操作如转账和购买商品）。主要是拿到了用户的登录态。<br>防范：<br>检查 Referer 字段：这个字段用以标明请求来源于哪个地址。在处理敏感数据请求时，通常来说，Referer 字段应和请求的地址位于同一域名下<br>添加校验 Token：这种数据通常是表单中的一个数据项。服务器生成token并附加在表单中，其内容是一个伪乱数。当客户端通过表单提交请求时，这个伪乱数也一并提交上去以供校验。正常的访问时，客户端浏览器能够正确得到并传回这个伪乱数，而通过 CSRF 传来的欺骗性攻击中，攻击者无从事先得知这个伪乱数的值，服务器端就会因为校验 Token 的值为空或者错误，拒绝这个可疑请求<br>通过输入验证码来校验合法请求</li>
 </ol>
-<p>（1）XSS：跨站脚本攻击</p>
-<p>攻击方式：在URL或者页面输入框中插入JavaScript代码。</p>
-<p>防范：</p>
-<p>设置httpOnly，禁止用document.cookie操作；<br>输入检查：在用户输入的时候进行格式检查；<br>对输出转义。</p>
-<p>（2）CSRF：跨站点伪造请求</p>
-<p>攻击方式：攻击者通过一些技术手段欺骗用户的浏览器去访问一个自己曾经认证过的网站并执行一些操作（如发邮件，发消息，甚至财产操作如转账和购买商品）。主要是拿到了用户的登录态。</p>
-<p>防范：</p>
-<p>检查 Referer 字段：这个字段用以标明请求来源于哪个地址。在处理敏感数据请求时，通常来说，Referer 字段应和请求的地址位于同一域名下。<br>添加校验 Token：这种数据通常是表单中的一个数据项。服务器生成token并附加在表单中，其内容是一个伪乱数。当客户端通过表单提交请求时，这个伪乱数也一并提交上去以供校验。正常的访问时，客户端浏览器能够正确得到并传回这个伪乱数，而通过 CSRF 传来的欺骗性攻击中，攻击者无从事先得知这个伪乱数的值，服务器端就会因为校验 Token 的值为空或者错误，拒绝这个可疑请求。<br>通过输入验证码来校验合法请求。</p>
 <p>三面</p>
 <p>这一面基本问的是个人知识沉淀了，如实回答就可以了。</p>
 <p>在项目中的难点，怎么解决的<br>你的优势是什么<br>redux 源码学到了什么，怎么看源码的<br>了解哪些前端的前沿技术<br>平时看什么书，兴趣爱好是什么<br>异步有哪些方法<br>博客写了什么<br>除了实习经历，还做过哪些项目<br>四面</p>
