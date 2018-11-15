@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="胡大大的博客">
 <meta property="og:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://www.nowcoder.com/discuss/122092?type=2&amp;amp;order=0&amp;amp;pos=334&amp;amp;page=2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-06T11:08:11.321Z">
+<meta property="og:updated_time" content="2018-11-09T03:07:07.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题-答14">
 <meta name="twitter:description" content="浏览web文章的时候 收集的大厂的一些面试题 当然是查漏补缺,学习一波了 原文问题链接: https://www.nowcoder.com/discuss/122092?type=2&amp;amp;order=0&amp;amp;pos=334&amp;amp;page=2">
@@ -208,7 +208,7 @@
 <p>配置 router 的 按需加载: require.ensure(dependencies, callback, chunkName)</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getComponent =&gt; (location, cb) &#123;</span><br><span class="line">  <span class="built_in">require</span>.ensure([], (<span class="built_in">require</span>) =&gt; &#123;</span><br><span class="line">    cb(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../pages/BugComponent'</span>).default)</span><br><span class="line">  &#125;, <span class="string">'bug'</span>)</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">&lt;Route path=<span class="string">"/bug"</span> getComponent=&#123;getComponent&#125;&gt;</span><br></pre></td></tr></table></figure>
 <p>Cookie 是紧跟域名的。同一个域名下的所有请求，都会携带 Cookie<br>这样就凸显了 Local Storage 的优越性</p>
-<p>redux 实质性的工作流?<br>React通过Context属性，可以将属性(props)直接给子孙component，无须通过props层层传递, Provider仅仅起到获得store，然后将其传递给子孙元素而已<br>connect是一个高阶函数，首先传入mapStateToProps、mapDispatchToProps，然后返回一个生产Component的函数(wrapWithConnect)，然后再将真正的Component作为参数传入wrapWithConnect(MyComponent)，这样就生产出一个经过包裹的Connect组件，该组件具有如下特点:<br>  通过this.context获取祖先Component的store<br>  props包括stateProps、dispatchProps、parentProps,合并在一起得到nextState，作为props传给真正的Component<br>  componentDidMount时，添加事件this.store.subscribe(this.handleChange)，实现页面交互<br>  shouldComponentUpdate时判断是否有避免进行渲染，提升页面性能，并得到nextState<br>  componentWillUnmount时移除注册的事件this.handleChange<br>  在非生产环境下，带有热重载功能<br>  // 主要的代码逻辑<br>  export default function connect(mapStateToProps, mapDispatchToProps, mergeProps, options = {}) {}</p>
+<p>redux 实质性的工作流?<br>React通过Context属性，可以将属性(props)直接给子孙component，无须通过props层层传递, Provider仅仅起到获得store，然后将其传递给子孙元素而已<br>connect是一个高阶函数，首先传入mapStateToProps、mapDispatchToProps，然后返回一个生产Component的函数(wrapWithConnect)，然后再将真正的Component作为参数传入wrapWithConnect(MyComponent)，这样就生产出一个经过包裹的Connect组件，该组件具有如下特点:<br>  通过 props.store 获取祖先 Component 的 store<br>  props包括stateProps、dispatchProps、parentProps,合并在一起得到nextState，作为props传给真正的Component<br>  componentDidMount时，添加事件this.store.subscribe(this.handleChange)，实现页面交互<br>  shouldComponentUpdate时判断是否有避免进行渲染，判断得到的 nextState,提升页面性能<br>  componentWillUnmount时移除注册的事件this.handleChange<br>  在非生产环境下，带有热重载功能<br>  // 主要的代码逻辑<br>  export default function connect(mapStateToProps, mapDispatchToProps, mergeProps, options = {}) {}</p>
 <p>Reducer是一个纯函数（Pure Function） （相同的输入会得到同样的输出）</p>
 <p>z-index 再fixed 中的表现?<br>子元素 z-index设置成负数 会被父元素覆盖<br>左侧的菜单固定为fixed时，二级菜单无法设置有效的z-index，导致菜单隐藏在页面元素之下，明明页面元素的z-index是1，但是无论把菜单的z-index设置为多大，都不管用?<br>原来谷歌浏览器在设置position:fixed;后会触发元素创建一个新的层叠上下文，并且当成一个整体在父层叠上下文中进行比较。如上面的dom结构，当给b设置了position:fixed;属性后，会触发创建一个新的层叠上下文，它的父层叠上下文变成了a，所以b只能在a的内部进行层叠比较。这也就是大家熟听的“从父原则”<br>所以本来所有元素都在root内比较，改为fixed之后只能在父级元素内比较，而父级元素没有设置z-index，所以无法比较<br>所以解决方案是给父级元素设置z-index，一般设置为0就可以了<br>摘抄两点:<br>1.z-index只有在设置了position为relative,absolute,fixed时才会有效。<br>2.z-index的“从父原则”。当你发现把z-index设的多大都没用时，看看其父元素是否设置了有效的z-index，当然别忘了先看看自身是否设置了position</p>
 <p>Etag 的生成过程需要服务器额外付出开销，会影响服务端的性能，这是它的弊端。因此启用 Etag 需要我们审时度势。正如我们刚刚所提到的——Etag 并不能替代 Last-Modified，它只能作为 Last-Modified 的补充和强化存在。 Etag 在感知文件变化上比 Last-Modified 更加准确，优先级也更高。当 Etag 和 Last-Modified 同时存在时，以 Etag 为准</p>
@@ -234,6 +234,21 @@
 <p>18.服务器端渲染（不会问太深，加分项）</p>
 <p>19.websocket原理和服务器端推送机制，长短轮询<br>WebSocket：WebSocket一种在单个 TCP 连接上进行全双工通讯的协议<br>客户端发送一次http websocket请求，服务器响应请求，双方建立持久连接，并进行双向数据传输，后面不进行HTTP连接，而是使用TCP连接<br>Websocket使用和 HTTP 相同的 TCP 端口，可以绕过大多数防火墙的限制。默认情况下，Websocket协议使用80端口；运行在TLS之上时，默认使用443端口<br>Upgrade: websocket<br>Connection: Upgrade</p>
 <p>在HTTP/1.0中默认使用短连接。也就是说，客户端和服务器每进行一次HTTP操作，就建立一次连接，任务结束就中断连接<br>而从HTTP/1.1起，默认使用长连接，用以保持连接特性。使用长连接的HTTP协议，会在响应头加入 Connection:keep-alive</p>
+<p>响应式的rem实现原理:<br>rem是相对于根元素（html标签）的字体大小的单位<br>核心思想：百分比布局可实现响应式布局，而rem相当于百分比布局<br>实现手段：动态获取当前视口宽度width，除以一个固定的数n，得到rem的值。表达式为rem = width / n<br>通过此方法，rem大小始终为width的n等分</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 核心代码块：</span></span><br><span class="line"><span class="comment">// 动态为根元素设置字体大小</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">　<span class="comment">// 获取屏幕宽度</span></span><br><span class="line">  <span class="keyword">var</span> width = <span class="built_in">document</span>.documentElement.clientWidth || <span class="built_in">window</span>.innerWidth</span><br><span class="line">　<span class="comment">// 设置根元素字体大小。此时为宽的10等分</span></span><br><span class="line">  <span class="built_in">document</span>.documentElement.style.fontSize = width / <span class="number">10</span> + <span class="string">'px'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 首次加载应用，设置一次</span></span><br><span class="line">init()</span><br><span class="line"><span class="comment">// 监听手机旋转的事件的时机，重新设置</span></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'orientationchange'</span>, init)</span><br><span class="line"><span class="comment">// 监听手机窗口变化，重新设置</span></span><br><span class="line"><span class="keyword">if</span> (resizeTimeout) &#123;</span><br><span class="line">  clearTimeout(resizeTimeout)</span><br><span class="line">  resizeTimeout = <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> resizeTimeout = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">window</span>.addEventListener(<span class="string">'resize'</span>, init)</span><br><span class="line">&#125;, <span class="number">30</span>)</span><br><span class="line"><span class="comment">// 理解：上面代码实现了，无论设备可视窗口如何变化，始终设置rem为width的1/10.即实现了百分比布局</span></span><br></pre></td></tr></table></figure>
+<p>tips：<br>　　1、以上代码需在dom之前写入（可放在head里面第一个script标签）<br>　　2、移动端加上meta标签<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"></p>
+<p>也可以用 flexible.js 动态修改rem的值</p>
+<p>render ?<br>Virtual DOM =&gt; Actual DOM<br>Virtual DOM 通过 vm.$createElement(‘div’)生成一个JS对象  { tag: ‘div’, data: { attrs: {}, …}, children: [] }<br>Actual DOM 通过document.createElement(‘div’)生成一个DOM节点</p>
+<p>精确获取页面元素位置的方式有哪些?<br>那就是使用getBoundingClientRect()方法 它返回一个对象，其中包含了left、right、top、bottom四个属性</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> X= <span class="keyword">this</span>.getBoundingClientRect().left</span><br><span class="line"><span class="keyword">var</span> Y =<span class="keyword">this</span>.getBoundingClientRect().top</span><br><span class="line"><span class="comment">//再加上滚动距离，就可以得到绝对位置</span></span><br><span class="line"><span class="keyword">var</span> X= <span class="keyword">this</span>.getBoundingClientRect().left+<span class="built_in">document</span>.documentElement.scrollLeft</span><br><span class="line"><span class="keyword">var</span> Y =<span class="keyword">this</span>.getBoundingClientRect().top+<span class="built_in">document</span>.documentElement.scrollTop</span><br></pre></td></tr></table></figure>
+<p>ES6 的 super 关键字表示父类的构造函数, 相当于 ES5 的 Parent.call(this) 所以子类只有调用 super 之后, 才能使用 this 关键字<br>object.setPrototypeOf(child.prototype, parent.prototype)</p>
+<p>a b c 按顺序执行?<br>Promise.resolve() 构建队列:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">queue</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> sequence = <span class="built_in">Promise</span>.resolve()</span><br><span class="line">  arr.forEach (<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">    sequence = sequence.then(item)</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> sequence</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">queue([a, b, c]).then( <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)  <span class="comment">// abc</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>async await 构建队列:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">queue</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = <span class="literal">null</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> promise <span class="keyword">of</span> arr) &#123;</span><br><span class="line">    res = <span class="keyword">await</span> promise(res)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">await</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">queue([a, b, c]).then( <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)  <span class="comment">// abc</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>url中的# ?<br>window.location.hash 来读取 或 改变 #<br>location.href += ‘#caper’ 浏览器滚动到新的页面位置</p>
+<p>H5的 onhashchange 事件 的3中使用方式:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onhashchange = func</span><br><span class="line">&lt;body onhashchange = <span class="string">'func()'</span> &gt;<span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'hashchange'</span>, func, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
 
       
 
@@ -353,8 +368,8 @@
     </a>
   
   
-    <a href="/2018/08/10/vue的一些相关知识总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue-react-的一些相关知识总结</div>
+    <a href="/2018/08/29/forjob15/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">题-答15</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -498,15 +513,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,10 +538,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">lodash</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,15 +569,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">掘金小册</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">npm script</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,7 +589,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -582,7 +597,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,19 +625,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异步</a>
               </li>
              
               <li class="article-tag-list-item">
