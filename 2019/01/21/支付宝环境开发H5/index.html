@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://8899hudada.github.io">
-  <title>webpack 打包配置NODE_ENV | 胡大大的博客</title>
+  <title>支付宝环境开发H5 | 胡大大的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是webpack打包时的主要两个功能：   清除dist文件 配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod    1.pakage.json安装相关功能的插件：devDependencies =&amp;gt; {clean-webpack-plugin,cross-env}">
-<meta name="keywords" content="随笔,webpack">
+  <meta name="description" content="在支付宝环境开发H5页面分析：h5 端必须使用钱包环境，通过调用支付宝的全局变量 AlipayJSBridge 来实现云客服与访客的视频通话功能。">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack 打包配置NODE_ENV">
-<meta property="og:url" content="https://8899hudada.github.io/2018/04/01/webpack-打包配置NODE-ENV/index.html">
+<meta property="og:title" content="支付宝环境开发H5">
+<meta property="og:url" content="https://8899hudada.github.io/2019/01/21/支付宝环境开发H5/index.html">
 <meta property="og:site_name" content="胡大大的博客">
-<meta property="og:description" content="这是webpack打包时的主要两个功能：   清除dist文件 配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod    1.pakage.json安装相关功能的插件：devDependencies =&amp;gt; {clean-webpack-plugin,cross-env}">
+<meta property="og:description" content="在支付宝环境开发H5页面分析：h5 端必须使用钱包环境，通过调用支付宝的全局变量 AlipayJSBridge 来实现云客服与访客的视频通话功能。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T07:54:10.000Z">
+<meta property="og:updated_time" content="2019-01-21T07:10:11.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack 打包配置NODE_ENV">
-<meta name="twitter:description" content="这是webpack打包时的主要两个功能：   清除dist文件 配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod    1.pakage.json安装相关功能的插件：devDependencies =&amp;gt; {clean-webpack-plugin,cross-env}">
+<meta name="twitter:title" content="支付宝环境开发H5">
+<meta name="twitter:description" content="在支付宝环境开发H5页面分析：h5 端必须使用钱包环境，通过调用支付宝的全局变量 AlipayJSBridge 来实现云客服与访客的视频通话功能。">
   
     <link rel="alternative" href="/atom.xml" title="胡大大的博客" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-webpack-打包配置NODE-ENV" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-支付宝环境开发H5" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      webpack 打包配置NODE_ENV
+      支付宝环境开发H5
     </h1>
   
 
         
-        <a href="/2018/04/01/webpack-打包配置NODE-ENV/" class="archive-article-date">
-  	<time datetime="2018-04-01T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
+        <a href="/2019/01/21/支付宝环境开发H5/" class="archive-article-date">
+  	<time datetime="2019-01-21T07:06:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-21</time>
 </a>
         
         
@@ -184,20 +184,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>这是webpack打包时的主要两个功能：</p>
-<blockquote>
-<ol>
-<li>清除dist文件</li>
-<li>配置 dist 打包方式  npm run dev   npm run build:test   npm run build:prod</li>
-</ol>
-</blockquote>
-</blockquote>
-<h3 id="1-pakage-json"><a href="#1-pakage-json" class="headerlink" title="1.pakage.json"></a>1.pakage.json</h3><p>安装相关功能的插件：devDependencies =&gt; {clean-webpack-plugin,cross-env}</p>
+        <p>在支付宝环境开发H5页面<br>分析：h5 端必须使用钱包环境，通过调用支付宝的全局变量 AlipayJSBridge 来实现云客服与访客的视频通话功能。</p>
 <a id="more"></a>
-<h3 id="2-webpack-base-config-js"><a href="#2-webpack-base-config-js" class="headerlink" title="2.webpack.base.config.js"></a>2.webpack.base.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new webpack.Provideplugin(&#123;&#125;),</span><br><span class="line">        new webpack.DefinePlugin(&#123;</span><br><span class="line">            &apos;process.env&apos;: &#123;</span><br><span class="line">                NODE_ENV: JSON.stringify(process.env.NODE_ENV || &apos;development&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-webpack-prod-config-js"><a href="#3-webpack-prod-config-js" class="headerlink" title="3.webpack.prod.config.js"></a>3.webpack.prod.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const cleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;)</span><br><span class="line">const Path = require(&apos;path&apos;)</span><br><span class="line">modules.exports = &#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.join(__dirname, &apos;../dist&apos;),</span><br><span class="line">        publicPath: &apos;/dist/&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new cleanWebpackPlugin([&apos;dist&apos;], &#123;</span><br><span class="line">            root: path.resolve(__dirname, &apos;../dist&apos;)</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-main-js-调用"><a href="#4-main-js-调用" class="headerlink" title="4.main.js 调用"></a>4.main.js 调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const baseUrl = &#123;</span><br><span class="line">    development: &apos;--------&apos;, // 测试地址</span><br><span class="line">    production: &apos;--------&apos; // 生产地址</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">baseUrl: baseUrl[process.env.NODE_ENV]</span><br></pre></td></tr></table></figure>
+<h3 id="搭建支付宝的开发环境："><a href="#搭建支付宝的开发环境：" class="headerlink" title="搭建支付宝的开发环境："></a>搭建支付宝的开发环境：</h3><ol>
+<li>最优方法是基于现有的开发方式，用 Charles 代理 h5 页面，电脑上安装 xcode simulator 模拟支付宝环境的开发方式；</li>
+<li>让手机和电脑在同一个网络环境下，用手机上的支付宝访问开发页面，用 Charles 代理到本地代码，进行开发；</li>
+<li>本地开发，每一次开发完，用 basement 部署到预发环境，然后访问聊天窗地址，查看效果。</li>
+</ol>
+<p>对比上述 3 中方案，第一种是最方便，也是实时能看到开发效果的方式，缺点是：simulator 与真机环境存在差异，可能会有兼容bug；第二种方案是折中的方案，开发需要每次打开支付宝，访问聊天窗页面来查看开发效果，比较慢，而且页面可能会把支付宝卡死，优点：真机环境，所有的功能都能够兼容；第三种方案也是兜底的方案，实在没辙了就写完，然后部署预发，然后再手机上访问聊天窗地址访问，是最慢的开发方式。</p>
+<p>结果：<br>第一种方式搭建好，开发时才发现虚拟机不能调用支付宝上的视频通话功能，然后使用第二种方法，成功。<br>同时由于 h5 页面的全局变量，需要注释掉 eslint 检查</p>
 
       
 
@@ -237,11 +232,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -297,7 +288,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2018/04/01/webpack-打包配置NODE-ENV/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://8899hudada.github.io/2019/01/21/支付宝环境开发H5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -311,18 +302,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/02/学习类Class简记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          学习类Class简记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/26/touchEvent/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">触摸事件</div>
+    <a href="/2019/01/03/2019年新的开始/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019年新的开始</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -349,7 +331,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pakage-json"><span class="toc-number">1.</span> <span class="toc-text">1.pakage.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-webpack-base-config-js"><span class="toc-number">2.</span> <span class="toc-text">2.webpack.base.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-webpack-prod-config-js"><span class="toc-number">3.</span> <span class="toc-text">3.webpack.prod.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-main-js-调用"><span class="toc-number">4.</span> <span class="toc-text">4.main.js 调用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建支付宝的开发环境："><span class="toc-number">1.</span> <span class="toc-text">搭建支付宝的开发环境：</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -372,30 +354,6 @@
 
 
 <!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-    <span class="btn-bg"></span>
-    <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pakage-json"><span class="toc-number">1.</span> <span class="toc-text">1.pakage.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-webpack-base-config-js"><span class="toc-number">2.</span> <span class="toc-text">2.webpack.base.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-webpack-prod-config-js"><span class="toc-number">3.</span> <span class="toc-text">3.webpack.prod.config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-main-js-调用"><span class="toc-number">4.</span> <span class="toc-text">4.main.js 调用</span></a></li></ol>
-   </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
      
 <!-- 目录内容结束 -->
           </div>
